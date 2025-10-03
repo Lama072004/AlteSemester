@@ -1,0 +1,70 @@
+//gcc -o myUARTtoSARA myUARTtoSARA.c -lwiringPi
+//sudo ./myUARTtoSARA
+
+//includes:
+#include <wiringPi.h>
+#include <stdio.h>
+#include <errno.h>
+#include <wiringSerial.h>
+#include <unistd.h>
+
+//defines:
+#define PORT			"/dev/ttyAMA0"
+#define LED_PIN 		5
+#define PWRON_PIN 		2
+#define RESET_N_PIN 	3
+
+int main (void){
+
+    int mySerial;
+    int check;
+    int i;
+
+    //wiringPi-init:
+    wiringPiSetup();
+  	pinMode(LED_PIN, OUTPUT);
+	pinMode(PWRON_PIN, OUTPUT);
+	pinMode(RESET_N_PIN, OUTPUT);
+
+	digitalWrite (LED_PIN, HIGH);
+	digitalWrite (PWRON_PIN, HIGH);
+	digitalWrite (RESET_N_PIN, HIGH);
+
+    //UART-init:
+    if ((mySerial = serialOpen ("/dev/ttyAMA0", 115200)) < 0){
+    
+      printf("Unable to open serial device\n");
+      return 1;
+    }
+
+    //TX:
+	unsigned char bufTransmit[] = "AT+GSN\r";
+    serialPrintf(mySerial, bufTransmit);
+    printf("sent: %s\n", bufTransmit);
+
+    usleep(10000);
+    //RX:
+	unsigned char bufReceive[50];
+	int receiveLen = serialDataAvail(mySerial);
+    if (receiveLen == 0) {
+		printf("Error: Empty string!\n");
+	}
+	else if(receiveLen < 0){
+		printf("Error: Unable to receive!\n");
+	}
+    else{
+        for(i = 0; i < receiveLen; i++){
+            bufReceive[i] = serialGetchar(mySerial);
+            printf("%c", bufReceive[i]);
+        }
+        printf("\n");
+        digitalWrite (LED_PIN, LOW);
+        serialFlush(mySerial);
+    }
+    sleep(1);
+    serialClose(mySerial);
+    digitalWrite (LED_PIN, HIGH);
+
+    return 0;
+
+}

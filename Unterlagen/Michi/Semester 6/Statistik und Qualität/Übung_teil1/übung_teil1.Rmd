@@ -1,0 +1,174 @@
+---
+title: "<b>STATISTIK – ÜBUNGEN TEIL I </b>– DESKRIPTIVE STATISTIK - Ausarbeitung"
+author: Michael Geuze
+date: March 05, 2024
+output: html_notebook
+---
+
+# Technische Fertigkeiten
+
+## A-1)
+a. Bestandsgröße
+a. Bewegungsgröße
+a. Bestandsgröße
+a. Bewegungsgröße
+a. Bewegungsgröße
+
+## A-2)
+
+a. Grundgesamtheit sind die Anrufe je 10 Minuten entsprechend der Liste. 
+Die beobachteten Merkmale ist die Häufigkeit je 10 Minuten. Sie sind metrisch und proprotional skaliert.
+
+a. Zur Aufgabe b)
+
+```{r}
+# Raw input data
+cpi.raw <- c(0, 0, 1, 3, 4, 1, 2, 2, 1, 1, 1, 2, 3, 0, 2, 0, 1, 3, 1, 2, 2, 0, 1, 1, 6, 1, 0, 2, 3, 1, 1, 4, 2, 3, 2, 0, 3, 0, 1, 2) # Calls per interval
+
+# Scale factor for y axis of barplot. Controls how much the scale goes beyond the last value
+scale_factor <-  1.1
+
+# Settings for boxplot
+whiskers_factor <- 1.5
+# Use ceil, resp, floor function on IQR * whiskers_factor
+quantize_outliers <- TRUE
+
+
+data <- cpi.raw # Write to data, rest of script can be reused
+
+data.factor <- factor(data, c(0:6))
+
+data.table <- table(data.factor)
+print("Absolute Häufigkeitstabelle")
+data.table
+
+data.len <- length(data)
+
+# Absolute occurences
+data.element_counts <- data.table
+barplot(data.element_counts, ylim = c(0,max(data.element_counts) * scale_factor), ylab = "Anzahl", xlab = "Telefonate im Intervall von 10 min", main = "Absolute Häufigkeit", col = "green")
+
+```
+```{r}
+# Relative occurences
+data.element_frq <- data.table/data.len
+print("Relative Häufigkeitstabelle")
+data.element_frq
+
+barplot(data.element_frq, ylim = c(0,max(data.element_frq) * scale_factor), ylab = "Anzahl", xlab = "Telefonate im Intervall von 10 min", main = "Relative Häufigkeit", col = "blue")
+```
+```{r}
+plot_cumsum_rainbow <- function(data_table, main, xlab, ylab, is_relative = FALSE)
+{
+  # data_table... table to draw
+  # main... main title. like in barplot
+  # xlab... x axis name
+  # ylab... y axis name
+  # Set variables for plot 
+  data_table.len <- length(data_table)
+  colors <- rainbow(data_table.len) 
+  space_initial <- 1.4
+  space_between <- 1.2
+  spacing <- seq(space_initial, length.out = data_table.len, by = space_between)
+  
+  # Create inital barplot
+  barplot(rep(data_table[1], length(data_table)), ylim = c(0,(sum(data_table) * scale_factor)), ylab = ylab, xlab = xlab, main = main, col = colors[1], names.arg = names(data_table))
+  
+  # Add all data on top of other, change color while doing so
+  offset_var <- cumsum(data_table)
+  for(loop_outer in (data_table.len - 1) : 1){
+    idx <- data_table.len - loop_outer 
+    for(loop_inner in 1:loop_outer){
+      barplot(data_table[idx + 1], add = TRUE, col = colors[idx+1], 
+              offset = offset_var[idx], names.arg = NA, 
+              space = spacing[idx + loop_inner - 1])
+    }
+  }
+  # Draw median if is relative. 
+  if (is_relative){
+    abline(0.5, 0, lty='dashed', col='red')
+    abline(0.25, 0, lty='dashed')
+    abline(0.75, 0, lty='dashed')
+  }
+}
+plot_cumsum_rainbow(data.table, main="Absolute Summenhäufigkeit", ylab="Kumulierte Anzahl", xlab = "Telefonate im Intervall von 10 min")
+plot_cumsum_rainbow(data.element_frq, main="Relative Summenhäufigkeit", ylab="Relative Häufigkeit", xlab = "Telefonate im Intervall von 10 min", is_relative = TRUE)
+
+
+```
+c. Schätzung: es kommen etwa 1,5 Gespräche alle 10 Minuten. Median ist ziemlich genau bei 1. Wenn bei der Achse "Kumulierte Anzahl" bei 20 eine Linie eingezeichnet werden würde, so wäre diese recht genau beim Balken "1".
+d. Nachfolgen werden alle geforderten Werte berechnet und mit cat gedruckt.
+```{r}
+data.sorted <- sort(data)
+
+# Positional parameters
+data.mode <- names(data.table)[which(data.table == max(data.table))]
+if (length(data.mode) != 1){
+  data.mode <- NA
+}
+
+if (data.len %% 2)  {
+  upper <- data.sorted[ceiling(data.len/2)]
+  lower <- data.sorted[floor(data.len/2)]
+  data.q50 <- (upper + lower) / 2
+}else{
+  data.q50 <- data.sorted[data.len/2]  
+}
+
+data.mean <- sum(data)/data.len
+cat("Zentralmaße", "\nModus:", data.mode, "\nMedian:", data.q50, "\nMittelwert:", data.mean)
+
+
+# Scattering parameters
+data.min <- min(data)
+data.max <- max(data)
+data.range <- data.max - data.min
+cat("\nStreumaße", "\nMinimalwert:", data.min, "\nMaximalwert:", data.max, "\nSpannweite:", data.range)
+
+# Quantiles
+data.q25.pos <- ceiling(data.len/4)
+data.q25 <- data.sorted[data.q25.pos]
+data.q75.pos <- floor(3*data.len/4)
+data.q75 <- data.sorted[data.q75.pos]
+cat("\nQuantile", "\nOberes Quantil:", data.q75, "\nUnteres Quantil:", data.q25)
+
+data.mean_abs_dev <- sum(abs(data))/data.len
+data.std_dev <- sqrt(sum((data.mean - data)^2) / data.len)
+data.std_dev_emp <- sqrt(sum((data.mean - data)^2) / (data.len-1))
+cat("\nMittlere absolute Abweichung:", data.mean_abs_dev, "\nStandardabweichung:", data.std_dev, "\nEmpirische Standardabweichung:", data.std_dev_emp)
+
+# Automated calculation for cross check 
+cat("\nAutomatische Berechnung der Parameter")
+cat("\nMIttelwert:", mean(data))
+cat("\nStandardabweichung:", sd(data))
+cat("\nZusammenfassung\n")
+summary(data)
+
+```
+e. Die gerade generierten Daten werden nun zu einem Boxplot zusammengefasst. Hierfür wird noch der Interquartilabstand berechnet. Davon ausgehend werden die Ausreißer berechnet und als solche dargestellt.
+```{r}
+data.iqr <- data.q75 - data.q25
+if (quantize_outliers){
+  data.outliers.max.val <- ceiling(data.q50 + data.iqr * whiskers_factor)
+  data.outliers.min.val <- floor(data.q50 - data.iqr * whiskers_factor)
+}else{
+  data.outliers.max.val <- data.q50 + data.iqr * whiskers_factor
+  data.outliers.min.val <- data.q50 - data.iqr * whiskers_factor
+}
+data.outliers.pos <- data.sorted < data.outliers.min.val | data.sorted > data.outliers.max.val
+data.outliers <- data.sorted[data.outliers.pos]
+data.inliers <- data.sorted[!data.outliers.pos]
+
+bxp_obj <- list(
+   stats = matrix(
+     c(min(data.inliers), data.q25, data.q50, data.q75, max(data.inliers),
+       ncol = 1)),
+   n = c(data.len),
+   conf = matrix(c(1, 1), ncol = 1), # Conf is not drawn, so its not calculated either
+   out = data.outliers,
+   group = rep(1, times = length(data.outliers)), # Every outlier is in group 1
+   names = "Telefonate"
+)
+bxp(bxp_obj, show.names = TRUE, pars = c(boxcol = "blue", boxfill = "lightblue",
+                                         outcol = "red"))
+```

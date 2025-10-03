@@ -1,0 +1,33 @@
+Circuit: * C:\Users\mge9869\OneDrive - FH Vorarlberg\Dokumente\Leistungselektronik\SchaltvorgLTSpice\FetSwitchHalbBrueInversBFH1.asc
+
+Direct Newton iteration for .op point succeeded.
+
+
+Measurement "p_vr_switch" FAIL'ed
+
+Measurement "p_vrl_switch" FAIL'ed
+
+Measurement "p_vrl_on" FAIL'ed
+p=0.07982 FROM 0 TO 0.07982
+
+Measurement "maxval" FAIL'ed
+
+
+Date: Fri May 12 17:03:19 2023
+Total elapsed time: 31.238 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 1655811
+traniter = 1655802
+tranpoints = 813593
+accept = 809785
+rejected = 3808
+matrix size = 37
+fillins = 12
+solver = Normal
+Avg thread counts: 1.0/1.0/1.0/1.0
+Matrix Compiler1: 2.54 KB object code size  1.0/0.6/[0.3]
+Matrix Compiler2: 3.01 KB object code size  0.4/0.6/[0.3]
+

@@ -1,0 +1,10 @@
+**********************************
+* Copyright:                     *
+*   Thomatronik GmbH, Germany    *
+*   info@thomatronik.de          *
+**********************************
+*   PSPICE
+.model ba159 d is = 3.09101E-006 n = 2.9571 rs = 0.0358243
++ eg = 1.11 xti = 3 t_measured = 27
++ cjo = 2.26802E-011 vj = 2.23329 m = 0.625523 fc = 0.5
++ tt = 1.10984E-006 bv = 1100 ibv = 10 af = 1 kf = 0

@@ -1,0 +1,22 @@
+Circuit: * C:\Users\Michael\OneDrive - FH Vorarlberg\Embedded\Eingebettete Systeme\WS22\Projekt Theremin\smoothingSD_DAC.asc
+
+WARNING: Less than two connections to node TONE.  This node is used by R10.
+Direct Newton iteration for .op point succeeded.
+
+Date: Sun Dec 04 12:42:42 2022
+Total elapsed time: 0.359 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 4569
+traniter = 4535
+tranpoints = 2253
+accept = 2116
+rejected = 137
+matrix size = 50
+fillins = 40
+solver = Normal
+Matrix Compiler1: 6.19 KB object code size  5.0/0.6/[0.4]
+Matrix Compiler2: 5.07 KB object code size  0.6/0.7/[0.3]
+

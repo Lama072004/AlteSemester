@@ -1,0 +1,53 @@
+Circuit: * C:\Users\admin\OneDrive - FH Vorarlberg\Dokumente\BoostConverter\realParts\spice\BoostMichaelGeuzeRealeBauteile.asc
+
+Direct Newton iteration for .op point succeeded.
+
+vout: AVG(v(out))=8.23093 FROM 0 TO 2.5e-005
+maxvout: MAX(v(out))=8.34157 FROM 0 TO 2.5e-005
+minvout: MIN(v(out))=8.12098 FROM 0 TO 2.5e-005
+delta_v_r1: (maxvout-minvout)/2=0.110294
+iout: AVG(i(r1))=0.685911 FROM 0 TO 2.5e-005
+i_l1_avg: AVG(i(l1))=0.685923 FROM 0 TO 2.5e-005
+maxl1: MAX(i(l1))=0.862988 FROM 0 TO 2.5e-005
+minl1: MIN(i(l1))=0.508809 FROM 0 TO 2.5e-005
+delta_i_l1: (maxl1-minl1)/2=0.17709
+delta_i_l1_percent=2.5e-005 FROM 0 TO 2.5e-005
+id_vout: AVG(v(id_out))=8.60184 FROM 0 TO 2.5e-005
+id_maxvout: MAX(v(id_out))=8.74336 FROM 0 TO 2.5e-005
+id_minvout: MIN(v(id_out))=8.46103 FROM 0 TO 2.5e-005
+id_delta_v_r1: (id_maxvout-id_minvout)/2=0.141167
+id_iout: AVG(i(id_r1))=0.71682 FROM 0 TO 2.5e-005
+id_i_l1_avg: AVG(i(id_l1))=0.716842 FROM 0 TO 2.5e-005
+id_maxl1: MAX(i(id_l1))=0.920033 FROM 0 TO 2.5e-005
+id_minl1: MIN(i(id_l1))=0.513658 FROM 0 TO 2.5e-005
+id_delta_i_l1: (id_maxl1-id_minl1)/2=0.203188
+diff_i_l1_id_real: (id_i_l1_avg-i_l1_avg)=0.0309185
+diff_v_c_id_real: (id_vout-vout)=0.370908
+diff_delta_i_id_real: (id_delta_i_l1-delta_i_l1)=0.026098
+diff_delta_v_id_real: (id_delta_v_r1-delta_v_r1)=0.0308735
+pin: AVG(-v(in)*i(r_i_meas))=5.88332 FROM 0 TO 2.5e-005
+pout: AVG(v(out)*i(r1))=5.64622 FROM 0 TO 2.5e-005
+eff: (pout/pin)=0.9597
+pow_m1: AVG(v(in)*ix(m1:d)+v(drv)*ix(m1:g)+v(sw)*ix(m1:s))=0.0217412 FROM 0 TO 2.5e-005
+pow_d1: AVG(-v(sw)*i(d1))=0.136951 FROM 0 TO 2.5e-005
+pow_l1: AVG(v(out,l_loss)*i(l1_r_para))=0.127461 FROM 0 TO 2.5e-005
+pow_c1: AVG(v(c_loss)*i(c1_r_para))=0.00023397 FROM 0 TO 2.5e-005
+
+
+Date: Mon May 01 19:57:43 2023
+Total elapsed time: 2.424 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 980069
+traniter = 980055
+tranpoints = 343145
+accept = 266287
+rejected = 76858
+matrix size = 29
+fillins = 13
+solver = Normal
+Matrix Compiler1: 2.08 KB object code size  0.4/0.3/[0.1]
+Matrix Compiler2: off  [0.2]/0.3/0.2
+

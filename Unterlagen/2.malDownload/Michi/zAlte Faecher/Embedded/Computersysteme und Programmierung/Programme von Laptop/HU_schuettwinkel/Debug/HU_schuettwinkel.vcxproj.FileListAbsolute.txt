@@ -1,0 +1,2 @@
+C:\Users\michael\source\repos\HU_schuettwinkel\Debug\HU_schuettwinkel.exe
+C:\Users\michael\source\repos\HU_schuettwinkel\Debug\HU_schuettwinkel.pdb

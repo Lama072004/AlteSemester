@@ -1,0 +1,27 @@
+Circuit: * C:\Users\admin\OneDrive - FH Vorarlberg\Embedded\Eingebettete Systeme\WS22\Projekt Theremin\Circuits\Draft1.asc
+
+Direct Newton iteration for .op point succeeded.
+Heightened Def Con from 0.0153078 to 0.0153078
+Heightened Def Con from 0.0253082 to 0.0253082
+Heightened Def Con from 0.0353088 to 0.0353088
+Heightened Def Con from 0.0453121 to 0.0453121
+Heightened Def Con from 0.0553128 to 0.0553128
+Heightened Def Con from 0.0653056 to 0.0653056
+
+Date: Mon Dec 19 18:18:30 2022
+Total elapsed time: 0.188 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 12612
+traniter = 12577
+tranpoints = 3525
+accept = 2809
+rejected = 722
+matrix size = 15
+fillins = 6
+solver = Normal
+Matrix Compiler1: 1.12 KB object code size  0.5/0.3/[0.2]
+Matrix Compiler2: off  [0.3]/0.4/0.3
+

@@ -1,0 +1,29 @@
+Circuit: * C:\Users\admin\OneDrive - FH Vorarlberg\Dokumente\Seminar2LE\buckBoostRealDiodeAndMosfet.asc
+
+Direct Newton iteration for .op point succeeded.
+
+pin1: AVG(v(in1)*i(s1))=14.3924 FROM 0 TO 8e-005
+pout1: AVG(v(out1)*i(r1))=14.3809 FROM 0 TO 8e-005
+eff_ideal: pout1/pin1=0.999204
+pin2: AVG(v(in2)*ix(m1:d))=13.126 FROM 0 TO 8e-005
+pout2: AVG(v(out2)*i(r3))=11.8227 FROM 0 TO 8e-005
+eff_real: pout2/pin2=0.900712
+
+
+Date: Wed Apr 19 12:58:21 2023
+Total elapsed time: 2.751 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 1004627
+traniter = 1004618
+tranpoints = 370548
+accept = 292951
+rejected = 77597
+matrix size = 29
+fillins = 13
+solver = Normal
+Matrix Compiler1: 1.89 KB object code size  0.4/0.3/[0.2]
+Matrix Compiler2: off  [0.2]/0.3/0.9
+

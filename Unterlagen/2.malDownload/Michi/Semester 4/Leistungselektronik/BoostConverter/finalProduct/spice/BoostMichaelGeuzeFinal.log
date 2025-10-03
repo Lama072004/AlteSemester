@@ -1,0 +1,70 @@
+Circuit: * C:\Users\admin\OneDrive - FH Vorarlberg\Dokumente\Leistungselektronik\BoostConverter\finalProduct\spice\BoostMichaelGeuzeFinal.asc
+
+WARNING: Node N002 is floating.
+
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+Gmin = 0.000142725
+vernier = 0.5
+Gmin = 2.39452e-005
+vernier = 0.666667
+Gmin = 6.14784e-006
+vernier = 0.888888
+vernier = 1
+Gmin = 8.09366e-007
+Gmin = 8.6905e-008
+Gmin = 9.33136e-009
+Gmin = 1.00195e-009
+Gmin = 1.07583e-010
+Gmin = 1.15517e-011
+Gmin = 1.24035e-012
+Gmin = 1.33182e-013
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+
+vout: AVG(v(out))=8.59115 FROM 0 TO 0.00175
+maxvout: MAX(v(out))=8.64536 FROM 0 TO 0.00175
+minvout: MIN(v(out))=8.53681 FROM 0 TO 0.00175
+delta_v_r1: (maxvout-minvout)/2=0.054275
+iout: AVG(i(r1))=0.357964 FROM 0 TO 0.00175
+i_l1_avg: AVG(i(l1))=0.716086 FROM 0 TO 0.00175
+maxl1: MAX(i(l1))=0.880167 FROM 0 TO 0.00175
+minl1: MIN(i(l1))=0.552257 FROM 0 TO 0.00175
+delta_i_l1: (maxl1-minl1)/2=0.163955
+delta_i_l1_percent=0.00175 FROM 0 TO 0.00175
+
+Measurement "pin" FAIL'ed
+pout: AVG(v(out)*i(r1))=3.07536 FROM 0 TO 0.00175
+
+Measurement "eff" FAIL'ed
+pow_m1: AVG(v(in)*ix(m1:d)+v(drv)*ix(m1:g)+v(sw)*ix(m1:s))=0.0700812 FROM 0 TO 0.00175
+pow_d1: AVG(-v(sw)*i(d1))=0.134548 FROM 0 TO 0.00175
+pow_l1: AVG(v(out,l_loss)*i(l1_r_para))=0.138229 FROM 0 TO 0.00175
+
+Measurement "pow_c1" FAIL'ed
+
+
+Date: Tue Jun 20 16:29:52 2023
+Total elapsed time: 16.176 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 1767851
+traniter = 1767347
+tranpoints = 580193
+accept = 438988
+rejected = 141205
+matrix size = 53
+fillins = 20
+solver = Normal
+Thread vector: 19.2/15.7[2] 3.9/3.5[2] 1.6/5.4[1] 0.6/4.1[1]  2592/500
+Matrix Compiler1: 3.41 KB object code size  1.0/0.7/[0.5]
+Matrix Compiler2: 4.00 KB object code size  1.5/2.2/[1.3]
+

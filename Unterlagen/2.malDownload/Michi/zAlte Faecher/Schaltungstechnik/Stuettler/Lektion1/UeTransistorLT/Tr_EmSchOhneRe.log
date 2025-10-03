@@ -1,0 +1,37 @@
+Circuit: * C:\D\user\CHRISTOP\sicher\schule\LTspice\Tr_EmSchOhneRe.asc
+
+Direct Newton iteration for .op point succeeded.
+
+ic: AVG(ic(q2))=0.0045744 FROM 0.9 TO 1
+ic_: AVG(ic(q1))=0.00463679 FROM 0.9 TO 1
+ib: AVG(ib(q2))=1.53789e-005 FROM 0 TO 1
+ube: AVG(v(ue1))=0.67903 FROM 0 TO 1
+ube_: AVG(v(ue2))=0.679449 FROM 0 TO 1
+beta: AVG(ic(q2)/ib(q2))=297.447 FROM 0 TO 1
+s: AVG(ic(q2)/0.025)=0.182976 FROM 0 TO 1
+rbeap: AVG(beta/s)=1625.61 FROM 0 TO 1
+re: AVG(1/((1/8000)+(1/93000)+(1/rbeap)))=1331.72 FROM 0 TO 1
+re_ui: AVG((v(ue2)-v(ue1))/(i(r2)-i(r5)))=1455.33 FROM 0 TO 1
+a: AVG(1k*s)=182.976 FROM 0 TO 1
+a_ui: AVG((v(ua2)-v(ua1))/(v(ue1)-v(ue2)))=148.641 FROM 0 TO 1
+ra: AVG((v(ua3)-v(ua4))/(i(rl1)-i(rl2)))=-936.331 FROM 0 TO 1
+
+
+Date: Sat Jan 28 10:59:42 2017
+Total elapsed time: 0.079 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2093
+traniter = 2088
+tranpoints = 1045
+accept = 1045
+rejected = 0
+matrix size = 32
+fillins = 0
+solver = Normal
+Matrix Compiler1: 1,82 KB object code size  2.4/2.2/[1.8]
+Matrix Compiler2: off  [2.0]/2.2/2.3
+
+

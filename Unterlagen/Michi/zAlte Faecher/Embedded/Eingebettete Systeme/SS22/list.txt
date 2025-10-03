@@ -1,0 +1,204 @@
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+/*1. Verkettete Liste ( 20 Punkte )
+Ergänzen Sie die Schnittstelle und implementieren Sie in einer Bibliothek
+folgende Funktionen zur Verwaltung einer einfach verketteten Liste
+(pHead static global im Listenmodul):
+
+createNode … erzeugt dynamisch einen neuen Knoten mit einem
+gegebenen uint64_t-Wert
+
+insertFront … fügt einen Knoten am Anfang einer Liste ein
+
+removeFront … löscht den ersten Knoten aus einer Liste und gibt ihn
+zurück
+
+deleteList … gibt den Speicher aller Knoten einer Liste frei
+
+countElements … berechnet die Anzahl der Knoten einer Liste
+
+insertSorted … fügt einen Knoten aufsteigend sortiert (in eine bereits
+aufsteigend sortierte Liste) ein
+
+splitList … Teilt eine Liste in zwei Listen, eine mit Werten >= ein
+gegebener Wert und eine mit Werten < dem gegebenen Wert auf. Die
+Knoten sollen dabei umgehängt und nicht kopiert werden
+Verwenden Sie diese Funktionen in einem Testprogramm. Vergessen Sie
+nicht, dass jeglicher Speicher, der mit malloc allokiert wurde, auf NULL
+geprüft und “irgendwann” wieder freigegeben werden muss.*/
+
+typedef struct Node {
+	uint64_t value;
+	struct Node* pNext;
+}node_t;
+
+
+node_t* createNode(uint64_t value);
+node_t* removeFront(node_t** ppHead);
+void insertFront(node_t** ppHead, uint64_t value);
+void deleteList(node_t** ppHead);
+uint64_t countElements(node_t* pHead);
+void insertSorted(node_t* pHead, uint64_t value);
+node_t* splitList(node_t* pHead, uint64_t value);
+
+
+
+node_t* createNode(uint64_t value) {
+	node_t* pNode = malloc(sizeof(node_t));
+	if (pNode != NULL) {
+		pNode->value = value;
+		pNode->pNext = NULL;
+	}
+	return pNode;
+}
+
+//removes first node from list. Memory has to be freed seperately
+node_t* removeFront(node_t** ppHead) {
+	if (*ppHead == NULL) {
+		return;
+	}
+	node_t* pRemovedNode = *ppHead;
+	*ppHead = pRemovedNode->pNext;
+	return pRemovedNode;
+}
+
+void insertFront(node_t** ppHead, uint64_t value) {
+	node_t* pNewNode = createNode(value);
+	if (pNewNode == NULL) {
+		exit(-1);
+	}
+	pNewNode->pNext = *ppHead;
+	*ppHead = pNewNode;
+}
+
+void deleteList(node_t** ppHead) {
+	if (*ppHead == NULL) { //list empty
+		return;
+	}
+
+	node_t* pActNode = *ppHead;
+	*ppHead = NULL;
+	free(*ppHead);
+
+	while (pActNode->pNext != NULL) {	//compiler warning
+		node_t* pNextNode = pActNode->pNext;
+		pActNode->pNext = NULL;
+		free(pActNode);
+		pActNode = pNextNode;
+	}
+	//delete last node
+	pActNode->pNext = NULL;
+	free(pActNode);
+}
+
+uint64_t countElements(node_t* pHead) {
+	if (pHead == NULL) {
+		return 0;
+	}
+	uint64_t cnt = 1;
+	node_t* pActNode = pHead;
+	while (pActNode->pNext != NULL) {
+		cnt += 1;
+		pActNode = pActNode->pNext;
+	}
+	return cnt;
+}
+
+void insertSorted(node_t* pHead, uint64_t value) {
+	if (pHead == NULL) {
+		return 0;
+	}
+	node_t* pActNode = pHead;
+	node_t* pLastNode = pHead; // = NULL; compiler warning?
+	while (pActNode->value < value && pActNode->pNext != NULL) {
+		pLastNode = pActNode;
+		pActNode = pActNode->pNext;
+	}
+	node_t* newNode = createNode(value);
+
+	//end of list reached, adding last element
+	if (pActNode->pNext == NULL) { 
+		pLastNode->pNext = newNode;
+		return;
+	}
+
+	//chaining elements together
+	newNode->pNext = pActNode;
+	pLastNode->pNext = newNode;
+}
+
+//returns new list header with values greater or equal to value. Return NULL if list is empty
+node_t* splitList(node_t* pHead, uint64_t value) {
+	if (pHead == NULL) {
+		return NULL;
+	}
+	node_t* pActNode = pHead;
+	node_t* pLastNode = pHead;
+	while (pActNode->value < value && pActNode->pNext != NULL) {
+		pLastNode = pActNode;
+		pActNode = pActNode->pNext;
+	}
+	pLastNode->pNext = NULL;
+	return pActNode;
+}
+
+void printList(node_t* pHead) {
+	if (pHead == NULL) {
+		return;
+	}
+	printf("List:\n");
+	node_t* pActNode = pHead;
+	while (pActNode->pNext != NULL) {
+		printf("%d\n", (int)pActNode->value);
+		pActNode = pActNode->pNext;
+	}
+	printf("%d\n", (int)pActNode->value);
+}
+
+int main() {
+	node_t* pHead = NULL;
+
+	insertFront(&pHead, 1);
+
+	pHead = createNode(120); //!!works, but head gets overwritten, memory leak!!
+
+	if (pHead != NULL) {
+		printf("List successfully created. Value: %d\n", (int)pHead->value);
+	}
+	//fill list
+	for (int i = 110; i > 10; i -= 10) {
+		insertFront(&pHead, i);
+	}
+
+
+	node_t* pNewHead = splitList(pHead, 70);
+	printf("List splitted\n");
+	printf("Old list\n");
+	printList(pHead);
+	printf("New list\n");
+	printList(pNewHead);
+
+	printf("Insert sorted at value 80\n");
+	insertSorted(pHead, 80);
+	printList(pHead);
+	printf("Elements: %lld\n", countElements(pHead));
+
+	printf("Remove node at front\n");
+	node_t* pRemovedNode = removeFront(&pHead);
+	printList(pHead);
+	printf("Value of removed node %d\n", (int)pRemovedNode->value);
+	printf("Elements: %lld\n", countElements(pHead));
+
+	insertFront(&pHead, 6);
+	insertFront(&pHead, 95);
+	printf("Added 2 nodes\n"
+		"Elements: %lld\n", countElements(pHead));
+	printList(pHead);
+
+	printf("Deleting old list\n");
+	deleteList(&pHead);
+	printf("Elements: %lld\n", countElements(pHead));
+
+}

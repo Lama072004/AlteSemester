@@ -1,0 +1,71 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+Anrufe.vec.raw <- c(0, 0, 1, 3, 4, 1, 2, 2, 1, 1, 1, 2, 3, 0, 2, 0, 1, 3, 1, 2, 2, 0, 1, 1, 6, 1, 0, 2, 3, 1, 1, 4, 2, 3, 2, 0, 3, 0, 1, 2)
+Anrufe.vec.raw
+
+
+```
+```{r}
+table(Anrufe.vec.raw)
+```
+```{r}
+table(Anrufe.vec.raw) / sum(table(Anrufe.vec.raw))
+```
+```{r}
+Anrufe.vec <- factor(Anrufe.vec, c(0:6))
+barplot(table(Anrufe.vec), ylim=c(0, 14))
+
+```
+```{r}
+Anrufe.vec <- factor(Anrufe.vec.raw, c(0:6))
+Anrufe.vec
+```
+```{r}
+table(Anrufe.vec)
+```
+
+```{r}
+barplot(table(Anrufe.vec)/sum(table(Anrufe.vec)), ylim=c(0, 0.4))
+```
+```{r}
+Sum.vec <- table(Anrufe.vec)/ sum(table(Anrufe.vec))
+Sum.vec <- cumsum(Sum.vec)
+Sum.vec
+barplot(Sum.vec, ylim=c(0, 1))
+abline(0.5, 0, lty='dashed', col='red')
+abline(0.25, 0, lty='dashed')
+abline(0.75, 0, lty='dashed')
+
+```
+Q(0.25) ... 25% Quantil --> 1. Quartil
+Q(0.50) ... 50% Quantil --> 2. Quartil --> Median
+Q(0.75) ... 75% Quantil --> 3. Quartil
+
+```{r}
+boxplot(Anrufe.vec.raw)
+```
+
+```{r}
+barplot(table(Anrufe.vec), ylim=c(0, 14))
+Anrufe.vec
+```
+```{r}
+sum(abs(Anrufe.vec.raw -  mean(Anrufe.vec.raw))) / length(Anrufe.vec.raw)
+```
+mean absolute deviation, Mittlere absolute Abweichung --> MAD
+
+```{r}
+sum((Anrufe.vec.raw -  mean(Anrufe.vec.raw))^2) / length(Anrufe.vec.raw)
+```
+ Varianz 
+
+```{r}
+sqrt(sum((Anrufe.vec.raw -  mean(Anrufe.vec.raw))^2) / length(Anrufe.vec.raw))
+```
+Standardabweichung SIGMA
+

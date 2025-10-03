@@ -1,0 +1,118 @@
+---
+title: "<b>STATISTIK – ÜBUNGEN TEIL I </b>– DESKRIPTIVE STATISTIK - Ausarbeitung"
+author: Michael Geuze
+date: March 19, 2024
+output: html_notebook
+---
+```{r}
+# Functon definitions
+plot_hist <- function(Data.vec, KlassGrenz.vec, Titel, X_Label)
+# Data.vec ... Datenvektor aus der Urliste
+# KlassGrenz.vec ... Klassengrenzen auf der x-Achse
+# Titel ... Diagrammtitel
+# X_Label ... Beschriftung der x-Achse (Merkmalsachse)
+{
+  Histo.list <- hist(Data.vec, breaks=KlassGrenz.vec, right=FALSE, plot=FALSE)
+  # Zahl auf geeignete Nachkommastellen runden
+  Max <- max(Histo.list$density) * 1.25
+  Digs <- abs(floor(log10(Max)))
+  Ymax <- round(Max, digits=Digs)
+  hist(Data.vec, breaks=KlassGrenz.vec, freq=FALSE, right=FALSE, col="blue",
+  main=Titel, xlab=X_Label, ylab="Häufigkeitsdichte",
+  ylim=c(0,Ymax))
+  axis(side=1, at=seq(min(KlassGrenz.vec), max(KlassGrenz.vec), 10))
+  text(Histo.list$mids, Histo.list$density+.003, label=c(Histo.list$density), 
+       pos=3, cex=.80, srt=45)
+  rug(jitter(Data.vec))
+  return(Histo.list$density)
+}
+
+plot_summenhfk <- function(Dichte.vec, X.vec, Titel, X_Label)
+{
+  # X.vec ... Vektor mit den Klassengrenzen
+  KlassenBreite.vec <- diff(X.vec)
+  Y.vec <- c(0, cumsum(Dichte.vec * KlassenBreite.vec))
+  plot(X.vec, Y.vec, type="l", lty=1, main=Titel, xlab=X_Label, ylab="%-Anteil")
+  points(X.vec, Y.vec)
+  lines(X.vec, Y.vec,type="s",lty=3)
+  abline(.25,0,lty="dashed")
+  abline(.5,0,lty="dashed", col="red")
+  abline(.75,0,lty="dashed")
+  axis(side=1, at=seq(min(X.vec), max(X.vec), 10))
+  text(X.vec, Y.vec +.003, label=Y.vec, pos=3, cex=.80, srt=0)
+}
+```
+
+
+```{r}
+lifetime.class.mids <- seq(1,9,2)
+lifetime.class.mids
+lifetime.class.limits <- seq(0, 10, 2)
+lifetime.class.limits
+
+lifetime.raw <- c(rep(lifetime.class.mids, c(33,276,404,237,50) ) )
+
+# Generate pseudo raw lifetime
+lifetime.hist <- hist(lifetime.raw, breaks = lifetime.class.limits, right = FALSE, 
+                  plot = FALSE)
+lifetime.hist
+plot_hist(lifetime.raw, lifetime.class.limits, "Häufigkeitsverteilung", "Lebensdauer in Jahren")
+
+
+```
+
+```{r}
+plot_summenhfk(Dichte.vec = lifetime.hist$density, X.vec = lifetime.class.limits, Titel = "Summenhäufigkeit", X_Label = "Lebensdauer  in Jahren")
+```
+b) Schätzung für das arithmetische Mittel: ~4,8 Jahre
+Schätzung für den Median: ~5 Jahre
+
+c) 
+```{r}
+cat("Es gab", sum(lifetime.raw > 5), "Motoren mit mehr als 5 Jahren Lebensdauer")
+```
+d) 
+```{r}
+summary(lifetime.raw)
+sd(lifetime.raw)
+```
+## Aufgabe A-4
+a)
+
+```{r}
+
+mission.class.mids <- c(5,15,25,55)
+mission.class.limits <- c(seq(0,30,10), 80)
+mission.raw <- c(rep(mission.class.mids, c(16, 48, 27, 9)))
+trash <- plot_hist(mission.raw, mission.class.limits, "Häufigkeitsverteilung", "Häufigkeit der Einsätze pro 100 Tage")
+
+```
+```{r}
+cat("Es waren",sum(data.raw > 20), "Tage mitmehr als 20 Einsätzen")
+```
+```{r}
+summary(mission.raw)
+sd(mission.raw)
+```
+
+Das Intervall 30-80 ist sehr groß im Gegensatz zu den anderen die jeweils 
+10 Einsätze umfassen. Zudem sind dort nur 9 Datenpunkt enthalten. Es ist daher
+sehr schwierig, genaue Lage und vor allem Streuparameter zu erhalten. 
+Angenommen in der wahren Urliste waren 8 Datenpunkte bei 31 Einsätzen und 1 bei
+80 Einsätzen, so wäre die Verteilung mit den berechneten Parametern gleich 
+wie wenn sie gleichverteilt auf das Intervall, oder genau umgekehrt, 1 bei 31
+und 8 Datenpunkte bei 80. 
+Hier sind die Abweichungen mit beiden extremurlisten Berechnet. Die 
+Gleichverteilung wird ja bereits bei der Ausgangsberechnung angenommen.
+
+
+```{r}
+mission.raw.upper_extreme <- c(rep(mission.class.mids, c(16, 48, 27, 0)), 31, rep(80, 8))
+mission.raw.lower_extreme <- c(rep(mission.class.mids, c(16, 48, 27, 0)), rep(31, 8), 80)
+trash <- plot_hist(mission.raw.lower_extreme, mission.class.limits, "Häufigkeitsverteilung mit unterer Extremwertannahme", "Häufigkeit der Einsätze pro 100 Tage")
+trash <- plot_hist(mission.raw.upper_extreme, mission.class.limits, "Häufigkeitsverteilung mit oberer Extremwertannahme", "Häufigkeit der Einsätze pro 100 Tage")
+summary(mission.raw.lower_extreme)
+summary(mission.raw.upper_extreme)
+sd(mission.raw.lower_extreme)
+sd(mission.raw.upper_extreme)
+```

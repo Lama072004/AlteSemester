@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+#define MAX_INPUT 98
+
+
+int main(void) {
+	char filename[100];
+	FILE* datei;
+	errno_t err;
+
+	printf("\nEnter filename: ");
+
+	if (!scanf_s("%99s", &filename, MAX_INPUT))
+		return 1;
+
+	err = fopen_s(&datei, filename, "r");
+	
+	if (err == 0)
+		printf("Successfully opened!\n");
+	else {
+		printf("Failure!\n");
+		return EXIT_FAILURE;
+	}
+
+
+
+	//func
+	size_t length;
+	double* dataHeight;
+	fscanf_s(datei, "%d", length);
+
+	dataHeight = (double*)malloc(length * sizeof(double));

@@ -1,0 +1,10 @@
+﻿  EBIAC.c
+C:\Users\michael\source\repos\cPrograms\EBIAC.c(12,10): warning C4473: "scanf_s": nicht genügend Argumente für Formatzeichenfolge übergeben
+C:\Users\michael\source\repos\cPrograms\EBIAC.c(12,10): message : Platzhalter und deren Parameter erwarten 2 variadic-Argumente, es wurden aber 1 variadic-Argumente bereitgestellt.
+C:\Users\michael\source\repos\cPrograms\EBIAC.c(12,10): message : Das fehlende variadic-Argument "2" ist für die Zeichenfolge "%99s" erforderlich.
+C:\Users\michael\source\repos\cPrograms\EBIAC.c(12,10): message : Dieses Argument wird als Puffergröße verwendet.
+  Code wird generiert.
+  Previous IPDB not found, fall back to full compilation.
+  All 7 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Codegenerierung ist abgeschlossen.
+  cPrograms.vcxproj -> C:\Users\michael\source\repos\cPrograms\Release\cPrograms.exe

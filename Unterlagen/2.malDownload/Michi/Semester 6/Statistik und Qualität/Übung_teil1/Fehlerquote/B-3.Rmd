@@ -1,0 +1,16 @@
+---
+title: "B-3_Fehlerquote"
+author: "Michael Geuze"
+date: "2024-05-19"
+output: html_document
+---
+
+## zu a)
+Es ist dichotom, ordinal und binärskaliert.
+
+```{r}
+data <- read.csv("Fehlerquote.csv", sep=";")
+plot(data$fehlerhaft)
+```
+
+

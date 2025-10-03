@@ -1,0 +1,22 @@
+"ExpressPCB Netlist"
+"LTspice XVII"
+1
+0
+0
+""
+""
+""
+"Part IDs Table"
+"V1" "SINE(0 1 2.5k)" ""
+"R1" "10k" ""
+
+"Net Names Table"
+"N001" 1
+"0" 3
+
+"Net Connections Table"
+1 1 1 2
+1 2 1 0
+2 1 2 4
+2 2 2 0
+

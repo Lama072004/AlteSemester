@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="P_Auto" Id="{3421c60a-be20-4250-a87f-959201b46f51}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM P_Auto
+VAR
+	istate : INT := 1;
+	isOn : BOOL;
+	Timer : TON;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[Timer(IN:= , PT:=T#1S, Q=> , ET=> );
+
+IF GVL.S3 THEN
+	isOn := TRUE;
+END_IF
+
+IF NOT GVL.S4 THEN
+	isOn := FALSE;
+END_IF
+
+IF isOn THEN
+	CASE istate OF
+	1: 
+		IF NOT GVL.BG1 THEN
+			GVL.K1 := TRUE;
+			GVL.K2 := FALSE;
+		ELSE
+			GVL.K1 := FALSE;
+			Timer.IN := TRUE;
+			istate := 2;
+		END_IF
+	2:
+		IF Timer.Q THEN
+			Timer.IN := FALSE;
+			istate := 3;
+		END_IF
+		
+	3: 
+		IF NOT GVL.BG2 THEN
+			GVL.K1 := TRUE;
+			GVL.K2 := TRUE;
+		ELSE
+			GVL.K1 := FALSE;
+			Timer.IN := TRUE;
+			istate := 4;
+		END_IF
+	4: 
+		IF Timer.Q THEN
+			Timer.IN := FALSE;
+			istate := 1;
+		END_IF
+	END_CASE
+	GVL.P3 := FALSE;
+	GVL.P4 := TRUE;
+ELSE
+	GVL.K1 := FALSE;
+	GVL.K2 := FALSE;
+	GVL.P3 := TRUE;
+	GVL.P4 := FALSE;
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="P_Auto">
+      <LineId Id="8" Count="0" />
+      <LineId Id="76" Count="0" />
+      <LineId Id="62" Count="1" />
+      <LineId Id="61" Count="0" />
+      <LineId Id="9" Count="0" />
+      <LineId Id="5" Count="0" />
+      <LineId Id="10" Count="1" />
+      <LineId Id="78" Count="0" />
+      <LineId Id="13" Count="0" />
+      <LineId Id="12" Count="0" />
+      <LineId Id="26" Count="0" />
+      <LineId Id="28" Count="1" />
+      <LineId Id="75" Count="0" />
+      <LineId Id="31" Count="3" />
+      <LineId Id="30" Count="0" />
+      <LineId Id="27" Count="0" />
+      <LineId Id="35" Count="1" />
+      <LineId Id="38" Count="0" />
+      <LineId Id="37" Count="0" />
+      <LineId Id="39" Count="3" />
+      <LineId Id="44" Count="1" />
+      <LineId Id="68" Count="1" />
+      <LineId Id="46" Count="0" />
+      <LineId Id="54" Count="0" />
+      <LineId Id="70" Count="0" />
+      <LineId Id="72" Count="2" />
+      <LineId Id="71" Count="0" />
+      <LineId Id="15" Count="0" />
+      <LineId Id="87" Count="1" />
+      <LineId Id="79" Count="0" />
+      <LineId Id="83" Count="2" />
+      <LineId Id="80" Count="1" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,50 @@
+Circuit: * C:\Users\admin\OneDrive - FH Vorarlberg\Schaltungstechnik\Stuettler\Lektion1\UeNetzGleichrichterSerienregler\SingleDiodeGr_.asc
+
+.OP point found by inspection.
+N-Period=1
+Fourier components of I(r1)
+DC component:-0.111395
+
+Harmonic	Frequency	 Fourier 	Normalized	 Phase  	Normalized
+ Number 	  [Hz]   	Component	 Component	[degree]	Phase [deg]
+    1   	5.000e+01	1.720e-01	1.000e+00	  179.35°	    0.00°
+    2   	1.000e+02	6.999e-02	4.068e-01	   90.42°	  -88.93°
+    3   	1.500e+02	2.866e-03	1.666e-02	   48.95°	 -130.39°
+    4   	2.000e+02	9.007e-03	5.235e-02	   91.76°	  -87.58°
+    5   	2.500e+02	1.852e-03	1.076e-02	  130.32°	  -49.03°
+    6   	3.000e+02	3.410e-03	1.982e-02	  101.83°	  -77.52°
+    7   	3.500e+02	1.288e-03	7.489e-03	  105.24°	  -74.11°
+    8   	4.000e+02	1.028e-03	5.978e-03	  113.57°	  -65.78°
+    9   	4.500e+02	6.797e-04	3.951e-03	  135.36°	  -43.98°
+Total Harmonic Distortion: 41.124176%(41.175645%)
+
+
+
+p_tr: AVG(v(vtr)*i(r1))=-3.0296 FROM 0 TO 1
+u: AVG(v(vtr)*v(vtr))=915.171 FROM 0 TO 1
+ueff: RMS(v(vtr))=30.2518 FROM 0 TO 1
+ieff: RMS(i(r2))=0.172181 FROM 0 TO 1
+s_tr: AVG(ueff*ieff)=5.20879 FROM 0 TO 1
+cosphi: AVG(p_tr/s_tr)=-0.581633 FROM 0 TO 1
+iarith: AVG(i(r1))=-0.111401 FROM 0 TO 1
+formfac: AVG(ieff/iarith)=-1.54559 FROM 0 TO 1
+qverzerr: AVG(sqrt((s_tr*s_tr)-(p_tr*p_tr)))=4.23709 FROM 0 TO 1
+
+
+Date: Sat Dec 03 11:22:29 2022
+Total elapsed time: 0.128 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 6138
+traniter = 6138
+tranpoints = 2085
+accept = 1606
+rejected = 479
+matrix size = 4
+fillins = 0
+solver = Normal
+Matrix Compiler1:       6 opcodes  0.0/[0.0]/0.0
+Matrix Compiler2: off  [0.0]/0.0/0.0
+

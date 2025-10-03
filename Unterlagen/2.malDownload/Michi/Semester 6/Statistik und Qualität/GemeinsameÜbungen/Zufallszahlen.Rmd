@@ -1,0 +1,138 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+Erzeuge 12 gleichverteile Zufasllszahlen im Intervall [0,1]
+```{r}
+runif(12)
+```
+So können Zahlen fixiert werden. Seed ist gesetzt
+```{r}
+set.seed(93)
+runif(12)
+```
+
+Beobachte, wie mit den verschiedenen Zufallsfolgen auch die Mittelwerte schwanken.
+```{r}
+z.vec <- runif(12)
+z.vec
+mean(z.vec)
+
+```
+Wiederholen im Intervall [5,10]
+```{r}
+z.vec <- runif(10, 5, 10)
+mean(z.vec)
+```
+```{r}
+N <- 1200
+mean(runif(N, 5, 10))
+```
+```{r}
+N <- 10
+x.vec = runif(N)
+plot(x.vec, rep(0,N), xlim = c(0,1))
+```
+
+```{r}
+N <- 10
+x.vec = runif(N)
+hist(x.vec, breaks=seq(0,1,0.1), freq = FALSE, col="blue", main = "Zufällige Gleichverteilung")
+axis(side=1, at=seq(0,1,.1))
+     
+rug(jitter(x.vec))
+```
+Markeiren des Mittelwerts
+```{r}
+N <- 10
+x.vec = runif(N)
+plot(x.vec, rep(0,N), xlim = c(0,1))
+
+abline(v=mean(x.vec), lty="dashed", col="red")
+```
+
+Erzeuge Punktwolke 2 dim rRaum mit je x und y koord
+```{r}
+N <- 10
+x.vec = runif(N)
+y.vec = runif(N)
+
+plot(x.vec, y.vec, xlim = c(0,1), ylim=c(0,1))
+
+```
+```{r}
+N <- 10
+x.vec = runif(N)
+y.vec = runif(N)
+
+par(pty="s") # macht Darstellung quadratihsch
+plot(x.vec, y.vec, xlim = c(0,1), ylim=c(0,1))
+
+```
+
+Darstellen der jeweiligen Mittelwerten der Schwerpunkte der Punktwolke
+```{r}
+N <- 100
+x.vec = runif(N)
+y.vec = runif(N)
+
+par(pty="s") # macht Darstellung quadratihsch
+plot(x.vec, y.vec, xlim = c(0,1), ylim=c(0,1))
+
+abline(h=mean(x.vec), col="red")
+abline(v=mean(y.vec), col="blue")
+```
+```{r}
+rnorm(12) # u=0, s=1
+```
+Ohne zurücklegen ist hypergeometrische Verteilung -> wenn N groß binomial -> wenn N-> inf -> stdnorm
+```{r}
+z.vec <- rnorm(12) # u=0, s=1
+z.vec
+mean(z.vec)
+```
+```{r}
+N <- 10
+z.vec <- rnorm(N, 5, 10) # u=0, s=1
+z.vec
+mean(z.vec)
+```
+
+```{r}
+N <- 10
+z.vec <- rnorm(N, 5, 10) # u=0, s=1
+z.vec
+plot(z.vec)
+```
+
+
+```{r}
+N <- 10
+z.vec <- rnorm(N, 5, 10) # u=0, s=1
+z.vec
+hist(z.vec, breaks=seq(-50,50,2))
+```
+
+z.vec <- runif()
+
+lines(x.vec,y.vec, type="s") # <- Stufen zeichnen
+text(x.vec, y.vec, )
+
+
+qunatile(z.vec, type=2)
+
+dnorm(0) # Wahrschienlichkeitsdichte an der Stelle x=0
+
+pnorm(0) # P(X<=x)
+
+qnorm(.25) # Quantil an der Stelle 0.25
+
+```{r}
+test <- c("hello", "this", "is")
+s <- sample(test, 20, replace = TRUE)
+s
+x.vec <- seq(0,1)
+
+```
+

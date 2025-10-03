@@ -1,2 +1,25 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+/Unterlagen/2.malDownload/Michi/Semester[[:space:]]4/Leistungselektronik/BoostConverter/AS05_IBN/Laborbericht[[:space:]]zur[[:space:]]Herstellung[[:space:]]und[[:space:]]Inbetriebnahme[[:space:]]des[[:space:]]Abwärtswandlers.docx filter=lfs diff=lfs merge=lfs -text
+/Unterlagen/2.malDownload/Michi/zAlte[[:space:]]Faecher/Embedded/Computersysteme[[:space:]]und[[:space:]]Programmierung/Teststuff.pdf filter=lfs diff=lfs merge=lfs -text
+/Unterlagen/2.malDownload/Michi/zAlte[[:space:]]Faecher/Embedded/TH/videos/Fehler/tonausgabeOK.mp4 filter=lfs diff=lfs merge=lfs -text
+/Unterlagen/2.malDownload/Michi/zAlte[[:space:]]Faecher/Embedded/TH/videos/Gut/RaspiMichi[[:space:]](raspberrypi)[[:space:]]–[[:space:]]VNC[[:space:]]Viewer[[:space:]]2023-01-28[[:space:]]16-35-35.mp4 filter=lfs diff=lfs merge=lfs -text
+/Unterlagen/2.malDownload/Michi/zAlte[[:space:]]Faecher/Embedded/TH/videos/Gut/__RaspiMichi[[:space:]](raspberrypi)[[:space:]]–[[:space:]]VNC[[:space:]]Viewer[[:space:]]2023-01-28[[:space:]]16-41-53.mp4 filter=lfs diff=lfs merge=lfs -text
+/Unterlagen/2.malDownload/Michi/zAlte[[:space:]]Faecher/Embedded/TH/videos/Gut/thereminOK_WIN_20230128_15_57_24_Pro.mp4 filter=lfs diff=lfs merge=lfs -text
+/Unterlagen/2.malDownload/Michi/zAlte[[:space:]]Faecher/Embedded/wahrschinlichSyncOpfer/theremin_v0_1_1_stable.zip filter=lfs diff=lfs merge=lfs -text
+/Unterlagen/2.malDownload/Michi/zAlte[[:space:]]Faecher/Mathematik/Mehrdimensionale[[:space:]]Analysis/Skripten/Skript_MehrdimAnalysis_Teil4.pdf filter=lfs diff=lfs merge=lfs -text
+/Unterlagen/2.malDownload/Michi/zAlte[[:space:]]Faecher/Physik/Mechanik/Physik_fur_Wissenschaftler_und_Ingenieur.pdf filter=lfs diff=lfs merge=lfs -text
+/Unterlagen/3.[[:space:]]Semester/Embedded[[:space:]]Systems/von[[:space:]]Michi/theremin_v0_1_1_stable.zip filter=lfs diff=lfs merge=lfs -text
+/Unterlagen/3.[[:space:]]Semester/Maschinenbau/Fragenkatalog.pdf filter=lfs diff=lfs merge=lfs -text
+/Unterlagen/Bücher/Giancoli[[:space:]]-[[:space:]]Physics[[:space:]](6th).pdf filter=lfs diff=lfs merge=lfs -text
+/Unterlagen/Bücher/Physik_[[:space:]]Lehr-[[:space:]]und[[:space:]]Übungsbuch,[[:space:]]3.[[:space:]]Auflage[[:space:]][[:space:]][[:space:]]([[:space:]]PDFDrive[[:space:]]).pdf filter=lfs diff=lfs merge=lfs -text
+/Unterlagen/Bücher/Physik_fur_Wissenschaftler_und_Ingenieur.pdf filter=lfs diff=lfs merge=lfs -text
+/Unterlagen/Michi/Semester[[:space:]]4/Leistungselektronik/BoostConverter/AS05_IBN/Laborbericht[[:space:]]zur[[:space:]]Herstellung[[:space:]]und[[:space:]]Inbetriebnahme[[:space:]]des[[:space:]]Abwärtswandlers.docx filter=lfs diff=lfs merge=lfs -text
+/Unterlagen/Michi/zAlte[[:space:]]Faecher/Embedded/Computersysteme[[:space:]]und[[:space:]]Programmierung/Teststuff.pdf filter=lfs diff=lfs merge=lfs -text
+/Unterlagen/Michi/zAlte[[:space:]]Faecher/Embedded/TH/videos/Fehler/tonausgabeOK.mp4 filter=lfs diff=lfs merge=lfs -text
+/Unterlagen/Michi/zAlte[[:space:]]Faecher/Embedded/TH/videos/Gut/RaspiMichi[[:space:]](raspberrypi)[[:space:]]–[[:space:]]VNC[[:space:]]Viewer[[:space:]]2023-01-28[[:space:]]16-35-35.mp4 filter=lfs diff=lfs merge=lfs -text
+/Unterlagen/Michi/zAlte[[:space:]]Faecher/Embedded/TH/videos/Gut/__RaspiMichi[[:space:]](raspberrypi)[[:space:]]–[[:space:]]VNC[[:space:]]Viewer[[:space:]]2023-01-28[[:space:]]16-41-53.mp4 filter=lfs diff=lfs merge=lfs -text
+/Unterlagen/Michi/zAlte[[:space:]]Faecher/Embedded/TH/videos/Gut/thereminOK_WIN_20230128_15_57_24_Pro.mp4 filter=lfs diff=lfs merge=lfs -text
+/Unterlagen/Michi/zAlte[[:space:]]Faecher/Embedded/wahrschinlichSyncOpfer/theremin_v0_1_1_stable.zip filter=lfs diff=lfs merge=lfs -text
+/Unterlagen/Michi/zAlte[[:space:]]Faecher/Mathematik/Mehrdimensionale[[:space:]]Analysis/Skripten/Skript_MehrdimAnalysis_Teil4.pdf filter=lfs diff=lfs merge=lfs -text
+/Unterlagen/Michi/zAlte[[:space:]]Faecher/Physik/Mechanik/Physik_fur_Wissenschaftler_und_Ingenieur.pdf filter=lfs diff=lfs merge=lfs -text

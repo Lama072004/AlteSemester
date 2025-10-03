@@ -1,0 +1,21 @@
+;*
+;* Tungsten lamp simulator model File: LAMP.LIB
+;* Author: Gerhard Krucker, Zaunackerstrasse 9, CH-3113 Rubigen
+;* 27-SEP-2004
+;*
+;*
+.SUBCKT LAMP 1 61 ; Hi Lo nodes
++ PARAMS: VLnom=12V PLnom=0.1W ; Mandatory parameters: Nominal lamp voltage and power
+H1 2 0 VH1 1
+VH1 1 3 0V ; Control voltage source is needed by H1
+V2 5 0 300V ; Base temperature for polynomial approximation
+RL2 4 5 {2600/{PLnom}}
+V3 9 0 {{VLnom}*{VLnom}/{PLnom}}
+E1 3 6 POLY(2) 2 0 8 0 0 0 0 0 1 0
+G1 0 4 POLY(2) 2 0 3 6 0 0 0 0 1 0
+C1 4 0 {1570u*{PLnom}} IC={{TEMP}+273} ; Use system temperature for OP
+E3 8 0 POLY(2) 9 0 7 0 0 0 0 0 1 0
+R11 0 7 1MEG
+R10 61 6 1E-6
+E2 7 0 POLY(1) 4 0 0.026812569 3.98407E-05 3.40385E-07 -1.47157E-10 2.21963E-14
+.ENDS

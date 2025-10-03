@@ -1,0 +1,21 @@
+Circuit: * C:\Users\admin\OneDrive - FH Vorarlberg\Dokumente\Seminar2LE\buckBoostRealDiode.asc
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Wed Apr 19 12:00:39 2023
+Total elapsed time: 2.052 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 883090
+traniter = 883081
+tranpoints = 316251
+accept = 245163
+rejected = 71088
+matrix size = 28
+fillins = 2
+solver = Normal
+Matrix Compiler1: 974 bytes object code size  0.2/0.1/[0.1]
+Matrix Compiler2: 1.75 KB object code size  0.1/0.2/[0.1]
+

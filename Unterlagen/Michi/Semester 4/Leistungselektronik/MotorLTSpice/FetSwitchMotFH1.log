@@ -1,0 +1,33 @@
+Circuit: * C:\D\user\CHRISTOP\sicher\FH\elektronik\2017\Lektion2 KleinleistungEl FET\SchaltvorgLTSpice\FetSwitchMotFH1.asc
+
+Direct Newton iteration for .op point succeeded.
+
+
+Measurement "p_vr_switch" FAIL'ed
+
+Measurement "p_vrl_switch" FAIL'ed
+
+Measurement "p_vrl_on" FAIL'ed
+p=0.0015 FROM 0 TO 0.0015
+
+Measurement "maxval" FAIL'ed
+
+
+Date: Sat Aug 12 15:56:25 2017
+Total elapsed time: 53.048 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 3195233
+traniter = 3195222
+tranpoints = 1500773
+accept = 1500565
+rejected = 208
+matrix size = 23
+fillins = 3
+solver = Normal
+Matrix Compiler1: 1,08 KB object code size  2.0/2.0/[1.6]
+Matrix Compiler2: off  [1.8]/2.0/2.6
+
+

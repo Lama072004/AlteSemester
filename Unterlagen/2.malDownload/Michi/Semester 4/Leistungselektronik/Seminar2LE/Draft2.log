@@ -1,0 +1,31 @@
+Circuit: * C:\Users\admin\OneDrive - FH Vorarlberg\Dokumente\Seminar2LE\Draft2.asc
+
+Direct Newton iteration for .op point succeeded.
+
+vout: AVG(v(out))=8.60251 FROM 0 TO 2.5e-005
+maxvout: MAX(v(out))=8.74394 FROM 0 TO 2.5e-005
+minvout: MIN(v(out))=8.46109 FROM 0 TO 2.5e-005
+delta_v_r1: (maxvout-minvout)/2=0.141429
+iout: AVG(i(r1))=0.716876 FROM 0 TO 2.5e-005
+maxl1: MAX(i(l1))=1.12272 FROM 0 TO 2.5e-005
+minl1: MIN(i(l1))=0.311034 FROM 0 TO 2.5e-005
+delta_i_l1: (maxl1-minl1)/2=0.405841
+
+
+Date: Mon Apr 24 00:57:52 2023
+Total elapsed time: 0.585 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 296860
+traniter = 296857
+tranpoints = 146338
+accept = 120231
+rejected = 26107
+matrix size = 6
+fillins = 0
+solver = Normal
+Matrix Compiler1: 146 bytes object code size  0.2/0.2/[0.1]
+Matrix Compiler2: 360 bytes object code size  0.2/0.2/[0.2]
+

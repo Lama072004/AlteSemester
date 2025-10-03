@@ -1,0 +1,39 @@
+git init
+make bash here
+git nur für source code
+gitIgnore file
+.gitgnore --> vorlagen für eclipse in github
+eclipse cdt
+
+in git-> git status
+git add .gitignore
+git status
+
+git commit -m "* initianl commit" (nachricht für version
+git add . --> alles andere hinzufügen
+giit status --> alle dateien sind dabei
+
+git commit -m "* Initial Build commit" --> nachricht für
+
+private git anlegen
+
+remote add laut github adden auf -> Fehler
+git push --set upstream blabla
+
+git scm book -> alles andere an infos darin
+git push geht auf server
+git diff änderungen zeilenweise
+git add
+git commit -m "* message"
+
+
+genau das gleiche bei MVS
+
+
+in eclipse ide window git repository 
+
+git log-> sieht man die commits
+git checkout ""HASH""
+
+
+

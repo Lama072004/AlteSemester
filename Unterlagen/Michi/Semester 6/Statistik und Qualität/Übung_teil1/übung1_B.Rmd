@@ -1,0 +1,49 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+# Aufgabe B-3)
+a) 
+Die Werte sind Nominal skaliert und dazu noch dichotom.
+
+b) 
+```{r}
+err_quote.raw <- read.csv("Fehlerquote.csv", sep=";")
+err_quote.len <- length(err_quote.raw$fehlerhaft)
+err_quote.table.abs <- table(err_quote.raw$fehlerhaft)
+cat("Absolute Häufigkeitstabelle\n")
+err_quote.table.abs
+cat("Relative Häufigkeitstabelle\n")
+err_quote.table.rel <- table(err_quote.raw$fehlerhaft) / err_quote.len
+err_quote.table.rel
+
+
+plot_cumsum_rainbow(err_quote.table.rel, main = "Relative Häufigkeitstabelle", ylab="Häufigkeit", xlab="Ausprägung. 0 -> kein Fehler, 1 -> Fehlerhaftes Teil", is_relative = TRUE)
+```
+c)
+Es kann wie bei einer anderen Skalierung berechnet werden. 
+HIER LATEX TEXT EINFÜGEN FÜR FORMEL
+
+```{r}
+
+err_quote.mean <- sum(err_quote.raw$fehlerhaft) / err_quote.len
+cat("Mittelwert:\n", err_quote.mean)
+
+```
+Es steht hier dafür, wie viel Prozent der Teile fehlerhaft waren bzw. wie oft die Ausprägung "1" vorkommt.
+
+d)
+```{r}
+sd(err_quote.raw$fehlerhaft)
+```
+HERLEITUNG DER FORMEL
+
+```{r}
+err_quote.std_dev_emp <- sqrt(sum((err_quote.mean - err_quote.raw$fehlerhaft)^2) / (err_quote.len-1))
+cat("Empirische Standardabweichung:",err_quote.std_dev_emp)
+```
+
+e)
+Um eine maximale Streuung zu erhalten, müssten die Ausprägungen gleich oft vorkommen. Also Ausprägung 1 kommt n/2 mal vor, Ausprägung 0 ebenfalls. Für eine minimale Streuung müsste jeweils nur eine Ausprägung vorkommen. 
+

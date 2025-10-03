@@ -1,0 +1,2 @@
+C:\Users\michael\source\repos\cPrograms\Debug\cPrograms.exe
+C:\Users\michael\source\repos\cPrograms\Debug\cPrograms.pdb

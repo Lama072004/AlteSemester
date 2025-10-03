@@ -1,0 +1,4 @@
+Circuit: * C:\Users\admin\OneDrive - FH Vorarlberg\Schaltungstechnik\Lab_2_1.asc
+
+Fatal Error: Unknown subcircuit called in:
+   xu1 n005 n010 n005 vcc 0 74hc00 vcc=5 speed=1.0 tripdt=1e-9

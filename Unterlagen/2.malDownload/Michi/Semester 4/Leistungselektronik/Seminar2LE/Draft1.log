@@ -1,0 +1,21 @@
+Circuit: * C:\Users\admin\OneDrive - FH Vorarlberg\Dokumente\Seminar2LE\Draft1.asc
+
+.OP point found by inspection.
+
+Date: Wed Apr 19 15:23:51 2023
+Total elapsed time: 0.215 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 4340
+traniter = 4340
+tranpoints = 1693
+accept = 1469
+rejected = 224
+matrix size = 8
+fillins = 0
+solver = Normal
+Matrix Compiler1: 318 bytes object code size  0.3/0.2/[0.2]
+Matrix Compiler2: off  [0.2]/0.3/0.2
+

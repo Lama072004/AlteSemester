@@ -1,0 +1,3 @@
+﻿  FormatierteAusgabe.cpp
+C:\Users\michael\source\repos\FormatierteAusgabe\FormatierteAusgabe\FormatierteAusgabe.cpp(16,68): warning C4305: "Initialisierung": Verkürzung von "double" in "float"
+  FormatierteAusgabe.vcxproj -> C:\Users\michael\source\repos\FormatierteAusgabe\Debug\FormatierteAusgabe.exe

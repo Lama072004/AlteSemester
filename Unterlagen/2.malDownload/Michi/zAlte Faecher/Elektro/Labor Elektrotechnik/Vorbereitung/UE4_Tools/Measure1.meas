@@ -1,0 +1,2 @@
+.meas TRAN V250 FIND V(X)*I(R1) WHEN V(X)=250m
+.meas TRAN V500 FIND V(X)*I(R1) WHEN V(X)=500m

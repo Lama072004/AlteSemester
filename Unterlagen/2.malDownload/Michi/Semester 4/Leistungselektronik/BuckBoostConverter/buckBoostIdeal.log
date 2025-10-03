@@ -1,0 +1,32 @@
+Circuit: * C:\Users\admin\OneDrive - FH Vorarlberg\Dokumente\BuckBoostConverter\buckBoostIdeal.asc
+
+Direct Newton iteration for .op point succeeded.
+
+vc: AVG(v(out))=-11.5482 FROM 0 TO 0.0002
+il: AVG(i(l1))=2.31023 FROM 0 TO 0.0002
+vcmax: MAX(v(out))=-11.0394 FROM 0 TO 0.0002
+vcmin: MIN(v(out))=-11.9967 FROM 0 TO 0.0002
+dvc: (vcmax-vcmin)/2=0.478666
+ilmax: MAX(i(l1))=2.49203 FROM 0 TO 0.0002
+ilmin: MIN(i(l1))=2.12843 FROM 0 TO 0.0002
+dil: (ilmax-ilmin)/2=0.181801
+icrms: RMS(i(c1))=1.11318 FROM 0 TO 0.0002
+
+
+Date: Mon Apr 24 00:57:14 2023
+Total elapsed time: 0.595 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 387288
+traniter = 387285
+tranpoints = 191637
+accept = 157728
+rejected = 33909
+matrix size = 7
+fillins = 0
+solver = Normal
+Matrix Compiler1: 196 bytes object code size  0.2/0.2/[0.2]
+Matrix Compiler2: off  [0.2]/0.2/0.2
+

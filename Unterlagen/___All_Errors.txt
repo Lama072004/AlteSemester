@@ -1,0 +1,262 @@
+CorrelationId: d6cadf33-7e2f-4bb6-b0df-ff4c04da1117
+UTC DateTime: 11/14/2024 09:08:36
+
+The following files/folders have not been downloaded
+0. Michi/zAlte Faecher/Schaltungstechnik/Pilsan/74hc161.asy
+1. Michi/zAlte Faecher/Schaltungstechnik/Pilsan/74hc161.i.asy
+2. Michi/zAlte Faecher/Schaltungstechnik/Pilsan/74hc164.asy
+3. Michi/zAlte Faecher/Schaltungstechnik/Pilsan/74hc164.i.asy
+4. Michi/zAlte Faecher/Schaltungstechnik/Pilsan/74hc221.asy
+5. Michi/zAlte Faecher/Schaltungstechnik/Pilsan/74hc221.i.asy
+6. Michi/zAlte Faecher/Schaltungstechnik/Pilsan/74hc32.asy
+7. Michi/zAlte Faecher/Schaltungstechnik/Pilsan/74hc32.i.asy
+8. Michi/zAlte Faecher/Schaltungstechnik/Pilsan/74hc74.asy
+9. Michi/zAlte Faecher/Schaltungstechnik/Pilsan/74hc74.i.asy
+10. Michi/zAlte Faecher/Schaltungstechnik/Pilsan/catchingCircuit.asc
+11. Michi/zAlte Faecher/Schaltungstechnik/Pilsan/catchingCircuit.log
+12. Michi/zAlte Faecher/Schaltungstechnik/Pilsan/catchingCircuit.op.raw
+13. Michi/zAlte Faecher/Schaltungstechnik/Pilsan/catchingCircuit.raw
+14. Michi/zAlte Faecher/Schaltungstechnik/Pilsan/cathingCircuitSchematic.png
+15. Michi/zAlte Faecher/Schaltungstechnik/Pilsan/Lab_2_1.asc
+16. Michi/zAlte Faecher/Schaltungstechnik/Pilsan/Lab_2_1.log
+17. Michi/zAlte Faecher/Schaltungstechnik/Pilsan/Lab_2_1__.asc
+18. Michi/zAlte Faecher/Schaltungstechnik/Pilsan/Lab_2_1__.log
+19. Michi/zAlte Faecher/Schaltungstechnik/Pilsan/Lab_2_1__.op.raw
+20. Michi/zAlte Faecher/Schaltungstechnik/Pilsan/Lab_2_1__.raw
+21. Michi/zAlte Faecher/Schaltungstechnik/Pilsan/labor01_realerOPV.asc
+22. Michi/zAlte Faecher/Schaltungstechnik/Pilsan/labor01_realerOPV.log
+23. Michi/zAlte Faecher/Schaltungstechnik/Pilsan/labor01_realerOPV.op.raw
+24. Michi/zAlte Faecher/Schaltungstechnik/Pilsan/labor01_realerOPV.raw
+25. Michi/zAlte Faecher/Schaltungstechnik/Pilsan/labor02_addiererMitOPV.asc
+26. Michi/zAlte Faecher/Schaltungstechnik/Pilsan/labor02_addiererMitOPV.log
+27. Michi/zAlte Faecher/Schaltungstechnik/Pilsan/labor02_addiererMitOPV.op.raw
+28. Michi/zAlte Faecher/Schaltungstechnik/Pilsan/labor02_addiererMitOPV.raw
+29. Michi/zAlte Faecher/Schaltungstechnik/Pilsan/LT_Spice_Simulation.asc
+30. Michi/zAlte Faecher/Schaltungstechnik/Pilsan/LT_Spice_Simulation.log
+31. Michi/zAlte Faecher/Schaltungstechnik/Pilsan/LT_Spice_Simulation.raw
+32. Michi/zAlte Faecher/Schaltungstechnik/Pilsan/UA741.301
+33. Michi/zAlte Faecher/Schaltungstechnik/projekt/Datasheets/accelerometer_datasheet.pdf
+34. Michi/zAlte Faecher/Schaltungstechnik/projekt/Datasheets/accelerometer_schematic-symbol-and-pcb-footprint.zip
+35. Michi/zAlte Faecher/Schaltungstechnik/projekt/Datasheets/kondensator_100uF.pdf
+36. Michi/zAlte Faecher/Schaltungstechnik/projekt/Datasheets/rpi_DATA_2711_1p0_preliminary.pdf
+37. Michi/zAlte Faecher/Schaltungstechnik/projekt/Datasheets/SARA-R4_DataSheet.pdf
+38. Michi/zAlte Faecher/Schaltungstechnik/projekt/Datasheets/Schaltplan.pdf
+39. Michi/zAlte Faecher/Schaltungstechnik/projekt/Datasheets/TC77_datasheet.pdf
+40. Michi/zAlte Faecher/Schaltungstechnik/projekt/Datasheets/tlmo1000-1767021.pdf
+41. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/Lektion1NETZGRundLinearregler_V1_.pdf
+42. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/BrueckeGr.asc
+43. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/BrueckeGr.log
+44. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/BrueckeGr.op.raw
+45. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/BrueckeGr.raw
+46. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/BrueckeGrMot.asc
+47. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/BrueckeGrMot.log
+48. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/BrueckeGrMot.op.raw
+49. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/BrueckeGrMot.raw
+50. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/Draft1.log
+51. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/Draft1.op.raw
+52. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/Draft1.raw
+53. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/EinwegGleichrichter_.mdl
+54. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/EinwegGleichrichter_MitFDATool.slx
+55. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/EinwegGleichrichter_OhneFDATool.slx
+56. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/NetzGleichrichter.log
+57. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/NetzGleichrichter.op.raw
+58. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/NetzGleichrichter.raw
+59. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/SerOpTr.asc
+60. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/SerOpTr.log
+61. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/SerOpTr.raw
+62. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/SerOpTrVorne.asc
+63. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/SerOpTrVorne.log
+64. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/SerOpTrVorne.raw
+65. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/SerTrTr.asc
+66. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/SerTrTr.log
+67. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/SerTrTr.raw
+68. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/SingleDiodeGr.asc
+69. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/SingleDiodeGr.log
+70. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/SingleDiodeGr.op.raw
+71. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/SingleDiodeGr.raw
+72. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/SingleDiodeGr_.asc
+73. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/SingleDiodeGr_.log
+74. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/SingleDiodeGr_.op.raw
+75. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/SingleDiodeGr_.raw
+76. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/SingleDiodeGrC.asc
+77. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/SingleDiodeGrC.log
+78. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/SingleDiodeGrC.op.raw
+79. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeNetzGleichrichterSerienregler/SingleDiodeGrC.raw
+80. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeTransistorLT/Inversbetrieb.asc
+81. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeTransistorLT/Inversbetrieb.log
+82. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeTransistorLT/Inversbetrieb.op.raw
+83. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeTransistorLT/Inversbetrieb.raw
+84. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeTransistorLT/test.log
+85. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeTransistorLT/test.op.raw
+86. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeTransistorLT/test.raw
+87. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeTransistorLT/Tr_ColSchMitRe.asc
+88. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeTransistorLT/Tr_ColSchMitRe.log
+89. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeTransistorLT/Tr_ColSchMitRe.op.raw
+90. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeTransistorLT/Tr_ColSchMitRe.raw
+91. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeTransistorLT/Tr_EmSchMitRe.asc
+92. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeTransistorLT/Tr_EmSchMitRe.log
+93. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeTransistorLT/Tr_EmSchMitRe.op.raw
+94. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeTransistorLT/Tr_EmSchMitRe.raw
+95. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeTransistorLT/Tr_EmSchOhneRe.log
+96. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeTransistorLT/Tr_EmSchOhneRe.op.raw
+97. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeTransistorLT/Tr_EmSchOhneRe.raw
+98. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeTransistorLT/Tr_EmSchOhneRe_.asc
+99. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeTransistorLT/Tr_EmSchOhneRe_.log
+100. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeTransistorLT/Tr_EmSchOhneRe_.op.raw
+101. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeTransistorLT/Tr_EmSchOhneRe_.raw
+102. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeTransistorLT/Tr_IcUbe.log
+103. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeTransistorLT/Tr_IcUbe.raw
+104. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeTransistorLT/Tr_S_rbe_rb.asc
+105. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeTransistorLT/Tr_S_rbe_rb.log
+106. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeTransistorLT/Tr_S_rbe_rb.op.raw
+107. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/UeTransistorLT/Tr_S_rbe_rb.raw
+108. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/Lektion1Verzerrungsblindleistung_V1_.pdf
+109. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion1/Lektion1WHTransistor2017_V2.2.pdf
+110. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion2/LektionAnalogePEl_V2017_1__.pdf
+111. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion2/AnPVstLTSpice/AnPVstLTSpice.zip
+112. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion2/AnPVstLTSpice/audioampFH1.log
+113. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion2/AnPVstLTSpice/audioampFH1.op.raw
+114. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion2/AnPVstLTSpice/audioampFH1.raw
+115. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion2/AnPVstLTSpice/audioampFH1andereVersion.asc
+116. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion2/AnPVstLTSpice/audioampFH2.asc
+117. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion2/AnPVstLTSpice/audioampFH2.log
+118. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion2/AnPVstLTSpice/audioampFH2.op.raw
+119. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion2/AnPVstLTSpice/audioampFH2.raw
+120. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion2/AnPVstLTSpice/audioampFH2OP.asc
+121. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion2/AnPVstLTSpice/audioampFH2OP.log
+122. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion2/AnPVstLTSpice/audioampFH2OP.op.raw
+123. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion2/AnPVstLTSpice/audioampFH2OP.raw
+124. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion2/AnPVstLTSpice/audioampFH2Trans.asc
+125. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion2/AnPVstLTSpice/audioampFH2Trans.log
+126. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion2/AnPVstLTSpice/audioampFH2Trans.op.raw
+127. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion2/AnPVstLTSpice/audioampFH2Trans.raw
+128. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion2/AnPVstLTSpice/audioampFH2Trans_.log
+129. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion2/AnPVstLTSpice/audioampFH2Trans_.op.raw
+130. Michi/zAlte Faecher/Schaltungstechnik/Stuettler/Lektion2/AnPVstLTSpice/audioampFH2Trans_.raw
+131. Michi/zAlte Faecher/Schaltungstechnik/TestBilder/StuettlerAnalogeLeistunsstufe.png
+132. Michi/zAlte Faecher/Schaltungstechnik/TestBilder/StuettlerKolleEmitSchaltungen.png
+133. Michi/zAlte Faecher/Schaltungstechnik/TestBilder/StuettlerKolleEmitSchaltungen2.png
+134. Michi/zAlte Faecher/Schaltungstechnik/IMG_0109.jpg
+135. Michi/zAlte Faecher/Schaltungstechnik/IMG_0110.jpg
+136. Michi/zAlte Faecher/Schaltungstechnik/IMG_0111.jpg
+137. Michi/zAlte Faecher/Schaltungstechnik/IMG_0112.jpg
+138. Michi/zAlte Faecher/Schaltungstechnik/IMG_0113.jpg
+139. Michi/zAlte Faecher/Selbst- und Projektmanagement/el.2019.1269.pdf
+140. Michi/zAlte Faecher/Selbst- und Projektmanagement/Notenrelevanter Textabsatz/ArbeitsblattSchluesselbegriffeADC.docx
+141. Michi/zAlte Faecher/Selbst- und Projektmanagement/Notenrelevanter Textabsatz/Computerschnittstellen_AD_Wandler_Geuze.docx
+142. Michi/zAlte Faecher/Selbst- und Projektmanagement/Notenrelevanter Textabsatz/Ver1_AD Wandler.docx
+143. Michi/zAlte Faecher/Selbst- und Projektmanagement/Meine Bibliothek.rdf
+144. Michi/zAlte Faecher/Selbst- und Projektmanagement/Uebungsdok1.docx
+145. Michi/zAlte Faecher/Selbst- und Projektmanagement/Zotero Online Handbuch.pdf
+146. SchaltungstechnikPrj/EMF/Pruefung/WS_21-22_Teil1.pdf
+147. SchaltungstechnikPrj/EMF/Pruefung/alte_Pruefung/Teil 1/EMF_Formelsammlung.pdf
+148. SchaltungstechnikPrj/EMF/Pruefung/alte_Pruefung/Teil 1/Teil1_unb/1.JPG
+149. SchaltungstechnikPrj/EMF/Pruefung/alte_Pruefung/Teil 1/Teil1_unb/2.JPG
+150. SchaltungstechnikPrj/EMF/Pruefung/alte_Pruefung/Teil 1/Teil1_unb/Aufg_11_Lsg_Lucas_Huber_1.jpeg
+151. SchaltungstechnikPrj/EMF/Pruefung/alte_Pruefung/Teil 1/Teil1_unb/Aufg_11_Lsg_Lucas_Huber_2.jpeg
+152. SchaltungstechnikPrj/EMF/Pruefung/alte_Pruefung/Teil 1/Teil1_unb/L1.JPG
+153. SchaltungstechnikPrj/EMF/Pruefung/alte_Pruefung/Teil 1/Teil1_unb/L2.JPG
+154. SchaltungstechnikPrj/EMF/Pruefung/alte_Pruefung/Teil 1/Teil1_unb/L3.JPG
+155. SchaltungstechnikPrj/EMF/Pruefung/alte_Pruefung/Teil 1/Teil1_unb/L4.JPG
+156. SchaltungstechnikPrj/EMF/Pruefung/alte_Pruefung/Teil 1/Teil1_unb/L5.JPG
+157. SchaltungstechnikPrj/EMF/Pruefung/alte_Pruefung/Teil 1/Teil1_WS15_16/1.jpg
+158. SchaltungstechnikPrj/EMF/Pruefung/alte_Pruefung/Teil 1/Teil1_WS15_16/2.jpg
+159. SchaltungstechnikPrj/EMF/Pruefung/alte_Pruefung/Teil 1/Teil1_WS15_16/Foto 24.11.15, 17 09 32.jpg
+160. SchaltungstechnikPrj/EMF/Pruefung/alte_Pruefung/Teil 1/Teil1_WS15_16/Foto 24.11.15, 17 09 38.jpg
+161. SchaltungstechnikPrj/EMF/Pruefung/alte_Pruefung/Teil 1/Teil1_WS15_16/Foto 24.11.15, 17 09 43.jpg
+162. SchaltungstechnikPrj/EMF/Pruefung/alte_Pruefung/Teil 1/Teil1_WS19/1.jpeg
+163. SchaltungstechnikPrj/EMF/Pruefung/alte_Pruefung/Teil 1/Teil1_WS19/2.jpeg
+164. SchaltungstechnikPrj/EMF/Pruefung/alte_Pruefung/Teil 1/Teil1_WS19/Loesung_Aufgabe9_Lucas_Huber.jpg
+165. SchaltungstechnikPrj/EMF/Pruefung/alte_Pruefung/Teil 2/Dok1.pdf
+166. SchaltungstechnikPrj/EMF/Pruefung/alte_Pruefung/Teil 2/Teil2_WS_17/2 Teilpr?fung1JG16.jpg
+167. SchaltungstechnikPrj/EMF/Pruefung/alte_Pruefung/Teil 2/Teil2_WS_17/2 Teilpr?fung2JG16.jpg
+168. SchaltungstechnikPrj/EMF/Pruefung/alte_Pruefung/Teil 2/Teil2_WS_17/2 Teilpr?fung3JG16.png
+169. SchaltungstechnikPrj/EMF/Pruefung/alte_Pruefung/Teil 2/Teil2_WS_17/Teil2_WS17.pdf
+170. SchaltungstechnikPrj/EMF/Pruefung/alte_Pruefung/Teil 2/Teil2_WS15-16/Aufgabe7.PNG
+171. SchaltungstechnikPrj/EMF/Pruefung/alte_Pruefung/Teil 2/Teil2_WS15-16/Teil2_WS_1516.pdf
+172. SchaltungstechnikPrj/EMF/Pruefung/alte_Pruefung/Teil 2/Teil2_WS15-16/Teil2_WS1516.pdf
+173. SchaltungstechnikPrj/EMF/Pruefung/alte_Pruefung/Teil 2/TEMF_Teilpr?fung_2.pdf
+174. SchaltungstechnikPrj/EMF/Pruefung/alte_Pruefung/WH_unb/EMF WH. Pr?fung .pdf
+175. SchaltungstechnikPrj/EMF/Pruefung/alte_Pruefung/WH-EMF 2019/EMF_EDB_Pr_Wdh_19_OpenBook_alle_Teile.pdf
+176. SchaltungstechnikPrj/EMF/Pruefung/alte_Pruefung/WH-EMF 2019/EMF_EDB_Pr_Wdh_19_OpenBook_Teil1.pdf
+177. SchaltungstechnikPrj/EMF/Pruefung/alte_Pruefung/WH-EMF 2019/EMF_EDB_Pr_Wdh_19_OpenBook_Teil2.pdf
+178. SchaltungstechnikPrj/EMF/Pruefung/alte_Pruefung/WH-EMF 2019/EMF_EDB_Pr_Wdh_19_OpenBook_Teil3.pdf
+179. SchaltungstechnikPrj/EMF/Pruefung/alte_Pruefung/WH-EMF 2019/EMF_EDB_Pr_Wdh_19_OpenBook_Teil4.pdf
+180. SchaltungstechnikPrj/EMF/Pruefung/alte_Pruefung/WH-EMF 2019/EMF_EDB_Pr_Wdh_19_OpenBook_Teil5.pdf
+181. SchaltungstechnikPrj/EMF/Pruefung/alte_Pruefung/WH-EMF 2019/WH_WS19_Aufg1.PNG
+182. SchaltungstechnikPrj/OszillatorLabBerichte/Geuze-Mangold.pdf
+183. SchaltungstechnikPrj/Projekt/100uF.eli
+184. SchaltungstechnikPrj/Projekt/100uF.lib
+185. SchaltungstechnikPrj/Projekt/Ausgabe_Raspberry.png
+186. SchaltungstechnikPrj/Projekt/Bauteilliste.docx
+187. SchaltungstechnikPrj/Projekt/Bericht.docx
+188. SchaltungstechnikPrj/Projekt/Dokumentation.pdf
+189. SchaltungstechnikPrj/Projekt/fehlermeldung.png
+190. SchaltungstechnikPrj/Projekt/IMG_8977.jpg
+191. SchaltungstechnikPrj/Projekt/Kontaktliste.xlsx
+192. SchaltungstechnikPrj/Projekt/LED.eli
+193. SchaltungstechnikPrj/Projekt/LED_SI2312.lib
+194. SchaltungstechnikPrj/Projekt/LED_SMD_COMP.eli
+195. SchaltungstechnikPrj/Projekt/Leiterplatte.jpg
+196. SchaltungstechnikPrj/Projekt/myUARTtoSARA.c.txt
+197. SchaltungstechnikPrj/Projekt/Projekt_PCB_Layout.dip
+198. SchaltungstechnikPrj/Projekt/Projekt_Schaltplan.dch
+199. SchaltungstechnikPrj/Projekt/SARA-R4_ATCommands_(UBX-17003787).pdf
+200. SchaltungstechnikPrj/Projekt/SARA-R4_DataSheet_UBX-16024152.pdf
+201. SchaltungstechnikPrj/Projekt/SARA-R4_SysIntegrManual_(UBX-16029218).pdf
+202. SchaltungstechnikPrj/Projekt/Schaltungstechnik Dokumentation.docx
+203. SchaltungstechnikPrj/Projekt/SMD_LED_PATTERN2.lib
+204. SchaltungstechnikPrj/Projekt/TC77-5.0MOA.eli
+205. SchaltungstechnikPrj/Projekt/Temperatursensor.pdf
+206. SchaltungstechnikPrj/Projekt/Zusammenfassung.docx
+207. SchaltungstechnikPrj/Team_1_Geuze_Mangold/GeuzeMangold_Ablaufdiagramm.pdf
+208. SchaltungstechnikPrj/Team_1_Geuze_Mangold/Schaltplan/schaltplan.pdf
+209. SchaltungstechnikPrj/Team_1_Geuze_Mangold/Schaltplan/schaltplan_HAT.dch
+210. SchaltungstechnikPrj/Team_1_Geuze_Mangold/Schaltplan/st?ckliste.bom
+211. SchaltungstechnikPrj/Team_1_Geuze_Mangold/SrcAndBinary_C_Programm/Makefile
+212. SchaltungstechnikPrj/Team_1_Geuze_Mangold/SrcAndBinary_C_Programm/output/main
+213. SchaltungstechnikPrj/Team_1_Geuze_Mangold/SrcAndBinary_C_Programm/src/main.c
+214. SchaltungstechnikPrj/Team_1_Geuze_Mangold/SrcAndBinary_C_Programm/src/main.o
+215. SchaltungstechnikPrj/Team_1_Geuze_Mangold/GeuzeMangold_Projektbericht.pdf
+216. SchaltungstechnikPrj/Wahrscheinlichkeit/20221214_143745748_iOS.heic
+217. SchaltungstechnikPrj/Wahrscheinlichkeit/pruefungen/20211018_Loesungen_Wahrsch_Lucas_Huber.pdf
+218. SchaltungstechnikPrj/Wahrscheinlichkeit/pruefungen/Teil1/WS_12-13_Teil1/WS_12-13_Teil1.pdf
+219. SchaltungstechnikPrj/Wahrscheinlichkeit/pruefungen/Teil1/WS_12-13_Teil1/WS_12-13_Teil1_Lsg_1.jpg
+220. SchaltungstechnikPrj/Wahrscheinlichkeit/pruefungen/Teil1/WS_12-13_Teil1/WS_12-13_Teil1_Lsg_2.jpg
+221. SchaltungstechnikPrj/Wahrscheinlichkeit/pruefungen/Teil1/WS_12-13_Teil1/WS_12-13_Teil1_Lsg_3.pdf
+222. SchaltungstechnikPrj/Wahrscheinlichkeit/pruefungen/Teil1/WS_15-16_Teil1/WS_15-16_Teil1_1.jpg
+223. SchaltungstechnikPrj/Wahrscheinlichkeit/pruefungen/Teil1/WS_15-16_Teil1/WS_15-16_Teil1_2.jpg
+224. SchaltungstechnikPrj/Wahrscheinlichkeit/pruefungen/Teil1/WS_17_Teil1/WS_17_Teil1_1.JPG
+225. SchaltungstechnikPrj/Wahrscheinlichkeit/pruefungen/Teil1/WS_17_Teil1/WS_17_Teil1_2.JPG
+226. SchaltungstechnikPrj/Wahrscheinlichkeit/pruefungen/Teil1/WS_17_Teil1/WS_17_Teil1_Lsg_1.JPG
+227. SchaltungstechnikPrj/Wahrscheinlichkeit/pruefungen/Teil1/WS_17_Teil1/WS_17_Teil1_Lsg_2.JPG
+228. SchaltungstechnikPrj/Wahrscheinlichkeit/pruefungen/Teil1/WS_17_Teil1/WS_17_Teil1_Lsg_3.JPG
+229. SchaltungstechnikPrj/Wahrscheinlichkeit/pruefungen/Teil1/WS_17_Teil1/WS_17_Teil1_Lsg_4.JPG
+230. SchaltungstechnikPrj/Wahrscheinlichkeit/pruefungen/Teil1/WS_17_Teil1/WS_17_Teil1_Lsg_5.JPG
+231. SchaltungstechnikPrj/Wahrscheinlichkeit/pruefungen/Teil1/WS_17_Teil1/WS_17_Teil1_Lsg_6.JPG
+232. SchaltungstechnikPrj/Wahrscheinlichkeit/pruefungen/Teil1/WS_17_Teil1/WS_17_Teil1_Lsg_7.JPG
+233. SchaltungstechnikPrj/Wahrscheinlichkeit/pruefungen/Teil1/WS_19_Teil1/WS_19_Teil1_1.jpeg
+234. SchaltungstechnikPrj/Wahrscheinlichkeit/pruefungen/Teil1/WS_19_Teil1/WS_19_Teil1_2.jpeg
+235. SchaltungstechnikPrj/Wahrscheinlichkeit/pruefungen/Teil2/WS_12-13_Teil2/WS_12-13_Teil2.pdf
+236. SchaltungstechnikPrj/Wahrscheinlichkeit/pruefungen/Teil2/WS_12-13_Teil2/WS_12-13_Teil2_Lsg.pdf
+237. SchaltungstechnikPrj/Wahrscheinlichkeit/pruefungen/Teil2/WS_13-14_Teil2/WS_13-14_Teil2.pdf
+238. SchaltungstechnikPrj/Wahrscheinlichkeit/pruefungen/Teil2/WS_13-14_Teil2/angabe als jpg/WS_13-14_Teil2_1.jpg
+239. SchaltungstechnikPrj/Wahrscheinlichkeit/pruefungen/Teil2/WS_13-14_Teil2/angabe als jpg/WS_13-14_Teil2_2.jpg
+240. SchaltungstechnikPrj/Wahrscheinlichkeit/pruefungen/Teil2/WS_13-14_Teil2/angabe als jpg/WS_13-14_Teil2_3.jpg
+241. SchaltungstechnikPrj/Wahrscheinlichkeit/pruefungen/Teil2/WS_13-14_Teil2/WS_13-14_Teil2_Lsg.pdf
+242. SchaltungstechnikPrj/Wahrscheinlichkeit/pruefungen/Teil2/WS_15_Teil2/WS_15_Teil2.txt
+243. SchaltungstechnikPrj/Wahrscheinlichkeit/pruefungen/Teil2/WS_15_Teil2/WS_15_Teil2_Lsg_1.jpg
+244. SchaltungstechnikPrj/Wahrscheinlichkeit/pruefungen/Teil2/WS_15_Teil2/WS_15_Teil2_Lsg_2.jpg
+245. SchaltungstechnikPrj/Wahrscheinlichkeit/pruefungen/WR-Pr_T2n1.pdf
+246. SchaltungstechnikPrj/Wahrscheinlichkeit/pruefungen/WS_13-14_Abschlussklausur.pdf
+247. SchaltungstechnikPrj/Wahrscheinlichkeit/pruefungen/WS_20-21_Gesamtpruefung.pdf
+248. SchaltungstechnikPrj/Wahrscheinlichkeit/20221214_143748874_iOS.heic
+249. SchaltungstechnikPrj/Wahrscheinlichkeit/20221214_143752828_iOS.heic
+250. SchaltungstechnikPrj/Wahrscheinlichkeit/20221214_143800992_iOS.heic
+251. SchaltungstechnikPrj/Wahrscheinlichkeit/20221214_143811300_iOS.heic
+252. SchaltungstechnikPrj/Wahrscheinlichkeit/20221214_143816694_iOS.heic
+253. SchaltungstechnikPrj/Wahrscheinlichkeit/20221214_143822247_iOS.heic
+254. SchaltungstechnikPrj/Wahrscheinlichkeit/20221214_143829831_iOS.heic
+255. SchaltungstechnikPrj/Wahrscheinlichkeit/20221214_143836231_iOS.heic
+256. SchaltungstechnikPrj/Wahrscheinlichkeit/20221214_143837506_iOS.heic
+257. messungenNeu.txt

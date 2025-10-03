@@ -1,0 +1,22 @@
+Circuit: * E:\user\christoph\sicher\FH\elektronik\2017\Lektion0 AnalogeSpR LinearR\UeTransistorLT\test.asc
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Fri Sep 29 13:46:43 2017
+Total elapsed time: 0.172 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2427
+traniter = 2420
+tranpoints = 1153
+accept = 1127
+rejected = 26
+matrix size = 10
+fillins = 0
+solver = Normal
+Matrix Compiler1: 426 Byte object code size  1.7/2.1/[1.6]
+Matrix Compiler2: off  [1.6]/1.7/1.8
+
+

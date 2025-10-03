@@ -1,0 +1,64 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+a)
+## Würfelmessreihe
+Für Würfelmessreihe
+
+```{r}
+source("..\\lib\\plot_cumsum_rainbow.R")
+source("..\\lib\\lorenzkurve.R")
+source("..\\lib\\summenhaeufigkeit.R")
+source("..\\lib\\plot_hist.R")
+
+distribution.raw <- read.csv("Verteilungsvergleich.csv", sep=";", dec =",")
+distdata.len <- length(distribution.raw$Nr.)
+
+# Dice evaluation
+dice_val.raw <- distribution.raw$Wuerfel
+dice_val.table <- table(dice_val.raw) 
+cat("Relative Häufigekeitsverteilung Würfel\n")
+dice_val.table / distdata.len
+barplot(dice_val.table / distdata.len, ylab = "Relative Häufigkeitsverteilung", xlab = "Augenzahl", main = "Relative Häufigkeit des Würfelwurfs", col = "blue")
+
+plot_cumsum_rainbow(dice_val.table / distdata.len , main = "Relative Summenhäufigkeit", xlab = "Augenzahl", ylab = "Relative Häufigkeit", is_relative= TRUE)
+
+```
+## Autowartezeit
+
+```{r}
+
+car_waittime_min.raw <- distribution.raw$Wartezeit_min
+car_waittime_min.num <- as.numeric(gsub(",", ".", car_waittime_min.raw))
+car_waittime_class_broadness <- 4
+
+car_waittime_min.classes <- c(seq(0, 20, car_waittime_class_broadness))
+
+car_waittime_min.hist <- plot_hist(car_waittime_min.num, KlassGrenz.vec = car_waittime_min.classes, Titel="Histogramm", X_Label="Wartezeit in Minuten")
+
+
+```
+
+```{r}
+
+summenhfk(car_waittime_min.num, car_waittime_min.classes, xlab = "Wartezeit in Minuten", ylab = "Relative Häufigkeit")
+
+```
+## Länge der Anrufe
+
+```{r}
+
+call_len_min.raw <- distribution.raw$Telgesprae_min
+call_len_min.table <- table(call_len_min.raw)
+
+hist(call_len_min.raw)
+
+pen_len_cm.raw <- distribution.raw$Stiftlaenge_cm
+pen_len_cm.table <- table(pen_len_cm.raw)
+
+```
+
+

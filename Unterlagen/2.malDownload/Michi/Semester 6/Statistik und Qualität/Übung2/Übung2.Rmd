@@ -1,0 +1,187 @@
+---
+title: "R Notebook"
+output:
+  html_document:
+    df_print: paged
+---
+Das Würfelwurfexperiment wird mehrmals durchgeführt und dann die Statistik daraus berechnet. 
+```{r}
+round_to_nearest_power_of_10 <- function(x, floor_value=FALSE) {
+  if(x <= 0){
+    stop("Value was smaller or equal to zero. Cannot round.")
+  }
+  if(floor_value){
+    power_of_10 <- floor(log10(x))
+  }else{
+    power_of_10 <- ceiling(log10(x))
+  }
+  rounded_value <- round(x / 10^power_of_10) * 10^power_of_10
+  return(rounded_value)
+}
+
+```
+
+# 1)
+Simulation von Münzwürfen. Es werden 500 Experimente mit je 100 Würfen durchgeführt. Diese werden dann in der Schleife ausgewertet.
+
+```{r}
+experiment_zähler <- 500
+mehr_als_3.vec <- c()
+for(i in 1:experiment_zähler){
+  N <- 100
+  münzwurf.vec <- floor(runif(N, 0, 2))
+  münzwurf.vec
+  
+  mehr_als_3 <- 0
+  eintrag <- münzwurf.vec[1]
+  hintereinander <- 0
+  for (wurf in münzwurf.vec){
+    if (wurf != eintrag){
+      hintereinander <- 1
+    }
+    else{
+      hintereinander = hintereinander + 1
+      eintrag <- wurf
+    }
+    if(hintereinander == 3){
+      mehr_als_3 = mehr_als_3 + 1
+    }
+  }
+  mehr_als_3.vec <- c(mehr_als_3.vec, mehr_als_3)
+}
+```
+Mittelwert des Vorkommnisses:
+```{r}
+mean(mehr_als_3.vec)
+```
+Standardabweichung:
+```{r}
+sd(mehr_als_3.vec)
+```
+Es kommen also bei 100 Münzwürfen im Durchschnitt etwa 12 Serien von mehr als 3 gleichen Ereignissen hintereiinander vor. Die Standardabweichung beträgt etwa 2.3.
+
+Wenn in nur 12 von 500 Experimenten diese dreier Folgen vorkommen, sind diese recht selten. In etwas mehr als 2% der Experimente ist das Vorkommnis zu beobachten.  
+
+## Würfelwurf
+
+```{r}
+experiment_zähler <- 15000
+mehr_als_3_6er_6er.vec <- c()
+for(i in 1:experiment_zähler){
+  N <- 100
+  würfelwurf.vec <- floor(runif(N, 1, 7))
+  sechser.vec <- c()
+  for (wurf in würfelwurf.vec){
+    if(wurf == 6){
+      sechser.vec <- c(sechser.vec, 1)
+    }else
+    {
+      sechser.vec <- c(sechser.vec, 0)
+    }
+  }
+  
+  mehr_als_3_6er <- 0
+  eintrag <- sechser.vec[1]
+  hintereinander <- 0
+  for (wurf in sechser.vec){
+    if (wurf != eintrag){
+      hintereinander <- 1
+    }
+    else{
+      hintereinander = hintereinander + 1
+      eintrag <- wurf
+    }
+    if(hintereinander == 3 && wurf == 1){
+      mehr_als_3_6er = mehr_als_3_6er + 1
+    }
+  }
+  mehr_als_3_6er_6er.vec <- c(mehr_als_3_6er_6er.vec, mehr_als_3_6er)
+}
+# mehr_als_3_6er_6er.vec
+```
+Statistische Wahrscheinlichkeit der Häufigkeit von 6er in Serie
+Mittelwert
+```{r}
+# Die Häufigkeit, wie oft mehr als 3 6er hintereinander kommen werden ignoriert. Es werden nur die Serien ungleich null für die Aussage verwendet
+mehr_als_3_6er_6er.count = 0
+for (i in mehr_als_3_6er_6er.vec){
+  if (i != 0){
+    mehr_als_3_6er_6er.count = mehr_als_3_6er_6er.count + 1
+  }
+}
+h = hist(mehr_als_3_6er_6er.vec, breaks = c(0:max(mehr_als_3_6er_6er.vec)), ylim = c(0, 15000), xlim = c(0, 9)
+     ,main = "Auftrittshäufigkeit von mehr als \n3 6er in Folge bei 15000 Experimenten a 100 Würfen"
+     ,ylab = "Häufigkeit"
+     ,xlab = "Anzahl von mehr als 3 6er in Folge")
+text(x = h$breaks + 0.9, y=h$counts, labels = h$counts, pos=3, cex=.80, srt=45)
+```
+Mittelwert
+```{r}
+mehr_als_3_6er_6er.count / experiment_zähler
+```
+Bedeutet, erst in etwa jeder 6ten bis 7ten Serie von 100 Würfelwürfen kommen mehr als 3 6er in Folge vor. 
+
+## Monte Carlo Simulation
+
+Für die Berechnung folgt hier die Erklärung der Flächenverhältnisse.
+
+$$
+Kreisfläche: A_{k} = r^2\cdot\pi \\
+Quadratfläche: A_{q} = s^2\\
+Verhältnis: V=\frac{A_{k}}{A_{q}}\\
+mit\,s=2,\,r=1\\
+V=\frac{r^2\cdot\pi}{s^2}=\frac{1\cdot\pi}{4}\\
+\pi=4 \cdot V
+$$
+```{r}
+
+N.vec <- 10^(seq(2,9,1)) # logartithmischer Anstieg der Zahlenfolge
+
+Q.vec <- c()
+
+for(N in  N.vec){
+  set.seed(10000)
+  z.vec <- runif(N, -1, 1)
+  m <- N/2
+  x.vec <- z.vec[1:m]
+  y.vec <- z.vec[(m+1):N]
+  Q <- 0
+  for (i in 1:m){
+    if(sqrt(x.vec[i]^2 + y.vec[i]^2) < 1){
+      Q = Q + 1
+    }
+  }
+  remove(x.vec, y.vec, z.vec)
+  gc()
+  Q.vec <- c(Q.vec, Q)
+}
+Q.vec
+```
+Q.vec hat nun die Punkteanzahl, welche im Kreis lagen. Gilt für jede Anzahl der Zufallszahlen in N.vec. N.vec/2 entspricht der Anzahl der Punkte die sich im Quadrat befinden. 
+Es wird das Verhältnis berechnet und anschließend die Abweichung zu Pi in Abhängigkeit der Anzahl der Zufallsgrößen dargestellt. 
+
+```{r}
+pi.vec <- 4*Q.vec/(N.vec/2)
+pidiff.vec <- abs(pi - pi.vec)
+pidiff.vec <- pidiff.vec / pi # Relative Abweichung zu Pi
+
+
+x <- pidiff.vec
+pidiff.max <- 0.1
+pidiff.min <- 10e-6
+limit <- c(pidiff.min, pidiff.max)
+bal <- barplot(x, ylim = limit, names.arg = N.vec/2, log="y", xlab="Anzahl der Zufallszahlen",ylab = "Relative Abweichung zu Pi", main = "Pi-Berechnung mit Monte-Carlo Simulation")
+
+#axis(2, at = c(0.001, 0.1, 0.5, 1, 20, 50, 100), labels = c("1e-3", "1e-2", 5, 10, 20, 50, 100))
+lab = signif(x, 2)
+x_pos = N.vec/2
+
+text(bal, y=x+x*0.003, labels =lab, pos=3, cex=.80, srt=45)
+
+```
+Mit 5x10^8 Zufallszahlen rechnet mein PC etwa 3 Minuten. Mit 5x10^7 wenige Sekunden. Der Zugewinn an genaugigkeit ist hierbei recht gering. Die relative Abweichung sinkt um nur
+```{r}
+pidiff.vec[7] - pidiff.vec[8]
+```
+Daher wird hier abgebrochen. Die längere Rechendauer rechtfertig nicht mehr das nur marginal besser werdende Ergebnis. 
+

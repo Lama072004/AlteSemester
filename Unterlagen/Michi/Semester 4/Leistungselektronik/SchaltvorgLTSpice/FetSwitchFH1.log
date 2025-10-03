@@ -1,0 +1,60 @@
+Circuit: * C:\Users\mge9869\OneDrive - FH Vorarlberg\Dokumente\Leistungselektronik\SchaltvorgLTSpice\FetSwitchFH1.asc
+
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+Gmin = 0.000142725
+Gmin = 1.5325e-05
+Gmin = 1.6455e-06
+Gmin = 1.76685e-07
+Gmin = 1.89714e-08
+Gmin = 2.03704e-09
+Gmin = 2.18725e-10
+Gmin = 2.34854e-11
+vernier = 0.5
+Gmin = 3.9402e-12
+vernier = 0.25
+vernier = 0.125
+vernier = 0.0625
+vernier = 0.03125
+Gmin = 2.93011e-12
+vernier = 0.015625
+vernier = 0.0078125
+vernier = 0.00390625
+vernier = 0.00195312
+vernier = 0.000976562
+vernier = 0.000488281
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+
+p_vr_switch: AVG(v(a)*i(r14))=0.808451 FROM 0 TO 0.00282
+p_vrl_switch: AVG(v(b)*id(m2))=44.8667 FROM 0.0017302 TO 0.0017303
+p_vrl_on: AVG(v(b)*id(m2))=0.0235523 FROM 0.001731 TO 0.0017342
+p_vrl_total: AVG(v(b)*id(m2))=1.39158 FROM 0.0016 TO 0.0018
+p=0.00282 FROM 0 TO 0.00282
+maxval: MAX(v(a))=24.0075 FROM 0 TO 0.00282
+
+
+Date: Fri May 12 16:35:43 2023
+Total elapsed time: 9.291 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 634438
+traniter = 632777
+tranpoints = 312717
+accept = 308725
+rejected = 3992
+matrix size = 34
+fillins = 1
+solver = Normal
+Avg thread counts: 1.0/1.0/1.0/1.0
+Matrix Compiler1: 1.62 KB object code size  0.8/0.5/[0.4]
+Matrix Compiler2: 2.48 KB object code size  0.5/0.8/[0.3]
+

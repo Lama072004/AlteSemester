@@ -1,0 +1,18 @@
+//Funktion erstellen
+name = @(VAR) (BERECHNUNG)
+phi_exp = @(phi) (cosd(phi) + j*sind(phi))
+//diverse Funktionen
+plot(...)
+simplify
+expand
+se 										// == simplify and expand
+logspace (a,b,n) 	linspace(a,b,n)		//ersteller array mit linearem oder logarithmischem Abstand
+
+//Gleichungssystem lösen
+syms x1 x2 xn....
+eqn_1 = arg_1 + arg_2 + ... + arg_n == 0
+eqn_n = .....
+sol = solve([eqn_1, eqn_n...], [arg_1, arg_2, ... , arg_n])
+
+ergebnis_1 = sol.arg_1
+ergebnis_n = sol.arg_n

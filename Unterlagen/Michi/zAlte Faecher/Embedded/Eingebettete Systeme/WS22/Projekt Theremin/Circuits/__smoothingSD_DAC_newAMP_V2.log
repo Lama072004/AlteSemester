@@ -1,0 +1,43 @@
+Circuit: * C:\Users\admin\OneDrive - FH Vorarlberg\Embedded\Eingebettete Systeme\WS22\Projekt Theremin\Circuits\__smoothingSD_DAC_newAMP_V2.asc
+
+Warning: Multiple definitions of model "2scr375p" Type: BJT
+Warning: Multiple definitions of model "bc857b" Type: BJT
+Warning: Multiple definitions of model "bc847c" Type: BJT
+Warning: Multiple definitions of model "bc847b" Type: BJT
+Direct Newton iteration for .op point succeeded.
+Changing Tseed to 1e-014
+Heightened Def Con from 1e-014 to 1e-013
+Heightened Def Con from 1e-013 +to 1.1e-013
+Heightened Def Con from 1.1e-013 to 2e-013
+Heightened Def Con from 3e-005 to 3.0002e-005
+Heightened Def Con from 9e-005 +to 9e-005
+Heightened Def Con from 9e-005 to 9.0002e-005
+Heightened Def Con from 0.00018 to 0.000180002
+Heightened Def Con from 0.00021 to 0.00021
+Heightened Def Con from 0.00027 to 0.00027
+Heightened Def Con from 0.0003 to 0.0003
+Heightened Def Con from 0.0003 to 0.0003
+Heightened Def Con from 0.00036 to 0.00036
+Heightened Def Con from 0.00039 to 0.00039
+Heightened Def Con from 0.00045 +++++++++++++to 0.00045
+Heightened Def Con from 0.00045 to 0.00045
+Heightened Def Con from 0.00054 to 0.00054
+
+Date: Tue Dec 13 17:08:33 2022
+Total elapsed time: 0.329 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 11807
+traniter = 11771
+tranpoints = 3238
+accept = 2667
+rejected = 601
+matrix size = 50
+fillins = 44
+solver = Normal
+Thread vector: 11.1/9.7[2] 3.5/3.4[1] 1.1/1.4[1] 0.2/1.6[1]  2592/500
+Matrix Compiler1: 5.69 KB object code size  1.2/0.7/[0.3]
+Matrix Compiler2: 5.16 KB object code size  0.5/0.8/[0.5]
+

@@ -1,0 +1,80 @@
+---
+title: "<b>STATISTIK – ÜBUNGEN TEIL I </b>– DESKRIPTIVE STATISTIK - Ausarbeitung"
+author: Michael Geuze
+date: March 05, 2024
+output: html_notebook
+---
+
+## A-3a)
+
+a.
+
+```{r}
+# Raw input data
+life_time.raw <- c(33, 276, 404, 237, 50) # Count of motors in interval
+intervals <- c("[0, 2]", "(2, 4]", "(4, 6]", "(6, 8]", "(8, 10]")
+middle_of_intervals = seq(1, 9, 2)
+
+# Scale factor for y axis of barplot. Controls how much the scale goes beyond the last value
+scale_factor <-  1.1
+
+# Settings for boxplot
+whiskers_factor <- 1.5
+# Use ceil, resp, floor function on IQR * whiskers_factor
+quantize_outliers <- TRUE
+
+
+data <- data.frame(intervals = intervals, counts = life_time.raw, mids = middle_of_intervals) # Write to data, rest of script can be reused
+
+data.table <- table(data)
+data.len <- length(data)
+
+# Absolute occurences
+barplot(data$counts, ylim = c(0,max(data$counts) * scale_factor), ylab = "Anzahl", xlab = "Lebensdauer in Jahren", main = "Absolute Häufigkeit", col = "green", names.arg = data$intervals)
+
+```
+```{r}
+# Relative occurences
+barplot(data$counts/sum(data$counts), ylab = "Relative Häufigkeit", xlab = "Laufzeit in Jahren", main = "Relative Häufigkeit", col = "blue", names.arg = data$intervals)
+```
+```{r}
+# Set variables for plot 
+data.table.len <- length(data$intervals)
+colors <- rainbow(data.table.len) 
+space_initial <- 1.4
+space_between <- 1.2
+spacing <- seq(space_initial, length.out = data.table.len, by = space_between)
+
+# Create inital barplot
+barplot(rep(data$counts[1], data.table.len), ylim = c(0,sum(data$counts) * scale_factor), ylab = "Kumulierte Anzahl", xlab = "Lebensdauer in Jahren", main = "Summenhäufigkeit", col = colors[1], names.arg = data$intervals)
+
+# Add all data on top of other, change color while doing so
+offset_var <- cumsum(data$counts)
+for(loop_outer in (data.table.len - 1) : 1){
+  idx <- data.table.len - loop_outer 
+  for(loop_inner in 1:loop_outer){
+    barplot(data$counts[idx + 1], add = TRUE, col = colors[idx+1], 
+            offset = offset_var[idx], names.arg = NA, 
+            space = spacing[idx + loop_inner - 1])
+  }
+}
+```
+b. Schätzung: das arithmetische Mittel liegt etwa bei 5 Jahren. Der Median liegt etwa bei 5 Jahren.
+c.
+```{r}
+more_than_six_years <- sum(data$counts[4:5])
+cat("Laufzeit mit mehr als 6 Jahren: ", more_than_six_years)
+```
+
+
+```{r}
+data.mode <- data[data$counts == max(data$counts), ]
+cat("Modus:", data.mode$intervals)
+
+data.mean <- sum(data$mids * data$counts) / sum(data$counts)
+cat("Mittelwert:", data.mean)
+
+data.sd <- sqrt(sum((data$mids - data.mean)^2) / sum(data$counts))
+data.sd
+
+```

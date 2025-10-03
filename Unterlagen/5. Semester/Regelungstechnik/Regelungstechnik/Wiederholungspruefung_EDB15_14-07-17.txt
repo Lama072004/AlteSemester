@@ -1,0 +1,25 @@
+﻿Widerholungsprüfung "Modellbildung, Signal- und Systemtheorie"
+EDB15 - 14.07.2017
+
+Aufgabe 1:
+An die Übertragungsfunktion G(s) wird das Signal x(t) angelegt. Berechnen Sie das Ausgangssignal y(t)? 
+G(s) = 2/(s^2 + 6s + 8)
+x(t) = e^(-3*t)*sigma(t)
+Ist das System stabil?
+
+Aufgabe 2:
+... langer, sinnloser Absatz, dass man komplexe Transformation mithilfe der Toolbox vereinfachen kann ...
+Zeigen Sie, wie unter Anwendung der Fourier-Toolbox, wie ein beliebiges Signal mithilfe der Amplitudenmodulation übertragen werden kann.
+Welche Vorraussetzungen muss das Signal dafür haben? 
+
+
+Aufgabe 3:
+Die Übertragungsfunktion G(s) soll unter Anwendung eines geigneten Integrationsverfahren zeitdiskret als G(z) dargestellt werden.
+G(s)=(1+s)/(1+0,5s)		
+Wie würde das Ganze als Programmcode aussehen (Pseudocode).
+
+Aufgabe 4:
+Gegeben ist folgender Amplitudengang. (siehe Abbildung: Aufgabe4.jpg)
+Zeichnen Sie das Pol-/Nullstellendiagramm und geben Sie die Übertragungsfunktion G(s) an.
+
+

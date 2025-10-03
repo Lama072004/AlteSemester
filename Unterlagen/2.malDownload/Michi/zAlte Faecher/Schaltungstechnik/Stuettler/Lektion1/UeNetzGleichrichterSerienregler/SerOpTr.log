@@ -1,0 +1,97 @@
+Circuit: * J:\user\christoph\sicher\FH\Elektronik2\2018\Lektion0 AnalogeSpR LinearR\UeNetzGleichrichterSerienregler\SerOpTr.asc
+
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+Gmin = 0.000142725
+Gmin = 1.5325e-005
+Gmin = 1.6455e-006
+Gmin = 1.76685e-007
+Gmin = 1.89714e-008
+Gmin = 2.03704e-009
+Gmin = 2.18725e-010
+Gmin = 2.34854e-011
+Gmin = 2.52173e-012
+Gmin = 2.70769e-013
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+Semiconductor Device Operating Points:
+                        --- Diodes ---
+Name:    d:u1:3      d:u1:16     d:u1:15     d:u1:14     d:u1:7
+Model:  u1:dbia2    u1:dbia2     u1:din     u1:dlimp2     u1:dp
+Id:      1.04e-07    1.04e-07    6.60e-05    1.56e-09    1.00e-04
+Vd:      9.31e+00    7.00e+00    2.31e+00    2.02e+00    1.20e+01
+Req:     1.00e-03    1.00e-03    5.00e-05    5.56e-09    1.00e-03
+CAP:     0.00e+00    0.00e+00    0.00e+00    0.00e+00    0.00e+00
+
+Name:    d:u1:13     d:u1:12     d:u1:6      d:u1:11     d:u1:10
+Model:  u1:dbiaot   u1:dbiaot   u1:dlimn2   u1:dbia1    u1:dbia1
+Id:     -1.05e-11   -8.18e-12    2.55e-10   -4.65e-08   -3.50e-08
+Vd:     -1.04e+01   -8.10e+00    3.40e-01   -9.31e+00   -7.00e+00
+Req:     1.00e-14    1.00e-14    1.25e-09    5.00e-09    5.00e-09
+CAP:     0.00e+00    0.00e+00    0.00e+00    0.00e+00    0.00e+00
+
+Name:    d:u1:8      d:u1:5      d:u1:1      d:u1:4
+Model:  u1:dlimp1   u1:dlimn1   u1:dvlimu   u1:dbia3
+Id:      1.13e-07   -2.83e-08    9.02e-03    6.95e-04
+Vd:      2.02e+00    3.40e-01    1.36e-01    1.10e+00
+Req:     1.00e-05    1.00e-02    1.00e-01    1.00e-03
+CAP:     0.00e+00    0.00e+00    0.00e+00    0.00e+00
+
+                        --- Bipolar Transistors ---
+Name:       q2          q1
+Model:    bc547c     2scr574d
+Ib:       1.91e-05    6.11e-04
+Ic:       8.32e-03    1.43e-01
+Vbe:      6.80e-01    6.68e-01
+Vbc:     -6.68e-01   -9.12e+00
+Vce:      1.35e+00    9.79e+00
+BetaDC:   4.36e+02    2.34e+02
+Gm:       3.01e-01    5.41e+00
+Rpi:      1.37e+03    4.26e+01
+Rx:       1.00e+00    1.49e+00
+Ro:       6.40e+03    7.79e+02
+Cbe:      1.82e-10    3.50e-09
+Cbc:      1.82e-12    1.98e-11
+Cjs:      0.00e+00    0.00e+00
+BetaAC:   4.13e+02    2.30e+02
+Cbx:      1.12e-12    0.00e+00
+Ft:       2.59e+08    2.45e+08
+
+                        --- VDMOSFET Transistors ---
+Name:        m:u1:2      m:u1:1
+Model:        u1:pi       u1:ni
+Id:         -9.02e-03    8.94e-05
+Vgs:        -1.88e+00    3.40e-01
+Vds:        -5.81e-02    1.18e+01
+Vth:        -3.00e-01    3.00e-01
+Gm:          5.81e-03    4.47e-03
+Gds:         1.52e-01    8.00e-07
+Cgs:         0.00e+00    0.00e+00
+Cgd:         0.00e+00    0.00e+00
+Cbody:       0.00e+00    0.00e+00
+
+
+
+Date: Fri Feb 23 08:41:13 2018
+Total elapsed time: 4.968 seconds.
+
+tnom = 27
+temp = 27
+method = trap
+totiter = 43
+traniter = 0
+tranpoints = 0
+accept = 0
+rejected = 0
+matrix size = 24
+fillins = 17
+solver = Normal
+Matrix Compiler1: 2,53 KB object code size
+Matrix Compiler2:     195 opcodes
+

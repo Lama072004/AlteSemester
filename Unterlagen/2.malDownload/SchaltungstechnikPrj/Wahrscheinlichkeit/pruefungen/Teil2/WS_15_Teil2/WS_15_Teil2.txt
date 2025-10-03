@@ -1,0 +1,34 @@
+1.	Verteilungsfunktion gegeben: 0 für t<1 bzw 1-1/t^4 für t>=1 
+	Median, Interquartilabstand, Erwartungswert, Varianz, Dichtefunktion berechnen.
+   
+2. 	100 serielle Downloads von einem Server (pro Download 4s, Abweichung 10s) 
+	Wahrscheinlichkeit, dass nach 8 Minuten abgeschlossen ist berechnen
+   
+3. 	Kraftwerk fällt 5x in 10 Jahren aus.
+	Wie Wahrscheinlich mehr als 1x pro Jahren?
+	
+4. 	Formel für Normalverteilung angeben.
+	Welche Wahrscheinlichkeit gilt bei X = 1 (mit Begründung) (X~N(0,1)) //vorher X~N(1,0) 
+	
+5. 	16 Datenwerte 
+	Median und Interquartilabstand berchnen
+	Stamm-Blatt-Diagramm zeichnen
+	Vereilungsfunktion erkennen
+	
+6.	Covarianzmatrix gegeben
+	Herauslesen der Daten (Varianz, Covarianz) und berechnen des Korrelationskoeffizient.
+	
+7.	Handys -> Ausfallswahrscheinlichkeit exponentialverteilt -> Lamda geben
+	Wie viel Prozent der Handys überstehen die ersten zwei Jahren?
+	Erwartungswert angeben (ohne Herleitung).
+	
+8.	S = X + Y -> jeweils normalverteilte Zufallsvariablen 
+	Wie groß ist die Wahrscheinlichkeit für S?
+	Was hat S für eine Verteilung.
+
+Zusatzaufgabe:
+	Berechnen einer Covarianzmatrix aus Angabe von zwei Zufallsvariablen.
+	
+
+	
+   

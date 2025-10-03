@@ -1,0 +1,279 @@
+---
+title: "Offene Untersuchung"
+author: "Michael Geuze"
+date: "2024-05-20"
+output: html_document
+---
+# C-1
+
+```{r}
+
+lorenzkurve <- function(Ressource.vec, Proz, Titel, XLabel, YLabel)
+{
+  # Ressource.vec ... Vektor, der die Urliste enthält, z.B. c(a1, a2, a3, a4,...)
+  # Proz ... Intervall für die Prozentschritte auf der x-Achse, z.B. 0.2
+  # Titel ... Diagrammüberschrift
+  # XLabel ... x-Achsen-Beschriftung
+  # YLabel ... y-Achsen-Beschriftung
+  
+  Ressource.vec[Ressource.vec < 0] <- 0   # setze alle negativen Einträge auf Null
+  Len <- length(Ressource.vec)
+  Anteil.vec <- 1:Len / Len
+  Ressource.vec <- Ressource.vec[order(Ressource.vec)]
+  Ressource.vec <- cumsum(Ressource.vec)
+  Ressource.vec <- Ressource.vec / Ressource.vec[Len]
+    
+  Schrittw <- round(Len * Proz)         #Anz. der Felder/Indizes pro Schritt
+  AnzLoop <- floor(Len / Schrittw) - 1  #letzter Loop wird gesondert mit angepasster Länge ausgeführt
+  Schritt0 <- Len - Schrittw * AnzLoop  #Anz. der Felder/Indizes für letzten Schritt
+    
+  X.vec <- rep(0,AnzLoop+2)
+  Y.vec <- X.vec
+    
+  for(i in 1:AnzLoop)
+    {
+      Idx <- i * Schrittw
+      X.vec[i+1] <- Anteil.vec[Idx]
+      Y.vec[i+1] <- Ressource.vec[Idx]
+    }
+  X.vec[AnzLoop+2] <- Anteil.vec[Len]
+  Y.vec[AnzLoop+2] <- Ressource.vec[Len]
+ 
+  plot(X.vec, Y.vec, main=Titel, xlab=XLabel, ylab=YLabel, type="l", col="blue")
+  points(X.vec,Y.vec)
+  lines(c(0,1), c(0,1), lty="dashed")
+}
+
+
+
+umsätze.df <- read.csv("Unternehmensumsaetze.csv", sep=";", dec=",", header=TRUE)
+attach(umsätze.df)
+
+cat("Verteilung der Unternehmen auf das jeweilige Land")
+land.t <- table(Land); land.t
+
+par(mar = c(9, 4, 4, 2) + 0.1)
+par(las=2, cex=.8) 
+barplot(sort(land.t,decreasing = TRUE),
+        ylab = "Anzahl der Unternehmen",
+        main = "Anazhl der Unternehmen pro Land",
+        ylim = c(0,35)
+        )
+
+```
+
+```{r}
+
+
+cat("Verteilung der Unternehmen auf die jeweilige Branche")
+branche.t <- table(Branche); branche.t
+
+par(mar = c(8, 4, 4, 2) + 0.1)
+par(las=2, cex=.7) 
+barplot(sort(branche.t,decreasing = TRUE),
+        ylab = "Anzahl der Branchen",
+        main = "Anazhl der Branchen pro Land",
+        ylim = c(0,25)
+        )
+cat("Unlesbare Branchentitel in der obigen Abbildung: \"Automotive Telecom, IT & Tourismus\" und \"Logistik, Bankwesen, Versicherungswesen\"")
+```
+
+## Tabelle der Länder, Summierte Umsätze, Geiwnne und Mitarbeiter. Nach Gewinnen sortiert.
+```{r}
+library(dplyr)
+
+aggregated_df <- umsätze.df %>%
+  group_by(Land) %>%
+  summarise(
+    umsatz_summe = sum(Umsatz, na.rm = TRUE),
+    gewinn_summe = sum(Gewinn, na.rm = TRUE),
+    mitarbeiter_summe = sum(Mitarbeiter, na.rm = TRUE)
+    )
+
+sorted_df <- aggregated_df %>%
+  arrange(desc(gewinn_summe))
+sorted_df
+
+```
+## Die 10 Unternehmen mit den höchsten Gewinnen
+```{r}
+top_10_companies <- umsätze.df %>%
+  arrange(desc(Gewinn)) %>%
+  head(10)
+top_10_companies
+```
+```{r}
+par(mar = c(13, 4, 4, 2) + 0.1)
+par(las = 2, cex = 0.7)
+sorted_df <- umsätze.df %>%
+  arrange(desc(Umsatz))
+barplot(height = sorted_df$Umsatz , names.arg = sorted_df$Name, ylim= c(0,500), ylab="Umsatz in Mrd. USD", main = "Unternehmensumsätze")
+```
+
+
+
+## Branchen nach Gewinn sortiert
+```{r}
+aggregated_df <- umsätze.df %>%
+  group_by(Branche) %>%
+  summarise(
+    umsatz_summe = sum(Umsatz, na.rm = TRUE),
+    gewinn_summe = sum(Gewinn, na.rm = TRUE),
+    mitarbeiter_summe = sum(Mitarbeiter, na.rm = TRUE) 
+     
+    ) %>%
+arrange(desc(gewinn_summe))
+aggregated_df 
+
+```
+```{r}
+par(mar = c(8, 4, 4, 2) + 0.1)
+par(las = 2, cex = 0.7)
+barplot(height = aggregated_df$gewinn_summe , names.arg = aggregated_df$Branche, ylim= c(0,400), ylab="Gewinn in Mrd. USD", main = "Branchengewinne")
+```
+
+
+So werden die größten Gewinne in den Branchen Banken, Oel und Gas und Technologie erzielt.
+
+## Branchen nach Umsatz sortiert
+```{r}
+aggregated_df <- umsätze.df %>%
+  group_by(Branche) %>%
+  summarise(
+    umsatz_summe = sum(Umsatz, na.rm = TRUE),
+    gewinn_summe = sum(Gewinn, na.rm = TRUE),
+    mitarbeiter_summe = sum(Mitarbeiter, na.rm = TRUE) 
+     
+    ) %>%
+arrange(desc(umsatz_summe))
+aggregated_df 
+
+```
+```{r}
+par(mar = c(8, 4, 4, 2) + 0.1)
+par(las = 2, cex = 0.7)
+barplot(height = aggregated_df$umsatz_summe , names.arg = aggregated_df$Branche, ylim= c(0,5000), ylab="Umsatz in Mrd. USD", main = "Branchenumsätze")
+```
+
+## Gewinne pro Mitarbeiter
+
+```{r}
+aggregated_df <- umsätze.df %>%
+  group_by(Branche) %>%
+  summarise(
+    umsatz_summe = sum(Umsatz, na.rm = TRUE),
+    gewinn_summe = sum(Gewinn, na.rm = TRUE),
+    mitarbeiter_summe = sum(Mitarbeiter, na.rm = TRUE)
+  ) %>%
+  mutate(gewinn_pro_mitarbeiter_millionen_USD = gewinn_summe / mitarbeiter_summe * 1000) %>%
+  arrange(desc(gewinn_pro_mitarbeiter_millionen_USD))
+aggregated_df
+```
+```{r}
+
+par(mar = c(8, 4, 4, 2) + 0.1)
+par(las = 2, cex = 0.7)
+barplot(height = aggregated_df$gewinn_pro_mitarbeiter_millionen_USD , names.arg = aggregated_df$Branche, ylim= c(0,0.6), ylab="Gewinnn pro Mitarbeiter in Millionen USD", main = "Gewinne pro Mitarbeiter")
+```
+
+
+In der Sparte Gewinn pro Mitarbeiter liegt die Pharmazie an erster Stelle. 
+
+
+## Branchenumsätze pro Mitarbeiter
+
+```{r}
+aggregated_df <- umsätze.df %>%
+  group_by(Branche) %>%
+  summarise(
+    umsatz_summe = sum(Umsatz, na.rm = TRUE),
+    gewinn_summe = sum(Gewinn, na.rm = TRUE),
+    mitarbeiter_summe = sum(Mitarbeiter, na.rm = TRUE)
+  ) %>%
+  mutate(umsatz_pro_mitarbeiter_mrd_USD = umsatz_summe / mitarbeiter_summe) %>%
+  arrange(desc(umsatz_pro_mitarbeiter_mrd_USD))
+aggregated_df
+```
+```{r}
+
+par(mar = c(8, 4, 4, 2) + 0.1)
+par(las = 2, cex = 0.7)
+barplot(height = aggregated_df$umsatz_pro_mitarbeiter_mrd_USD*1000 , names.arg = aggregated_df$Branche, ylim= c(0,5), ylab="Umsatz pro Mitarbeiter in Millionen USD", main = "Umsätze pro Mitarbeiter")
+```
+
+Wie man hier sehen kann, liegen die Branchen Rohstoffhandel, Pharmahandel und Pharmazie an erster Stelle, wenn man denn Umsatz pro Mitarbeiter ansieht. Dies ist auch nicht verwunderlich, da ein Handelsunternehmen meist mehr Umsatz hat als andere Unternehmensarten.
+
+## Plot der Besten 5 Branchen im Sektor Gewinn
+
+```{r}
+
+library(ggplot2)
+
+top_5 <- aggregated_df %>%
+  top_n(5, gewinn_summe)
+
+ggplot(top_5, aes(x = umsatz_summe, y = gewinn_summe, label = Branche)) +
+  geom_point() +
+  geom_text(vjust = -0.5, hjust = 0.5) +
+  labs(x = "Umsatz", y = "Gewinn") +
+  theme_minimal()
+```
+
+
+
+In diesem Scatter-Plot kann man sehen, dass Banken sehr viel Gewinn/Umsatz machen und Öl und Gas generell sehr viel Umsatz.
+
+# Regressionsgerade Gewinn in Abhängigkeit der Mitarbeiteranzahl
+```{r}
+regression_line <- lm(Gewinn ~ Mitarbeiter)
+plot(Mitarbeiter, Gewinn, main = "Gewinn in Abhängigkeit der Mitarbeiteranzahl", xlab = "Mitarbeiter", ylab = "Gewinn in Mrd. USD", ylim = c(-10, 100))
+abline(regression_line, col = "red")
+
+```
+
+
+# Regressionsgerade Gewinn zu Umsatz in Abhängigkeit der Mitarbeiteranzahl
+```{r}
+regression_line <- lm(Gewinn/Umsatz*100 ~ Mitarbeiter)
+plot(Mitarbeiter, Gewinn/Umsatz*100, main = "Regressionsgerade Gewinn zu Umsatz in Abhängigkeit der Mitarbeiteranzahl", xlab = "Mitarbeiter", ylab = "Gewinn / Umsatz in %", ylim = c(-12, 80))
+
+abline(regression_line, col = "red")
+
+```
+
+## Bewertung
+In beiden Plots sind bei 2 Ausreißer zu sehen. In der vorangegangenen Auswertung ist zu sehen, dass die Unternehmen Fannie Mae und Freddie Mac sehr starke Ausreißer sind. Hier noch Daten dazu:
+
+```{r}
+umsatz_mean <- mean(umsätze.df$Gewinn)
+umsatz_sd <- sd(umsätze.df$Gewinn)
+z_score <- (umsätze.df$Gewinn[Name == "Fannie Mae"] - umsatz_mean) / umsatz_sd
+cat("Das Unternehmen Fannie Mae ist", z_score, "Sigma vom normalwert entfernt und daher ein starker Ausreißer. In 3 Sigma sind 99.7% der Daten bei Normalverteilung. Bei diesem Wert ist es sehr weit davon entfernt.")
+```
+```{r}
+z_score <- (umsätze.df$Gewinn[Name == "Freddie Mac"] - umsatz_mean) / umsatz_sd
+cat("Das Unternehmen Freddie Mac ist", z_score, "Sigma vom normalwert entfernt und daher gerade kein wirklicher Ausreißer, wenn man annimmt, dass 3 Sigma noch im Rahmen von Normalwerten ist.")
+```
+Es sind auch diese Unternehmen, die kaum Mitarbeiter haben. 
+```{r}
+mitarbeiter_mean <- mean(Gewinn / Umsatz / Mitarbeiter)
+mitarbeiter_sd <- sd(Gewinn / Umsatz / Mitarbeiter)
+z_score <- (Gewinn[Name == "Fannie Mae"] / Umsatz[Name == "Fannie Mae"] / Mitarbeiter[Name == "Fannie Mae"] - mitarbeiter_mean) / mitarbeiter_sd
+cat("Das Unternehmen Fannie Mae ist", z_score, "Sigma vom normalwert entfernt und daher wieder ein starker Ausreißer.")
+```
+
+```{r}
+z_score <- (Gewinn[Name == "Freddie Mac"] / Umsatz[Name == "Freddie Mac"] / Mitarbeiter[Name == "Freddie Mac"] - mitarbeiter_mean) / mitarbeiter_sd
+cat("Das Unternehmen Freddie Mac ist", z_score, "Sigma vom normalwert entfernt und daher hier ein starker Ausreißer.")
+```
+# Lorenzkurve Umsätze
+
+
+
+```{r}
+par(mfrow=c(1,2), cex = .8)
+lorenzkurve(Umsatz, .2, "Konzernumsätze", "Anteil Unternehmen", "Anteil an Gesamtumsatz")
+lorenzkurve(Mitarbeiter, .2, "Mitarbeiter", "Anteil Unternehmen", "Anteil an Mitarbeitern")
+
+```
+

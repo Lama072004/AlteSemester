@@ -1,0 +1,22 @@
+Circuit: * C:\Users\admin\OneDrive - FH Vorarlberg\Dokumente\Seminar2LE\buckBoostRealMosfet.asc
+
+Direct Newton iteration for .op point succeeded.
+Heightened Def Con from 1.00015e-005 to 1.00023e-005
+
+Date: Wed Apr 19 12:36:52 2023
+Total elapsed time: 18.240 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2198854
+traniter = 2198841
+tranpoints = 544414
+accept = 419478
+rejected = 124937
+matrix size = 59
+fillins = 30
+solver = Normal
+Matrix Compiler1: 4.12 KB object code size  0.8/0.5/[0.3]
+Matrix Compiler2: 4.95 KB object code size  0.4/0.6/[0.3]
+

@@ -1,0 +1,171 @@
+---
+title: "Aufgaben_teil1_A3-A4"
+output: html_document
+date: "2024-05-19"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## A-3
+
+```{r}
+lifetime_motor_count <- c(33, 276, 404, 237, 50)
+lifetime_motor_count.rel <- lifetime_motor_count/sum(lifetime_motor_count)
+lifetime_years <- c("[0,2]", "(2,4]", "(4,6]", "(6,8]", "(8,10]")
+
+barplot(lifetime_motor_count.rel , 
+        names.arg = lifetime_years,
+        col = "blue",
+        xlab = "Lebensdauer in Jahren",
+        ylab = "Relative Häufigkeit",
+        main = "Häufigkeitsverteilung Motorlebensdauer"
+        )
+```
+```{r}
+lifetime_motor_count.cum <- cumsum(lifetime_motor_count.rel)
+
+# Bar plot of cumulative relative frequencies
+barplot_positions <- barplot(lifetime_motor_count.cum,  # Positions holds the mid values.
+        names.arg = lifetime_years,
+        col = "blue",
+        xlab = "Lebensdauer in Jahren",
+        ylab = "Relative Häufigkeit",
+        main = "Häufigkeitsverteilung Motorlebensdauer",
+        space = 0
+)
+
+# Plot the cumulative distribution line
+
+line_positions_x <- c(0, barplot_positions + (barplot_positions[2] - barplot_positions[1]) /2) # Create X coordinates. Assuming they are evenly spread
+par(new = TRUE)
+lines(x = line_positions_x,
+      y = c(0, lifetime_motor_count.cum), # We are starting at coord x=0, y=0
+      lty = 3,
+      col = "red")
+
+abline(0.25, 0, lty = "dashed", col = "purple") 
+abline(0.5, 0, lty = "dashed", col = "red")
+abline(0.75, 0, lty = "dashed", col = "purple")
+
+```
+## zu b)
+Das arithmetische Mittel ist bei relativer Häufigkeit = 0,5. Daher schätze ich es auf 4,8 Jahre.
+Der Median ist bei dieser Darstellung jender Balken, der bei Häufigkeit 0.5 geschnitten wird. Er ist daher im Intervall von (4,6] Jahren.
+
+## zu c) 
+```{r}
+more_than_six_years <- sum(lifetime_motor_count[4:5])
+cat("Mehr als 6 Jahre Laufzeit hatten", more_than_six_years, "Motoren.")
+```
+## zu d)
+```{r}
+mode_pos <- lifetime_motor_count == max(lifetime_motor_count)
+mode <- lifetime_years[mode_pos]
+cat("Modus ist der Intervall", mode)
+```
+```{r}
+mids <- seq(1,9,2)
+mean_val <- mean(sum(lifetime_motor_count * mids) / sum(lifetime_motor_count))
+cat("Arithemtisches Mittel ist", mean_val)
+```
+
+Aus den Daten ist ersichtlich, dass der Median beim Intervall (4,6] liegt.
+Min ist [0, 2] Jahre
+Max ist (8, 10] Jahre
+Spannweite sind 10 Jahre
+
+```{r}
+# Generate list of given values
+lifetime_list <- c()
+for (i in 1:length(mids)){
+  lifetime_list <- c(lifetime_list, rep(mids[i], lifetime_motor_count[i]))
+}
+
+standard_dev <- sd(lifetime_list)
+cat("Standardabweichung ist", standard_dev)
+```
+```{r}
+mean_abs_dev <- sum(abs(lifetime_list - mean_val)) / sum(lifetime_motor_count)
+cat("Mittlere Absolute Abweichung", mean_abs_dev)
+
+```
+Quantile:
+```{r}
+quantile(lifetime_list)
+```
+
+# A-4
+```{r}
+action_count <- c(16, 48, 27, 9)
+action_count.rel <- action_count/sum(action_count)
+actions_day <- c("[0,10]", "(10,20]", "(20,30]", "(30,80]")
+mids <- c(5,15,25,55)
+breaks_actions <- c(0,10,20,30,80)
+
+# Generate list of given values
+data_list <- c()
+for (i in 1:length(mids)){
+  data_list <- c(data_list, rep(mids[i], action_count[i]))
+}
+
+hist_actions <- hist(data_list, 
+     breaks=breaks_actions,
+     col = "blue",
+     xlab = "Einsätze pro Tag",
+     ylab = "Häufigkeitsdichte",
+     main = "Häufigkeitsverteilung als Dichte der Aktionen",
+     ylim = c(0,0.05),
+     freq = FALSE
+     )
+```
+
+```{r}
+
+density_vec_cum <- cumsum(hist_actions$density * diff(hist_actions$breaks))
+
+barplot(
+  density_vec_cum,
+  width = diff(hist_actions$breaks),
+  names.arg = actions_day,
+  space = 0,
+  xlab = "Einsätze pro Tag",
+  ylab = "Kumulative Dichte",
+  main = "Kumulatives Histogramm",
+  col = "green"
+)
+
+
+abline(0.25, 0, lty = "dashed", col = "purple") 
+abline(0.5, 0, lty = "dashed", col = "red")
+abline(0.75, 0, lty = "dashed", col = "purple")
+
+```
+## zu b)
+Arithmetisches Mittel ~18 Einsätze
+Median ist Intervall (10,20]
+```{r}
+more_than_20 <- sum(action_count[3:4])
+cat("Mehr als 20 Einsätze an", more_than_20, "Tagen")
+```
+Modus: Interval (10,20]
+
+```{r}
+quantile(data_list)
+```
+```{r}
+mean_val <- mean(data_list)
+cat("Mittelwert:" ,mean_val)
+```
+Minimum: 0 Einsätze
+Maximum: 80 Einsätze
+Spannweite: 80 Einsätze
+```{r}
+cat("Standardabweichung:", sd(data_list))
+mean_abs_dev <- sum(abs(data_list - mean_val)) / sum(data_list)
+cat("Mittlere Absolute Abweichung", mean_abs_dev)
+```
+Es ist hier problematisch die Maße zu berechnen, da die Urliste bereits aus Intervallen besteht. Außerdem ist der Intervall (30,80] sehr groß gewählt. In meiner Berechnung bin ich vom Mittelwert 55 ausgegangen. Es wäre hier auch möglich, linear zu Interpolieren um auf ein Art Urliste zu kommen. Hierfür müssten Werte im Intervall gewählte werden, sodass die gleiche Anzahl herauskommt. Es muss dabei aber auf ganze Zahlen gerundet werden, da es keine reelwertigen Einsätze pro Tag gibt. Darauf wurde hier aber verzichtet. 
+
+

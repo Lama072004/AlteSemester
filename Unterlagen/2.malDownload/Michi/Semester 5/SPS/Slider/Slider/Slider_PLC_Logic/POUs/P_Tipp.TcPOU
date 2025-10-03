@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="P_Tipp" Id="{e0d06ec1-cbb6-4846-9361-e4ac3f9aab98}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM P_Tipp
+VAR
+	istate: int;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[istate := 0;
+
+IF GVL.S3 THEN
+	istate := 1;
+END_IF
+
+IF NOT GVL.S4 THEN
+	istate := 2;
+END_IF
+
+IF GVL.S3 AND NOT GVL.S4 THEN
+	istate :=0;
+END_IF
+
+CASE istate OF
+0: (*Stopp*)
+	GVL.K1 := FALSE;
+	GVL.K2 := FALSE;
+1: 
+	IF NOT GVL.BG1 THEN
+		GVL.K1 := TRUE;
+	ELSE 
+		GVL.K1 := FALSE;
+	END_IF
+2: 
+	IF NOT GVL.BG2 THEN
+		GVL.K1 := TRUE;
+		GVL.K2 := TRUE;
+	ELSE 
+		GVL.K1 := FALSE;
+		GVL.K2 := FALSE;
+	END_IF
+END_CASE]]></ST>
+    </Implementation>
+    <LineIds Name="P_Tipp">
+      <LineId Id="5" Count="0" />
+      <LineId Id="10" Count="0" />
+      <LineId Id="7" Count="2" />
+      <LineId Id="12" Count="2" />
+      <LineId Id="11" Count="0" />
+      <LineId Id="16" Count="0" />
+      <LineId Id="15" Count="0" />
+      <LineId Id="17" Count="1" />
+      <LineId Id="20" Count="0" />
+      <LineId Id="19" Count="0" />
+      <LineId Id="24" Count="0" />
+      <LineId Id="26" Count="2" />
+      <LineId Id="34" Count="0" />
+      <LineId Id="31" Count="0" />
+      <LineId Id="35" Count="0" />
+      <LineId Id="30" Count="0" />
+      <LineId Id="36" Count="0" />
+      <LineId Id="25" Count="0" />
+      <LineId Id="37" Count="1" />
+      <LineId Id="41" Count="0" />
+      <LineId Id="39" Count="1" />
+      <LineId Id="42" Count="0" />
+      <LineId Id="33" Count="0" />
+      <LineId Id="23" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

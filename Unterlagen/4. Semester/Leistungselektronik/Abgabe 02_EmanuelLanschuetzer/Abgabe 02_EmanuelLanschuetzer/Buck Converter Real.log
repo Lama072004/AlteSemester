@@ -1,0 +1,52 @@
+Circuit: * C:\Users\katha\OneDrive - FH Vorarlberg\Semester\ET Dual Shared\4. Semester\Leistungselektronik\Abgabe 02_EmanuelLanschuetzer\Abgabe 02_EmanuelLanschuetzer\Buck Converter Real.asc
+
+Direct Newton iteration for .op point succeeded.
+
+vc: AVG(v(c))=6.60205 FROM 0 TO 5e-005
+il: AVG(i(l1))=0.600179 FROM 0 TO 5e-005
+vcmax: MAX(v(c))=6.78242 FROM 0 TO 5e-005
+vcmin: MIN(v(c))=6.42379 FROM 0 TO 5e-005
+dvc: (vcmax - vcmin)/2=0.179313
+ilmax: MAX(i(l1))=0.710166 FROM 0 TO 5e-005
+ilmin: MIN(i(l1))=0.490198 FROM 0 TO 5e-005
+dil: (ilmax-ilmin)/2=0.109984
+icrms: RMS(i(c1))=0.0625662 FROM 0 TO 5e-005
+pin1: AVG(v(in)*(-i(v1)))=3.96442 FROM 0 TO 5e-005
+pout1: AVG(v(c)*i(r1))=3.96398 FROM 0 TO 5e-005
+eff1: pout1/pin1=0.999889
+pin2: AVG(v(in2)*(-i(v3)))=3.77465 FROM 0 TO 5e-005
+pout2: AVG(v(c2)*i(r5))=3.5616 FROM 0 TO 5e-005
+eff2: pout2/pin2=0.943557
+vc2: AVG(v(c2))=6.25828 FROM 0 TO 5e-005
+il2: AVG(i(l2))=0.568934 FROM 0 TO 5e-005
+vc2max: MAX(v(c2))=6.42367 FROM 0 TO 5e-005
+vc2min: MIN(v(c2))=6.09467 FROM 0 TO 5e-005
+dvc2: (vc2max-vc2min)=0.328998
+il2max: MAX(i(l2))=0.667856 FROM 0 TO 5e-005
+il2min: MIN(i(l2))=0.469901 FROM 0 TO 5e-005
+dil2: (il2max-il2min)=0.197955
+pvrdc: AVG(v(c2,n002)*i(r6))=0.0915492 FROM 0 TO 5e-005
+pvd2: AVG(-v(sw2)*i(d2))=0.108894 FROM 0 TO 5e-005
+pvm1: AVG(v(in2)*ix(m1:d)+v(n001)*ix(m1:g)+v(sw2)*ix(m1:s))=0.0171004 FROM 0 TO 5e-005
+pvrelcap: AVG(v(n004)*i(r7))=0.00432138 FROM 0 TO 5e-005
+pvrceramic: AVG(v(n003)*i(r8))=2.25971e-005 FROM 0 TO 5e-005
+pcges: (pvrelcap+pvrceramic)=0.00434397
+
+
+Date: Tue Apr 23 10:59:03 2024
+Total elapsed time: 2.376 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 925809
+traniter = 925790
+tranpoints = 360522
+accept = 275516
+rejected = 85006
+matrix size = 29
+fillins = 10
+solver = Normal
+Matrix Compiler1: 1.80 KB object code size  0.4/0.3/[0.1]
+Matrix Compiler2: off  [0.2]/0.4/0.3
+

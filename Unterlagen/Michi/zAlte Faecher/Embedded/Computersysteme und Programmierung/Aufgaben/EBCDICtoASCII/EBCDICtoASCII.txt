@@ -1,0 +1,101 @@
+
+#define _CRT_SECURE_NO_WARNINGS
+
+#include <stdlib.h>
+#include <stdio.h>
+
+//declare prototype
+int ebcdicToAscii(int);
+
+int main(void) {
+	FILE* ebcdicFile = fopen("Input02.txt", "r");
+
+	if (ebcdicFile == NULL) {
+		printf("\nFile could not be opened, check filename");
+		return EXIT_FAILURE;
+	}
+
+	int lines;
+	if (fscanf(ebcdicFile, "%d", &lines) != 1) {
+		printf("\nLines could not be read, check file");
+		return EXIT_FAILURE;
+	}
+
+	for (int i = 0; i < lines; i++) {
+		int lenghtOfLine;
+		if (fscanf(ebcdicFile, "%d", &lenghtOfLine) != 1) {
+			printf("\nLength of line %d could not be read, check file", i + 1);
+			return EXIT_FAILURE;
+		}
+
+		for (int j = 0; j < lenghtOfLine; j++) {
+			int code;
+			if (fscanf(ebcdicFile, "%X", &code) != 1) {
+				printf("\nEBCDIC code could not be read, check file. Error occured on line %d, character %d", i , j);
+
+			}
+			code = ebcdicToAscii(code);
+			if (code != -1) {
+				printf("%c", code);
+			}
+			else {
+				printf("\nEBCDIC code could not be read, check file. Error occured on line %d, character %d", i , j);
+				return EXIT_FAILURE;
+			}
+		}
+
+		//line finished converting, add newline
+		printf("\n");
+	}
+
+	return EXIT_SUCCESS;
+}
+
+
+int ebcdicToAscii(int code) {
+
+	if (code == 0x40) {
+		code = 0x20;
+	}
+	else if (code == 0x4B) {
+		code = 0x2E;
+	}
+	else if (code == 0x5A) {
+		code = 0x21;
+	}
+	else if (code == 0x6B) {
+		code = 0x2C;
+	}
+	else if (code >= 0xF0 && code <= 0xF9) {
+		code -= 0xB0;
+	}
+	else if (code >= 0xE2 && code <= 0xE9) {
+		code -= 0x8F;
+	}
+	else if (code >= 0xD1 && code <= 0xD9) {
+		code -= 0x87;
+	}
+	else if (code >= 0xC1 && code <= 0xC9) {
+		code -= 0x80;
+	}
+	else if (code >= 0xA2 && code <= 0xA9) {
+		code -= 0x2F;
+	}
+	else if (code >= 0x91 && code <= 0x99) {
+		code -= 0x27;
+	}
+	else if (code >= 0x81 && code <= 0x89) {
+		code -= 0x20;
+	}
+	//Conversion not successful, abort program
+	else {
+		code = -1;
+	}
+
+	return code;
+}
+
+
+
+
+	

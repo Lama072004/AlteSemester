@@ -1,0 +1,302 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:z="http://www.zotero.org/namespaces/export#"
+ xmlns:dcterms="http://purl.org/dc/terms/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:bib="http://purl.org/net/biblio#"
+ xmlns:vcard="http://nwalsh.com/rdf/vCard#"
+ xmlns:foaf="http://xmlns.com/foaf/0.1/"
+ xmlns:prism="http://prismstandard.org/namespaces/1.2/basic/">
+    <bib:Document rdf:about="https://www.hanser-elibrary.com/doi/abs/10.3139/9783446432659">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>Hanser Books</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <dc:title>Regelungstechnik</dc:title>
+        <z:language>de</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.hanser-elibrary.com/doi/abs/10.3139/9783446432659</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2021-11-04 09:03:09</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Document rdf:about="https://www.hanser-elibrary.com/doi/epdf/10.3139/9783446432659">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <dc:title>Regelungstechnik</dc:title>
+        <z:language>en</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.hanser-elibrary.com/doi/epdf/10.3139/9783446432659</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2021-11-04 09:06:35</dcterms:dateSubmitted>
+        <dc:description>ISBN: 9783446432659</dc:description>
+    </bib:Document>
+    <bib:Book rdf:about="urn:isbn:978-3-446-43031-0%20978-3-446-43265-9">
+        <z:itemType>book</z:itemType>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>München</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Fachbuchverlag Leipzig im Carl Hanser Verlag</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Beier</foaf:surname>
+                        <foaf:givenName>Thomas</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Wurl</foaf:surname>
+                        <foaf:givenName>Petra</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>Regelungstechnik: Basiswissen, Grundlagen, Anwendungsbeispiele</dc:title>
+        <dc:date>2013-02-14</dc:date>
+        <z:language>de</z:language>
+        <z:shortTitle>Regelungstechnik</z:shortTitle>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://doi.org/10.3139/9783446432659.fm</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:identifier>ISBN 978-3-446-43031-0 978-3-446-43265-9</dc:identifier>
+    </bib:Book>
+    <bib:Article rdf:about="https://doi.org/10.1007/s00502-011-0065-x">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1613-7620"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Pröll</foaf:surname>
+                        <foaf:givenName>Birgit</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>Frauen in der Elektrotechnik und Informationstechnik II</dc:title>
+        <dc:date>2011-12-01</dc:date>
+        <z:language>de</z:language>
+        <z:libraryCatalog>Springer Link</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://doi.org/10.1007/s00502-011-0065-x</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <bib:pages>377</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1613-7620">
+        <prism:volume>128</prism:volume>
+        <dc:title>e &amp; i Elektrotechnik und Informationstechnik</dc:title>
+        <prism:number>11</prism:number>
+        <dcterms:alternative>Elektrotech. Inftech.</dcterms:alternative>
+        <dc:identifier>ISSN 1613-7620</dc:identifier>
+    </bib:Journal>
+    <bib:Book rdf:about="urn:isbn:978-3-662-56285-7%20978-3-662-56286-4">
+        <z:itemType>book</z:itemType>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Berlin, Heidelberg</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Springer Berlin Heidelberg</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Siegl</foaf:surname>
+                        <foaf:givenName>Johann</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Zocher</foaf:surname>
+                        <foaf:givenName>Edgar</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>Schaltungstechnik</dc:title>
+        <dc:date>2018</dc:date>
+        <z:language>de</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://doi.org/10.1007/978-3-662-56286-4</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:identifier>ISBN 978-3-662-56285-7 978-3-662-56286-4</dc:identifier>
+        <prism:edition>6. Auflage</prism:edition>
+    </bib:Book>
+    <bib:Book rdf:about="urn:isbn:978-3-662-54213-2%20978-3-662-54214-9">
+        <z:itemType>book</z:itemType>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Berlin, Heidelberg</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Springer Berlin Heidelberg</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:editors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hering</foaf:surname>
+                        <foaf:givenName>Ekbert</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Bressler</foaf:surname>
+                        <foaf:givenName>Klaus</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Gutekunst</foaf:surname>
+                        <foaf:givenName>Jürgen</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:editors>
+        <dc:title>Elektronik für Ingenieure und Naturwissenschaftler</dc:title>
+        <dc:date>2017</dc:date>
+        <z:language>de</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://doi.org/10.1007/978-3-662-54214-9</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:identifier>ISBN 978-3-662-54213-2 978-3-662-54214-9</dc:identifier>
+    </bib:Book>
+    <bib:Article rdf:about="https://doi.org/10.1049/el.2019.1269">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:0013-5194,%201350-911X"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Borgmans</foaf:surname>
+                        <foaf:givenName>Jonas</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Rombouts</foaf:surname>
+                        <foaf:givenName>Pieter</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>Toward ‘digital’ analogue‐to‐digital converters: Subject Editor Pieter Rombouts spotlight on analogue‐to‐digital conversion</dc:title>
+        <dc:date>05/2019</dc:date>
+        <z:language>en</z:language>
+        <z:shortTitle>Toward ‘digital’ analogue‐to‐digital converters</z:shortTitle>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://doi.org/10.1049/el.2019.1269</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <bib:pages>568-569</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:0013-5194,%201350-911X">
+        <prism:volume>55</prism:volume>
+        <dc:title>Electronics Letters</dc:title>
+        <prism:number>10</prism:number>
+        <dcterms:alternative>Electron. lett.</dcterms:alternative>
+        <dc:identifier>ISSN 0013-5194, 1350-911X</dc:identifier>
+    </bib:Journal>
+    <bib:Book rdf:about="https://support.microsoft.com/de-de/topic/empfehlungen-zum-virenscan-f%C3%BCr-unternehmenscomputer-auf-denen-aktuell-unterst%C3%BCtzte-versionen-von-windows-ausgef%C3%BChrt-werden-kb822158-c067a732-f24a-9079-d240-3733e39b40bc">
+        <z:itemType>book</z:itemType>
+        <bib:editors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                       <foaf:surname>Microsoft Corporation</foaf:surname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:editors>
+        <dc:title>Empfehlungen zum Virenscan für Unternehmenscomputer, auf denen aktuell unterstützte Versionen von Windows ausgeführt werden (KB822158)</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://support.microsoft.com/de-de/topic/empfehlungen-zum-virenscan-f%C3%BCr-unternehmenscomputer-auf-denen-aktuell-unterst%C3%BCtzte-versionen-von-windows-ausgef%C3%BChrt-werden-kb822158-c067a732-f24a-9079-d240-3733e39b40bc</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2021-11-18 07:27:38</dcterms:dateSubmitted>
+    </bib:Book>
+    <bib:Thesis rdf:about="https://doi.org/10.25924/opus-3195">
+        <z:itemType>thesis</z:itemType>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Dornbirn</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Fachhochschule Vorarlberg</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hasibeder</foaf:surname>
+                        <foaf:givenName>Thomas</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>Low cost Solar Forecast</dc:title>
+        <dcterms:abstract>This thesis focuses on the development of a cost-effective system to forecast solar radiation by using stochastic methods. The time frame for the forecast lies between one and three hours. The risks of using stochastics and data processing of stochastic methods will be discussed. Various methods for forecasting meteorological data are analyzed, applied and compared by using the relative error, the RMSE or the MAD. A variety of criteria for the selection of a suitable method are formulated. Based on the existing stochastic methods and application of these, it was found that the ANN, which has been created by using the software library Tensorflow, is the best applicable method. The programming of the particular methods, which was done by means of Scikit-learn, Python and Tensorflow, is described and a forecast is produced. As hardware a low cost single-board computer, a Raspberry Pi 3, is used on one hand and on the other hand a high-performance laptop is used. There is no significant difference in the processing time of these two tools. Then the calculated forecasts were compared to the existing measured data, the PM and the forecast of Meteo-Schweiz. The many diagrams of these forecasts and their accuracy are shown in the course of this thesis. In 2017, the relative deviation of the forecast calculated by ANNT from the measured data is at 8.52% or referring to the annual energy, it is 87.3 kWh/m2 . Compared to the PM, the ANNT method deviates by 83.5 kWh/m2 and year. The possibilities for improvements and further research are finally discussed.</dcterms:abstract>
+        <dc:date>2019</dc:date>
+        <z:language>de</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://doi.org/10.25924/opus-3195</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:rights>UrhG - Es gilt das Urheberrecht</dc:rights>
+        <dc:description>Artwork Size: 9075 KB, 78 pages
+Medium: application/pdf
+Publisher: FH Vorarlberg</dc:description>
+        <z:type>Masterarbeit</z:type>
+    </bib:Thesis>
+    <z:Collection rdf:about="#collection_2">
+        <dc:title>AD Wandler</dc:title>
+        <dcterms:hasPart rdf:resource="urn:isbn:978-3-662-56285-7%20978-3-662-56286-4"/>
+        <dcterms:hasPart rdf:resource="urn:isbn:978-3-662-54213-2%20978-3-662-54214-9"/>
+        <dcterms:hasPart rdf:resource="https://doi.org/10.1049/el.2019.1269"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_1">
+        <dc:title>Übungssammlung</dc:title>
+        <dcterms:hasPart rdf:resource="urn:isbn:978-3-446-43031-0%20978-3-446-43265-9"/>
+        <dcterms:hasPart rdf:resource="https://doi.org/10.1007/s00502-011-0065-x"/>
+        <dcterms:hasPart rdf:resource="https://support.microsoft.com/de-de/topic/empfehlungen-zum-virenscan-f%C3%BCr-unternehmenscomputer-auf-denen-aktuell-unterst%C3%BCtzte-versionen-von-windows-ausgef%C3%BChrt-werden-kb822158-c067a732-f24a-9079-d240-3733e39b40bc"/>
+        <dcterms:hasPart rdf:resource="https://doi.org/10.25924/opus-3195"/>
+    </z:Collection>
+</rdf:RDF>

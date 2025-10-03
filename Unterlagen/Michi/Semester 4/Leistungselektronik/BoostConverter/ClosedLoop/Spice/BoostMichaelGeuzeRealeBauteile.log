@@ -1,0 +1,53 @@
+Circuit: * C:\Users\admin\OneDrive - FH Vorarlberg\Dokumente\BoostConverter\BoostMichaelGeuzeRealeBauteile.asc
+
+Direct Newton iteration for .op point succeeded.
+
+vout: AVG(v(out))=8.23106 FROM 0 TO 2.5e-005
+maxvout: MAX(v(out))=8.3046 FROM 0 TO 2.5e-005
+minvout: MIN(v(out))=8.15772 FROM 0 TO 2.5e-005
+delta_v_r1: (maxvout-minvout)/2=0.0734401
+iout: AVG(i(r1))=0.685921 FROM 0 TO 2.5e-005
+i_l1_avg: AVG(i(l1))=0.685918 FROM 0 TO 2.5e-005
+maxl1: MAX(i(l1))=0.862492 FROM 0 TO 2.5e-005
+minl1: MIN(i(l1))=0.509295 FROM 0 TO 2.5e-005
+delta_i_l1: (maxl1-minl1)/2=0.176599
+delta_i_l1_percent=2.5e-005 FROM 0 TO 2.5e-005
+id_vout: AVG(v(id_out))=8.60211 FROM 0 TO 2.5e-005
+id_maxvout: MAX(v(id_out))=8.74362 FROM 0 TO 2.5e-005
+id_minvout: MIN(v(id_out))=8.4609 FROM 0 TO 2.5e-005
+id_delta_v_r1: (id_maxvout-id_minvout)/2=0.141358
+id_iout: AVG(i(id_r1))=0.716843 FROM 0 TO 2.5e-005
+id_i_l1_avg: AVG(i(id_l1))=0.716837 FROM 0 TO 2.5e-005
+id_maxl1: MAX(i(id_l1))=0.920058 FROM 0 TO 2.5e-005
+id_minl1: MIN(i(id_l1))=0.513644 FROM 0 TO 2.5e-005
+id_delta_i_l1: (id_maxl1-id_minl1)/2=0.203207
+diff_i_l1_id_real: (id_i_l1_avg-i_l1_avg)=0.0309188
+diff_v_c_id_real: (id_vout-vout)=0.371055
+diff_delta_i_id_real: (id_delta_i_l1-delta_i_l1)=0.0266084
+diff_delta_v_id_real: (id_delta_v_r1-delta_v_r1)=0.0679183
+pin: AVG(-v(in)*i(r_i_meas))=5.88257 FROM 0 TO 2.5e-005
+pout: AVG(v(out)*i(r1))=5.64609 FROM 0 TO 2.5e-005
+eff: (pout/pin)=0.959801
+pow_m1: AVG(v(in)*ix(m1:d)+v(drv)*ix(m1:g)+v(sw)*ix(m1:s))=0.0217744 FROM 0 TO 2.5e-005
+pow_d1: AVG(-v(sw)*i(d1))=0.136963 FROM 0 TO 2.5e-005
+pow_l1: AVG(v(out,l_loss)*i(l1_r_para))=0.127441 FROM 0 TO 2.5e-005
+pow_c1: AVG(v(c_loss)*i(c1_r_para))=1.40298e-006 FROM 0 TO 2.5e-005
+
+
+Date: Mon May 01 15:03:56 2023
+Total elapsed time: 2.661 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 969766
+traniter = 969752
+tranpoints = 340926
+accept = 265150
+rejected = 75776
+matrix size = 29
+fillins = 13
+solver = Normal
+Matrix Compiler1: 2.08 KB object code size  0.5/0.3/[0.2]
+Matrix Compiler2: 2.34 KB object code size  0.2/0.3/[0.2]
+

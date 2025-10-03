@@ -1,0 +1,16 @@
+typedef struct Node {
+	//Daten
+	uint64_t value;
+	//Verweis
+	struct Node* pNext;
+}node_t;
+//node_t einbinden
+
+node_t * createNode(uint64_t value) {
+	node_t * pNode = malloc(sizeof(node_t));
+	if (pNode != NULL) {
+		pNode->value = value;
+		pNode->pNext = NULL;
+	}
+	return pNode;
+}

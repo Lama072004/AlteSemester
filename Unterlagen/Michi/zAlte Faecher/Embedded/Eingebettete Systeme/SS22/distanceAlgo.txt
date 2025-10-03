@@ -1,0 +1,59 @@
+#include <stdio.h>
+
+int searchField(int* field, int length) {
+	int value = 0, distanceLast = 0, distanceNext = -1;
+
+	for (int i = 0; i < length / 2; i += 1) {
+		value = field[i];
+		for (int j = length - 1; j > length / 2; j -= 1) {
+			if (value == field[j]) {
+				distanceLast = j - i;
+				break;
+			}
+		}
+		if (distanceLast < distanceNext) return distanceLast;
+		distanceNext = distanceLast;
+	}
+	
+	return 0;
+}
+
+int searchPos(int values[], int len) {
+
+	int maxDist = -1;
+	int valueOfMaxDistance = -1;
+
+	for (int i = 0; i < len; i++) {
+		int posOfDuplicate = -1;
+		int pos = i + 1;
+		while ((pos < len)) {
+			if (values[pos] == values[i]) {
+				posOfDuplicate = pos;
+			}
+			pos = pos + 1;
+		};
+
+		if (posOfDuplicate != -1) {
+			if ((posOfDuplicate - i) > maxDist) {
+				maxDist = posOfDuplicate - i;
+				valueOfMaxDistance = values[i];
+			}
+		}
+	}
+	if (maxDist != -1) {
+		printf("Max distance = %d, value = %d\n", maxDist, valueOfMaxDistance);
+	}
+	else {
+		printf("No duplicates found\n");
+	}
+
+	return 0;
+}
+
+
+
+int main(int argc, int **argv) {
+	int field[] = { 1, 2, 5, 10, 3 , 10 , 10 ,3 };
+	printf("%d\n", searchPos(field, sizeof(field) / sizeof(field[0])));
+	printf("%d\n", searchField(field, sizeof(field) / sizeof(field[0])));
+}

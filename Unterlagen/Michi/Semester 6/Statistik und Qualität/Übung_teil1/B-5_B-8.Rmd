@@ -1,0 +1,62 @@
+---
+title: "B-5_Fluggesellschaft"
+author: "Michael Geuze"
+date: "2024-05-19"
+output: html_document
+---
+
+# B-5 Fluggesellschaft
+```{r}
+# Within both travel distances 1 death occurs
+flight_distance <- 48e6 # km/death
+flight_speed <- 1000 # km/h
+
+car_distance <- 4.8e6 # km/death
+car_speed <- 100 # km/h
+
+car_death_h <- car_speed / car_distance; car_death_h # deaths/h
+
+flight_death_h <- flight_speed / flight_distance; flight_death_h # deaths/h
+```
+Die gegebenen Toten pro Stunde sind gleich. Wollen wir aber das Auto besser da stehen lassen, können wir folgendes behaupten: Mit dem Fahrzeug fährt man üblicherweise 0,5 - 1 h. Mit einem Langstreckenflugzeug sind es 10 - 15 h. Daraus ergeben sich die folgenden Todesfälle bei einer üblichen Reise:
+```{r}
+cat("Tode bei 10000 üblichen Autofahrten:" ,car_death_h * 0.75 * 10000)
+cat("Tode bei 10000 üblichen Flugzeugreisen:", flight_death_h * 12.5 * 10000)
+cat("So ist das Risiko beim fliegen um", (flight_death_h * 12.5) / (car_death_h * 0.75), "höher zu sterben.")
+```
+
+# B-6 Will Rogers Phänomen
+```{r}
+risk_2005 <- 5
+senior_kids_2005 <- 8
+everyday_2005 <- 10
+risk_2010 <- 4.5
+senior_kids_2010 <- 7.8
+everyday_2010 <- 9.7
+devcnt_risk <- 30000
+devcnt_senior <- 10000
+devcnt_everyday <- 30000
+
+lifetime_2005_normal <- (everyday_2005 * devcnt_everyday + senior_kids_2005*devcnt_senior ) / (devcnt_everyday + devcnt_senior) 
+lifetime_2005_risk <- risk_2005
+
+lifetime_2010_normal <- everyday_2010
+lifetime_2010_risk <- (risk_2010 * devcnt_risk + senior_kids_2010 * devcnt_senior) / (devcnt_senior + devcnt_risk)
+
+```
+Durch die neuzuordnung ist hier das Roger Williams Phänomen zu beobachten. Es wurden die Geräte den Risikosensoren zugeordent, die die schlechtesten (bezogen auf Lebensdauer) in der vorigen Auswertung waren. Das waren eben Kinden und Senioren. Dadurch haben sich in beiden Kategorien die Werte "verbessert" obwohl sie in realität in allen Einsätzen an Lebesdauer einbeüßt hatten. 
+
+## Auswertung mit gleicher zuordnung:
+```{r}
+lifetime_2010_normal_no_chg <-  (everyday_2010 * devcnt_everyday + senior_kids_2010*devcnt_senior ) / (devcnt_everyday + devcnt_senior) 
+lifetime_2010_risk_no_chg <- risk_2010
+cat("Alltagseinsatz ohne Neuzordnung:", lifetime_2010_normal_no_chg)
+cat("Risikoeinsatz ohne Neuzuordnung:", lifetime_2010_risk_no_chg)
+```
+# B-7 Simpsons Paradoxon
+In Avantdstadt waren beide Verfahren besser, als in Marginalstadt. Um eine belastbare Aussage der Ergebnisse zu erhalten, müssten in beiden Orten jeweils gleich große Losgrößen der Produtkionsarten produziert werden. Die sogenannte stratifiziterte Randomisierung hätte angewandt werden müssen.
+
+#  B-8
+Dadurch dass sich überdurchschnittlich viele Frauen an Studiegängen die eine geringe Studienplatzanzahl haben, ist das ganze passiert. Bei Studiengängen die eine recht hohe Aufnahmequote wie STG2 haben, haben sich  überdurchschnittlich viele Männer beworben und sind daher auch aufgenommen worden. Wenn mann die getrennte Auflistung ansieht, sieht man das selbe Simpsons Paradoxon wie in Aufgabe B-7.
+
+

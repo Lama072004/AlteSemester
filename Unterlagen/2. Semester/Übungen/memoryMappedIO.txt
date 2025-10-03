@@ -1,0 +1,109 @@
+#define GPIO_BASE_ADDRESS__ 			0x60004000 //GPIO_BASE ADDRESS
+#define GPIO_IN_REG__					0x003C
+
+#define INPUT							3
+
+#include <stdbool.h>
+
+
+// Pointer zu addressbereich der gelesen werden soll
+volatile uint32_t* gpGPIO_Inputvalues = (volatile uint32_t*) ((GPIO_BASE_ADDRESS__) | (GPIO_IN_REG__));
+
+
+//Pin lesen
+
+//annahme 
+0000 0010 1100 1000 		//Bitmuster am eingang
+0000 0000 0000 1000			//Bitmuster zum vergleich
+=
+return 
+0000 0000 0000 1000
+
+
+anderer Fall:
+0000 0010 1100 0001
+0000 0000 0000 1000	
+=
+return 
+0000 0000 0000 0000
+
+//als funktion
+bool readIn1(uint32_t pinNumber){
+	return (bool) ( (*gpGPIO_Inputvalues) & (1 << pinNumber) );
+}
+
+//als programmteil
+bool in = 0;
+if(*gpGPIO_Inputvalues & (1 << INPUT) == (1 << INPUT) ){
+	in = true;
+}else{
+	in = false;
+}
+
+
+0000 0010 1100 0000
+0000 0000 0000 1000
+=
+0000 0000 0000 0000
+
+
+0000 0010 1100 1000 	//gpGPIO_Inputvalues
+
+0000 0000 0101 1001
+0000 0000 0000 0001
+
+
+//als funktion
+bool readInput(uint32_t pinNumber){
+	return ( ( (*gpGPIO_Inputvalues) >> pinNumber) & 0x01);
+}
+
+//als programmteil
+if( (*gpGPIO_Inputvalues) >> INPUT) & 0x01)){
+	in = true;
+}else{
+	in = false;
+}
+
+
+// Pin schreiben
+
+#define GPIO_OUT_W1TS_REG__ 		(0x0008)
+#define LED 						6
+#define GPIO_OUT_W1TC_REG__			0x000C
+
+volatile uint32_t* gpOutSetRegister = (volatile uint32_t*) ((GPIO_BASE_ADDRESS__) | (GPIO_OUT_W1TS_REG__));
+volatile uint32_t* gpOutClearRegister = (volatile uint32_t*) ((GPIO_BASE_ADDRESS__) | (GPIO_OUT_W1TC_REG__));
+
+
+// im programmteil
+(*gpOutSetRegister) = (1 << LED);	//einschalten
+(*gpOutClearRegister) = (1 << LED);	//ausschalten
+
+
+//als funktion
+void setOutput(uint32_t pinNumber){
+	(*gpOutSetRegister) = (1 << pinNumber);
+}
+
+void clearOutput(uint32_t pinNumber){
+	(*gpOutClearRegister) = (1 << pinNumber);	
+}
+
+while(1){
+	setOutput(LED);
+	vTaskDelay(100);
+	clearOutput(LED);
+	vTaskDelay(100);
+}
+
+
+
+// read-modify-write wie in test
+
+uint32_t varX = 2332; //zufälliger wert
+
+varX = varX | (1 << 28) | (1 << 2);
+
+varX = varX & ~((1 << 28) | (1 << 3));
+

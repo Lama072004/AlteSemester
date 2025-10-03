@@ -1,0 +1,32 @@
+Circuit: * C:\Users\admin\OneDrive - FH Vorarlberg\Dokumente\BoostMichaelGeuze.asc
+
+Direct Newton iteration for .op point succeeded.
+
+id_vout: AVG(v(id_out))=8.60249 FROM 0 TO 2.5e-005
+id_maxvout: MAX(v(id_out))=8.74382 FROM 0 TO 2.5e-005
+id_minvout: MIN(v(id_out))=8.46119 FROM 0 TO 2.5e-005
+id_delta_v_r1: (id_maxvout-id_minvout)/2=0.141312
+id_iout: AVG(i(id_r1))=0.716874 FROM 0 TO 2.5e-005
+id_i_l1_avg: AVG(i(id_l1))=0.716862 FROM 0 TO 2.5e-005
+id_maxl1: MAX(i(id_l1))=0.92007 FROM 0 TO 2.5e-005
+id_minl1: MIN(i(id_l1))=0.513673 FROM 0 TO 2.5e-005
+id_delta_i_l1: (id_maxl1-id_minl1)/2=0.203199
+
+
+Date: Thu Apr 27 17:54:19 2023
+Total elapsed time: 0.502 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 295902
+traniter = 295899
+tranpoints = 145950
+accept = 119965
+rejected = 25985
+matrix size = 6
+fillins = 0
+solver = Normal
+Matrix Compiler1: 146 bytes object code size  0.2/0.2/[0.1]
+Matrix Compiler2: 360 bytes object code size  0.2/0.2/[0.2]
+

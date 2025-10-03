@@ -1,0 +1,2076 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Intro - Python 4 ET Dual</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.2505c338.min.css">
+        
+          
+          
+          <meta name="theme-color" content="">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="stylesheets/extra.css" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Python 4 ET Dual" class="md-header__button md-logo" aria-label="Python 4 ET Dual" data-md-component="logo">
+      
+  <img src="img/fhv.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python 4 ET Dual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Intro
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Python 4 ET Dual" class="md-nav__button md-logo" aria-label="Python 4 ET Dual" data-md-component="logo">
+      
+  <img src="img/fhv.png" alt="logo">
+
+    </a>
+    Python 4 ET Dual
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="uebersicht.html" class="md-nav__link">
+        Übersicht
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="glossar.html" class="md-nav__link">
+        Glossar
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="infrastruktur.html" class="md-nav__link">
+        Infrastruktur
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Intro
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="python.intro.html" class="md-nav__link md-nav__link--active">
+        Intro
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#warum-python" class="md-nav__link">
+    Warum Python?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erste-schritte-in-python" class="md-nav__link">
+    Erste Schritte in Python
+  </a>
+  
+    <nav class="md-nav" aria-label="Erste Schritte in Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hello-world" class="md-nav__link">
+    Hello, World!
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sachen-zum-lachen" class="md-nav__link">
+    Sachen zum Lachen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#einfach-zum-nachdenken-the-zen-of-python-by-tim-peters" class="md-nav__link">
+    Einfach zum Nachdenken - The Zen of Python, by Tim Peters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-ressourcen-zu-python" class="md-nav__link">
+    Web Ressourcen zu Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ressourcen-zu-python-an-der-fh-vorarlberg" class="md-nav__link">
+    Ressourcen zu Python an der FH Vorarlberg
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statisch-typisierte-vs-dynamisch-typisierte-programmiersprachen" class="md-nav__link">
+    Statisch typisierte vs. dynamisch typisierte Programmiersprachen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-blocks" class="md-nav__link">
+    Building Blocks
+  </a>
+  
+    <nav class="md-nav" aria-label="Building Blocks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variable" class="md-nav__link">
+    Variable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datentypen-und-strukturen" class="md-nav__link">
+    Datentypen und -strukturen
+  </a>
+  
+    <nav class="md-nav" aria-label="Datentypen und -strukturen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integer" class="md-nav__link">
+    Integer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#float" class="md-nav__link">
+    Float
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string" class="md-nav__link">
+    String
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tuples" class="md-nav__link">
+    Tuples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listen" class="md-nav__link">
+    Listen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dictionaries" class="md-nav__link">
+    Dictionaries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sets-mengen" class="md-nav__link">
+    Sets (Mengen)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#files" class="md-nav__link">
+    Files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#klassen" class="md-nav__link">
+    Klassen
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ausdrucke-und-anweisungen" class="md-nav__link">
+    Ausdrücke und Anweisungen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steuerung-des-programmflusses" class="md-nav__link">
+    Steuerung des Programmflusses
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programmiertstil" class="md-nav__link">
+    Programmiertstil
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#idioms" class="md-nav__link">
+    Idioms
+  </a>
+  
+    <nav class="md-nav" aria-label="Idioms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#werte-tauschen" class="md-nav__link">
+    Werte tauschen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aus-einer-oder-mehreren-listen-mach-eine-liste" class="md-nav__link">
+    Aus einer oder mehreren Listen mach' eine Liste
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aus-zwei-listen-mach-durch-verschranken-eine-liste-von-paaren" class="md-nav__link">
+    Aus zwei Listen mach' (durch Verschränken) eine Liste von Paaren
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aus-einer-liste-von-paaren-mach-zwei-listen" class="md-nav__link">
+    Aus einer Liste von Paaren mach' zwei Listen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zugriff-auf-listenelemente-mittels-negativer-indices" class="md-nav__link">
+    Zugriff auf Listenelemente mittels negativer Indices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daten-ausin-objekten-lesenschreiben" class="md-nav__link">
+    Daten aus/in Objekte/n lesen/schreiben
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          Grundlagen
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Grundlagen" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Grundlagen
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="python.variable_und_datentypen.html" class="md-nav__link">
+        Variable und Datentypen
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="python.programmfluss.html" class="md-nav__link">
+        Programmflusssteuerung
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="python.funktionen.html" class="md-nav__link">
+        Funktionen
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="python.exceptionhandling.html" class="md-nav__link">
+        Excpetion-Handling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="python.strings.html" class="md-nav__link">
+        Strings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="python.files.html" class="md-nav__link">
+        File-I/O
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="python.stdlib.html" class="md-nav__link">
+        Pythons Std-Library
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3">
+          Vertiefung
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Vertiefung" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Vertiefung
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="python.oop.html" class="md-nav__link">
+        OOP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="python.kommunikation.html" class="md-nav__link">
+        Kommunikation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="python.guis.html" class="md-nav__link">
+        GUIs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="python.multithreading.html" class="md-nav__link">
+        Multithreading
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="python.distributed_computing.html" class="md-nav__link">
+        Distributed Computing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="python.datenpersistenz.html" class="md-nav__link">
+        Datenpersistenz
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Pie
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Pie" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Pie
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pie.html" class="md-nav__link">
+        Übersicht
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pieActuators.html" class="md-nav__link">
+        pieActuators
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pieControlEngineering.html" class="md-nav__link">
+        pieControlEngineering
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pieCore.html" class="md-nav__link">
+        pieCore
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pieDataManagement.html" class="md-nav__link">
+        pieDataManagement
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pieSensors.html" class="md-nav__link">
+        pieSensors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pieStatistix.html" class="md-nav__link">
+        pieStatistix
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pieTime.html" class="md-nav__link">
+        pieTime
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="raspi.html" class="md-nav__link">
+        Raspberry Pi
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tools" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ides.html" class="md-nav__link">
+        IDEs
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Übungen
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Übungen" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Übungen
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="se.algorithmen.html" class="md-nav__link">
+        Algorithmen
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="se.oop.html" class="md-nav__link">
+        OOP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          Anhang
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Anhang" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Anhang
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dox.html" class="md-nav__link">
+        Web-Links und Dokumentenverzeichnis
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#warum-python" class="md-nav__link">
+    Warum Python?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erste-schritte-in-python" class="md-nav__link">
+    Erste Schritte in Python
+  </a>
+  
+    <nav class="md-nav" aria-label="Erste Schritte in Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hello-world" class="md-nav__link">
+    Hello, World!
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sachen-zum-lachen" class="md-nav__link">
+    Sachen zum Lachen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#einfach-zum-nachdenken-the-zen-of-python-by-tim-peters" class="md-nav__link">
+    Einfach zum Nachdenken - The Zen of Python, by Tim Peters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-ressourcen-zu-python" class="md-nav__link">
+    Web Ressourcen zu Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ressourcen-zu-python-an-der-fh-vorarlberg" class="md-nav__link">
+    Ressourcen zu Python an der FH Vorarlberg
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statisch-typisierte-vs-dynamisch-typisierte-programmiersprachen" class="md-nav__link">
+    Statisch typisierte vs. dynamisch typisierte Programmiersprachen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-blocks" class="md-nav__link">
+    Building Blocks
+  </a>
+  
+    <nav class="md-nav" aria-label="Building Blocks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variable" class="md-nav__link">
+    Variable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datentypen-und-strukturen" class="md-nav__link">
+    Datentypen und -strukturen
+  </a>
+  
+    <nav class="md-nav" aria-label="Datentypen und -strukturen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integer" class="md-nav__link">
+    Integer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#float" class="md-nav__link">
+    Float
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string" class="md-nav__link">
+    String
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tuples" class="md-nav__link">
+    Tuples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listen" class="md-nav__link">
+    Listen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dictionaries" class="md-nav__link">
+    Dictionaries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sets-mengen" class="md-nav__link">
+    Sets (Mengen)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#files" class="md-nav__link">
+    Files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#klassen" class="md-nav__link">
+    Klassen
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ausdrucke-und-anweisungen" class="md-nav__link">
+    Ausdrücke und Anweisungen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steuerung-des-programmflusses" class="md-nav__link">
+    Steuerung des Programmflusses
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programmiertstil" class="md-nav__link">
+    Programmiertstil
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#idioms" class="md-nav__link">
+    Idioms
+  </a>
+  
+    <nav class="md-nav" aria-label="Idioms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#werte-tauschen" class="md-nav__link">
+    Werte tauschen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aus-einer-oder-mehreren-listen-mach-eine-liste" class="md-nav__link">
+    Aus einer oder mehreren Listen mach' eine Liste
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aus-zwei-listen-mach-durch-verschranken-eine-liste-von-paaren" class="md-nav__link">
+    Aus zwei Listen mach' (durch Verschränken) eine Liste von Paaren
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aus-einer-liste-von-paaren-mach-zwei-listen" class="md-nav__link">
+    Aus einer Liste von Paaren mach' zwei Listen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zugriff-auf-listenelemente-mittels-negativer-indices" class="md-nav__link">
+    Zugriff auf Listenelemente mittels negativer Indices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daten-ausin-objekten-lesenschreiben" class="md-nav__link">
+    Daten aus/in Objekte/n lesen/schreiben
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h2 id="_1"></h2>
+<h1 id="warum-python">Warum Python?</h1>
+<p>Die Sprache <a href="https://www.python.org"><em>Python</em></a> hat ihren Namen nicht von der Schlange, sondern von der englischen Komikertruppe <em>Monty Python</em>. Guido van Rossum, der Schöpfer der Sprache <a href="https://www.python.org"><em>Python</em></a> hatte gerade eine erste Version des Kernels seiner neuen Programmiersprache fertig, als eine Monty-Python-Episode im TV lief, deren Fan er ist. Der Rest ist Geschichte, wie's so schön heißt.</p>
+<p><a href="https://www.python.org"><em>Python</em></a> ist eine dynamisch und stark typisierte Programmiersprache, die interpretiert wird (exakt: Der Source Code wird in Byte Code übersetzt, der dann vom Interpreter interpretiert wird). Reine Python-Programme laufen daher je nach Anwendung 10- bis 100-mal langsamer als solche, die in einer statisch typisierten / compilierten Sprache geschrieben sind, weil solche Programme mehr oder weniger direkt in Maschinencode übersetzt werden. Dafür ist die Zeit, die man für die Entwicklung von Python-Programmen braucht, wesentlich kürzer als jene, die man für die Entwicklung von Programmen in einer statisch typisierten Sprache benötigt.</p>
+<p>Als Vorteile von <a href="https://www.python.org"><em>Python</em></a> können genannt werden:</p>
+<ul>
+<li>Einfache Syntax im besten Sinne des Wortes, ausdrucksstark</li>
+<li>Sehr gute Lesbarkeit der Programme (wie Pseudocode) - es sei denn, man verwendet das <code>typing</code>-Package :-(</li>
+<li>High-Level-Datentypen</li>
+<li>Interpretiert, daher kann auch interaktiv gearbeitet werden</li>
+<li>Keine Compiler-/Linker-Läufe notwendig</li>
+<li>Keine „einfachen“ Abstürze (Segmentation Faults) im Fehlerfall, sondern detaillierte Tracebacks</li>
+<li>Open Source1 und sehr große Community, sehr stark wachsend im akademischen Bereich</li>
+</ul>
+<p>Nachteile:</p>
+<ul>
+<li>Keine Compiler-/Linker-Läufe notwendig</li>
+<li>Laufzeitbedarf; allerdings bietet <a href="https://www.python.org"><em>Python</em></a> auch Mechanismen, die hier Raum für Laufzeitverbesserungen bieten (s. z.B. <a href="https://docs.python.org/3/library/functools.html#functools.lru_cache">lru_cache</a>).</li>
+</ul>
+<p>Auffällig:</p>
+<ul>
+<li>
+<p>Keine Klammern - whitespace matters</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">def</span> <span class="nf">sqr</span><span class="p">(</span> <span class="n">x</span><span class="p">):</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>self</p>
+<p>Dazu kommen wir im Kapitel <a href="python.oop.html">OOP</a>.</p>
+</li>
+</ul>
+<h1 id="erste-schritte-in-python">Erste Schritte in Python</h1>
+<h2 id="hello-world">Hello, World!</h2>
+<p>Legen Sie ein File <code>hello.py</code> an und schreiben Sie:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Führen Sie das File auf der Konsole aus per </p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>hello.py
+</span></code></pre></div>
+<p>Die Ausgabe auf einem Linux-Rechner ist dann (unter Windows ist der Prompt ein anderer, sonst natürlich alles gleich)</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$<span class="w"> </span>python<span class="w"> </span>hello.py<span class="w"> </span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Hello,<span class="w"> </span>World!
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>$
+</span></code></pre></div>
+<h2 id="sachen-zum-lachen">Sachen zum Lachen</h2>
+<p>Geben Sie auf der Konsole mal Folgendes ein</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>&gt;&gt;&gt;<span class="w"> </span>from<span class="w"> </span>__future__<span class="w"> </span>import<span class="w"> </span>braces
+</span></code></pre></div>
+<p>Das Ergebnis wird sein:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>File<span class="w"> </span><span class="s2">&quot;&lt;stdin&gt;&quot;</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">1</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>SyntaxError:<span class="w"> </span>not<span class="w"> </span>a<span class="w"> </span>chance
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>&gt;&gt;&gt;<span class="w"> </span>
+</span></code></pre></div>
+<h2 id="einfach-zum-nachdenken-the-zen-of-python-by-tim-peters">Einfach zum Nachdenken - The Zen of Python, by Tim Peters</h2>
+<p>Wenn Sie in einer Python-Konsole den Text</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">import</span> <span class="nn">this</span>
+</span></code></pre></div>
+<p>eingeben und ENTER drücken, erhalten Sie folgende Ausgabe (zur Historie siehe z.B. <a href="https://mail.python.org/pipermail/python-list/1999-June/001951.html">https://mail.python.org/pipermail/python-list/1999-June/001951.html</a>)</p>
+<p><strong>Beautiful is better than ugly.</strong></p>
+<p>Code, der nicht „schön“ ist, ist schwer zu warten und sogar fehleranfällig. Doch, was ist „schön“ in diesem Zusammenhang? Vllt. sollte man eher „einfach“ sagen. Gibt es Code-Teile, die man weglassen kann? Kann man diese Struktur des eines Programmabschnittes vereinfachen? Mit der Zeit entwickelt man eine Art Bauchgefühl dafür, dass etwas nicht stimmt, noch bevor man konkret sagen kann, was nicht stimmt.</p>
+<p>Doch Vorsicht, wenn Sie es mit Code eines Anderen zu tun haben. Streichen Sie nicht voreilig Teile des Programms, weil Sie glauben, sie seien unnötig. Es kann gut sein, dass sich der Autor damals etwas dabei gedacht hat...</p>
+<p><strong>Explicit is better than implicit.</strong></p>
+<p>Keine versteckten Annahmen, keine Tricks. Drücken Sie aus, was Sie meinen, zeigen Sie, was der Code tut, machen Sie es offensichtlich!</p>
+<p>„self“ oder der this-Pointer in C++ sind ebenfalls Beispiele hierfür.</p>
+<p><strong>Simple is better than complex.</strong></p>
+<p>Halten Sie’s mit Einstein: Machen Sie die Dinge so einfach wie möglich (aber nicht einfacher).</p>
+<p><strong>Complex is better than complicated.</strong></p>
+<p>Wenn Sie komplexe Aufgabenstellungen zu lösen haben, kann Komplexes gleich auch mal kompliziert werden – es sei denn, man verwendet Code aus der Std.-Lib oder aus Paketen, die für bestimmte Anwendungsgebiete nicht mehr wegzudenken sind. NumPy ist so ein Paket:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">N</span> <span class="o">=</span> <span class="mi">10000000</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">a</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span> <span class="n">N</span><span class="p">)</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">b</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span> <span class="n">N</span><span class="p">)</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">c</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span> <span class="n">N</span><span class="p">):</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    <span class="n">c</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="n">a</span><span class="p">[</span> <span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">b</span><span class="p">[</span> <span class="n">i</span><span class="p">])</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="n">ist</span> <span class="n">kompliziert</span> <span class="n">gegenüber</span> <span class="n">der</span> <span class="n">Lösung</span> <span class="n">mit</span> <span class="n">NumPy</span><span class="p">::</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    <span class="kn">import</span> <span class="nn">numpy</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>    <span class="n">N</span> <span class="o">=</span> <span class="mi">10000000</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>    <span class="n">a</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span> <span class="n">N</span><span class="p">)</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>    <span class="n">b</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span> <span class="n">N</span><span class="p">)</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>    <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</span></code></pre></div>
+<p><strong>Flat is better than nested.</strong></p>
+<p>Beginnt man seinen Code in Package-/Modul-Hierarchien zu organisieren, läuft man schnell Gefahr, in einer Art Bürokratie zu enden. Nehmen Sie als Beispiel eine Knowhow-Sammlung in einem Textdokument, in dem Sie Wichtiges hierarchisch organisieren. Schnell werden Sie merken, je tiefer die Hierarchie wird, desto schwieriger ist, es Bestehendes zu finden und Neues einzuordnen.</p>
+<p><strong>Sparse is better than dense.</strong></p>
+<p>Packen Sie nicht zuviel Code in dafür verfügbaren Raum. Wieviel Programmcode passt in eine Zeile? Falsche Frage! Die Frage muss richtig lauten: Kann man soviel Programmcode (in einer) Zeile noch lesen im Sinne von Verstehen?</p>
+<p><strong>Readability counts.</strong></p>
+<p>Sie oder Ihre Kollegen werden Ihren Code wahrscheinlich öfters lesen als schreiben, glauben Sie nicht?</p>
+<p>Python treibt das ins Extreme (wenigstens wird es von vielen so empfunden): Nicht Klammern sondern Einrückungen bestimmen den Programmfluss; keine schließenden Strichpunkte; Inline-Doku wird unterstützt.</p>
+<p><strong>Special cases aren't special enough to break the rules.</strong></p>
+<p>Wenn Sie Regularien folgen, versuchen Sie, das immer zu tun. Ausnahmen müssen wohlbegründet und gekennzeichnet sein.</p>
+<p>Für Python bedeutet das z.B. alles ist ein Objekt, dynamische Typisierung, die meiste Funktionalität in externen Modulen wie der Standard-Library (Regular Expressions sind ein gutes Beispiel hierfür).</p>
+<p><strong>Although practicality beats purity.</strong></p>
+<p>Diesen Satz muss man im Zusammenhang mit dem letzten sehen. Am Schluss muss etwas funktionieren, zeitgerecht. Hier sind Sie gefordert, die richtige Balance zu finden.</p>
+<p>Python bietet daher mehr als ein Programmiermodell: OOP, prozedural und funktional (im Sinne von Functional Programming, also seiteneffektfrei).</p>
+<p><strong>Errors should never pass silently.</strong></p>
+<p>Machen Sie sich früh Gedanken über ein anständiges Fehlerkonzept. Tun Sie bei Fehlern nicht einfach nichts, das beißt Sie früher als Sie denken.</p>
+<p>Python unterstützt hier durch Exceptions und Tracebacks.</p>
+<p><strong>Unless explicitly silenced.</strong></p>
+<p>Auch dieser Satz steht wieder mit dem vorhergehenden im Zusammenhang. Wenn Sie nicht anders können, tun Sie’s wenigstens explizit, also wohlbegründet und gekennzeichnet.</p>
+<p><strong>In the face of ambiguity, refuse the temptation to guess.</strong></p>
+<p>Dieser Satz ist vermutlich am besten übersetzt mit „Kein Herumprobieren!“ Sie müssen immer wissen, was Sie tun und warum.</p>
+<p>Auch Python rät nicht. So können Strings und Integers nicht addiert werden (<a href="https://www.perl.org/"><em>Perl</em></a> „kann“ das, Allerdings kann <em>Python</em> Strings und Integers muliplizieren - und das ist in der Tat sinnvoll:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="err">„</span><span class="c1">#“ * 3 == „###“.</span>
+</span></code></pre></div>
+<p><strong>There should be one -- and preferably only one – obvious way to do it.</strong></p>
+<p>Folgen Sie dem Principle Of Least Surprise, das Verhalten Ihres Programms (User-Ebene) oder Ihrer Software (Devel-Ebene) sollte offensichtlich sein. Vermeiden Sie also Redundanzen v.a. in APIs.</p>
+<p><strong>Although that way may not be obvious at first unless you're Dutch.</strong></p>
+<p>Python versucht, wenig zu überraschen, offensichtliche Lösungen anzubieten – jedenfalls aus Sicht des Schöpfers der Sprache und der ist Holländer...</p>
+<p><strong>Now is better than never.</strong></p>
+<p>Dieses Statement könnte man auch formulieren als „done is better than perfect“. Sollen die Dinge von Beginn an perfekt sein, nimmt man sie nie in Angriff!</p>
+<p><strong>Although never is often better than right now.</strong></p>
+<p>Allerdings muss Nachdenken schon erlaubt sein. Hierzu passen auch YAGNI – das Wikipedia mit „‘You aren't gonna need it’ (YAGNI) is a principle of extreme programming (XP) that states a programmer should not add functionality until deemed necessary.“ erklärt.</p>
+<p>Bezüglich Python ist hiermit wohl gemeint, dass das Team um diese Programmiersprache sehr konservativ ist, wenn’s um neue Sprachelemente geht (aber auch hier gibt’s Ausnahmen). Es kommt auch nicht alles in die Standard-Library, das irgendwie praktisch erscheint.</p>
+<p><strong>If the implementation is hard to explain, it's a bad idea.</strong></p>
+<p>Hierzu muss nicht viel gesagt gesagt werden, außer...</p>
+<p><strong>If the implementation is easy to explain, it may be a good idea.</strong></p>
+<p>dass es umgekehrt nicht unbedingt besser sein <em>muss</em>.</p>
+<p><strong>Namespaces are one honking great idea -- let's do more of those!</strong></p>
+<p>Python kennt die Namespaces built-in, global und local, unterstützt sie mit entsprechenden Sprachelementen und implemntiert sie mit der grundlegenden Datenstruktur <em>Dictionary</em>.</p>
+<h2 id="web-ressourcen-zu-python">Web Ressourcen zu Python</h2>
+<p>Sie wollen sich selber helfen und fragen sich, welche Web Ressourcen gerade für "fortgeschrittene Anfänger" sinnvoll sein können? Hier eine kleine Auswahl:</p>
+<p><strong><a href="https://pythontutor.com/">https://pythontutor.com/</a></strong></p>
+<p>Hier können Sie sich zeigen lassen, was Ihr Code mit Ihrem Computer macht bezüglich Objekten, die angelegt werden, Speicherverbrauch u. dgl.</p>
+<p><strong>Getting Started With Python</strong></p>
+<ul>
+<li><a href="https://stackoverflow.blog/2021/07/14/getting-started-with-python/">https://stackoverflow.blog/2021/07/14/getting-started-with-python/</a></li>
+<li><a href="file:///atlantis/p/python/AMAs_programmierbeispiele_per_2021-09/SammelmappeHP.pdf">file:///atlantis/p/python/AMAs_programmierbeispiele_per_2021-09/SammelmappeHP.pdf</a> (lokal)</li>
+</ul>
+<p><strong>Fundgruben für weitere Beispiele</strong></p>
+<ul>
+<li><a href="https://hpcodewarsbcn.com/">https://hpcodewarsbcn.com/</a></li>
+<li><a href="file:///atlantis/p/python/AMAs_programmierbeispiele_per_2021-09/SammelmappeJutge.pdf">file:///atlantis/p/python/AMAs_programmierbeispiele_per_2021-09/SammelmappeJutge.pdf</a> (lokal)</li>
+</ul>
+<p><strong>Statistik</strong></p>
+<ul>
+<li><a href="https://realpython.com/python-statistics/">Python Statistics Fundamentals: How to Describe Your Data</a></li>
+</ul>
+<div class="admonition question">
+<p class="admonition-title">Von welchen Websites haben <em>Sie</em> besonders profitiert?</p>
+<p>Schreiben Sie mir, ich nehme die URL gerne in dieses Dokument auf!</p>
+</div>
+<h2 id="ressourcen-zu-python-an-der-fh-vorarlberg">Ressourcen zu Python an der FH Vorarlberg</h2>
+<p>Kollege Klaus Rheinberger unterhält eine schöne Begleit-Präsenz im Intranet der FHV zu seiner Lehrveranstaltung <a href="https://energie.labs.fhv.at/~kr/effsys-en/index.html">Effiziente Netzwerke</a>. Hier finden Sie eine Seite zu Python, voller Links, Tips, Code-Beispiele, wertvoller Packages - hier ist alles Python, nicht nur die eine Seite <a href="https://energie.labs.fhv.at/~kr/effsys-en/Python.html">https://energie.labs.fhv.at/~kr/effsys-en/Python.html</a> in <a href="https://energie.labs.fhv.at/">https://energie.labs.fhv.at/</a>.</p>
+<p>Schauen Sie rein, es lohnt sich, unbedingt!</p>
+<h2 id="statisch-typisierte-vs-dynamisch-typisierte-programmiersprachen">Statisch typisierte vs. dynamisch typisierte Programmiersprachen</h2>
+<p>Statisch typisierte Programmierpsrachen - zu ihnen gehören <em>C</em>, <em>C++</em> (Achtung: <em>C++</em> hat mit <em>C</em> so gut wie nichts zu tun, außer dass <em>C++</em> blöderweise die gleiche Syntax hat wie <em>C</em>!), <em>C#</em>, <em>Go</em>, <em>Java</em>,  <em>Kotlin</em>, ...</p>
+<p>Alle diese Sprachen haben Compiler und Linker, die Ihre Progamme vorab auf Syntax- und Typ-Fehler übeprüfen, bevor sie ein Binary daraus machen.</p>
+<p>Dynamisch typisierte Sprachen können das gleiche erst zur Laufzeit leisten. Darüber hinaus arbeiten dynamisch typisierte Programmiersprachen nicht mit Typen, sondern mit "Protokollen". Wenn also zwei Objekte die gleichen Methoden haben, die gleich ausgeführt werden (gleiche Parameterliste), dann sind sie für dynamisch typisierte Programmiersprachen gleich. Die Python-Community hat den Spruch geprägt, "If it walks like a duck, if it quaks like a duck, it is a duck." Ist praktisch, aber nicht ungefährlich. Aber auch darauf gibt's eine Antwort: "Python, das ist Programmieren für Erwachsene." ...</p>
+<div class="admonition warning">
+<p class="admonition-title">2DO</p>
+<p>Wir werden hierauf an anderer Stelle noch eingehen.</p>
+</div>
+<h2 id="building-blocks">Building Blocks</h2>
+<h3 id="variable">Variable</h3>
+<p>Eine Variable ist ein Speicherbereich einer bestimmten Länge, gemessen in Bytes (= 8 Bits), der Daten enthält. Speicherbereiche werden über Adressen angesprochen. In höheren Programmiersprachen braucht man nicht mit Speicheradressen zu hantieren, sondern kann diesen Speicherbereichen Namen geben. Solche Namen könnte man auch – und andere Programmiersprachen wie <em>C</em> und <em>C++</em> tun das - als Pointer bezeichnen. Die Adressen der Speicherbereiche, auf die die Namen "zeigen", können wir uns mir der Funktion <code>id()</code> anzeigen lassen.</p>
+<p>Höhere Programmiersprachen verbinden mit solchen Speicherbereichen einen Typ wie Integer oder Float. In statisch typisierten Programmiersprachen muss einer Variablen ein Typ fest zugeordnet werden. In dynamisch typisierten Sprachen ist das nicht notwendig, weil Namen einfach nur eine Art Labels sind, die an Speicherbereiche gebunden werden können, eben auf sie zeigen.</p>
+<div class="admonition tip">
+<p class="admonition-title">Rechner raus und...</p>
+<p>machen!</p>
+</div>
+<p>Lassen Sie uns das gemeinsam "erforschen"!</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">42</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span> <span class="n">i</span><span class="p">)</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="mi">139791546582544</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">43</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span> <span class="n">i</span><span class="p">)</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="mi">139791546582576</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span> <span class="n">i</span><span class="p">)</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="mi">139791546582576</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span> <span class="n">j</span><span class="p">)</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="mi">139791546582576</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="o">&gt;&gt;&gt;</span> 
+</span></code></pre></div>
+<p>Erklärungen?</p>
+<h3 id="datentypen-und-strukturen">Datentypen und -strukturen</h3>
+<p>Neben den "gängigen" Datentypen wie Integer, Float, String bietet Python Listen, Dictionaries, Mengen und noch einige mehr.</p>
+<h4 id="integer">Integer</h4>
+<p>Ganzzahlen, hierzu gibt's nicht viel zu sagen, außer - und das erscheint mir nicht unwichtig - dass Ganzzahlen in Python nicht überlaufen können:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">42</span><span class="o">**</span><span class="mi">42</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="mi">150130937545296572356771972164254457814047970568738777235893533016064</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span> <span class="n">_</span><span class="p">)</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">int</span><span class="s1">&#39;&gt;</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="o">&gt;&gt;&gt;</span> 
+</span></code></pre></div>
+<p>Wir können vom System Informationen über diesen Datentyp erhalten:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kn">import</span> <span class="nn">sys</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">sys</span><span class="o">.</span><span class="n">maxsize</span>
+</span></code></pre></div>
+<div class="admonition danger inline end">
+<p class="admonition-title">Übung</p>
+<p>Finden Sie heraus, was das bedeutet!</p>
+</div>
+<p>Das ergibt die Ausgabe </p>
+<p><code>9223372036854775807</code></p>
+<p>Aus Ganzzahlenn werden beim Dividieren Floats, es sei denn, man verwendet <code>//</code> beim Dividieren:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">42</span><span class="o">/</span><span class="mi">10</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="mf">4.2</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">42</span><span class="o">//</span><span class="mi">10</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="mi">4</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="o">&gt;&gt;&gt;</span>
+</span></code></pre></div>
+<p>Es wird bei der Ganzzahldivision nicht gerundet, sondern abgeschnitten.</p>
+<h4 id="float">Float</h4>
+<p>Fließkommazahlen. Die sind zwar praktisch, aber nicht ungefährlich. Versuchen Sie mal Folgendes (auf einer Konsole):</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span> <span class="o">==</span> <span class="mf">0.3</span>
+</span></code></pre></div>
+<div class="admonition important inline end">
+<p class="admonition-title">Important</p>
+<p>Das ist keine unangenmehme Eigenschaft der Programmiersprache, dieses Problem haben Sie in jeder Programmiersprache! Das ist ein Problem des Datenformats.</p>
+</div>
+<p>Um das zu verstehen, lassen Sie </p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span>
+</span></code></pre></div>
+<p>ausführen. Das Ergebnis ist mit unausweichlichen Rundungsfehlern dieses Datenformats zu erklären.</p>
+<p>Was also tun? Probieren Sie Folgendes:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">math</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">)</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="kc">True</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">1e-9</span><span class="p">)</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="ne">TypeError</span><span class="p">:</span> <span class="n">isclose</span><span class="p">()</span> <span class="n">takes</span> <span class="n">exactly</span> <span class="mi">2</span> <span class="n">positional</span> <span class="n">arguments</span> <span class="p">(</span><span class="mi">3</span> <span class="n">given</span><span class="p">)</span>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">rel_tol</span><span class="o">=</span><span class="mf">1e-9</span><span class="p">)</span>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="kc">True</span>
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="o">&gt;&gt;&gt;</span> 
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Diskussion</p>
+<p>Was ist passiert?</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><a href="https://davidamos.dev/the-right-way-to-compare-floats-in-python/">The Right Way To Compare Floats in Python</a></p>
+</div>
+<p>Wir können uns Informationen anzeigen lassen über diesen Datentyp:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kn">import</span> <span class="nn">sys</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="n">sys</span><span class="o">.</span><span class="n">float_info</span>
+</span></code></pre></div>
+<p>Das ergibt die Ausgabe (umgebrochen und eingerückt für bessere Lesbarkeit):</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">sys</span><span class="o">.</span><span class="n">float_info</span><span class="p">(</span> \
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>    <span class="nb">max</span><span class="o">=</span><span class="mf">1.7976931348623157e+308</span><span class="p">,</span> <span class="n">max_exp</span><span class="o">=</span><span class="mi">1024</span><span class="p">,</span> <span class="n">max_10_exp</span><span class="o">=</span><span class="mi">308</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mf">2.2250738585072014e-308</span><span class="p">,</span> <span class="n">min_exp</span><span class="o">=-</span><span class="mi">1021</span><span class="p">,</span> \
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>    <span class="n">min_10_exp</span><span class="o">=-</span><span class="mi">307</span><span class="p">,</span> <span class="n">dig</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">mant_dig</span><span class="o">=</span><span class="mi">53</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="mf">2.220446049250313e-16</span><span class="p">,</span> <span class="n">radix</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">rounds</span><span class="o">=</span><span class="mi">1</span> \
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="p">)</span>
+</span></code></pre></div>
+<h4 id="string">String</h4>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Ich bin eine zeichenkette&quot;</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span> <span class="s2">&quot;z&quot;</span><span class="p">,</span> <span class="s2">&quot;Z&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Strings können eine ganze Menge oder - andersrum - <em>Sie</em> können eine ganze Menge anstellen mit Strings. Was alles, entnehmen Sie den Dokumenten, die Sie auf der <a href="http://www.python.org">Website von <em>Python</em></a> finden oder einfach mit</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nb">dir</span><span class="p">(</span> <span class="nb">str</span><span class="p">)</span>
+</span></code></pre></div>
+<p>auf der Konsole</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="n">Python</span> <span class="mf">3.10.4</span> <span class="p">(</span><span class="n">main</span><span class="p">,</span> <span class="n">Mar</span> <span class="mi">23</span> <span class="mi">2022</span><span class="p">,</span> <span class="mi">23</span><span class="p">:</span><span class="mi">05</span><span class="p">:</span><span class="mi">40</span><span class="p">)</span> <span class="p">[</span><span class="n">GCC</span> <span class="mf">11.2.0</span><span class="p">]</span> <span class="n">on</span> <span class="n">linux</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="n">Type</span> <span class="s2">&quot;help&quot;</span><span class="p">,</span> <span class="s2">&quot;copyright&quot;</span><span class="p">,</span> <span class="s2">&quot;credits&quot;</span> <span class="ow">or</span> <span class="s2">&quot;license&quot;</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">dir</span><span class="p">(</span> <span class="nb">str</span><span class="p">)</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="p">[</span><span class="s1">&#39;__add__&#39;</span><span class="p">,</span> <span class="s1">&#39;__class__&#39;</span><span class="p">,</span> <span class="s1">&#39;__contains__&#39;</span><span class="p">,</span> <span class="s1">&#39;__delattr__&#39;</span><span class="p">,</span> <span class="s1">&#39;__dir__&#39;</span><span class="p">,</span> <span class="s1">&#39;__doc__&#39;</span><span class="p">,</span> <span class="s1">&#39;__eq__&#39;</span><span class="p">,</span> <span class="s1">&#39;__format__&#39;</span><span class="p">,</span> <span class="s1">&#39;__ge__&#39;</span><span class="p">,</span> <span class="s1">&#39;__getattribute__&#39;</span><span class="p">,</span> <span class="s1">&#39;__getitem__&#39;</span><span class="p">,</span> <span class="s1">&#39;__getnewargs__&#39;</span><span class="p">,</span> <span class="s1">&#39;__gt__&#39;</span><span class="p">,</span> <span class="s1">&#39;__hash__&#39;</span><span class="p">,</span> <span class="s1">&#39;__init__&#39;</span><span class="p">,</span> <span class="s1">&#39;__init_subclass__&#39;</span><span class="p">,</span> <span class="s1">&#39;__iter__&#39;</span><span class="p">,</span> <span class="s1">&#39;__le__&#39;</span><span class="p">,</span> <span class="s1">&#39;__len__&#39;</span><span class="p">,</span> <span class="s1">&#39;__lt__&#39;</span><span class="p">,</span> <span class="s1">&#39;__mod__&#39;</span><span class="p">,</span> <span class="s1">&#39;__mul__&#39;</span><span class="p">,</span> <span class="s1">&#39;__ne__&#39;</span><span class="p">,</span> <span class="s1">&#39;__new__&#39;</span><span class="p">,</span> <span class="s1">&#39;__reduce__&#39;</span><span class="p">,</span> <span class="s1">&#39;__reduce_ex__&#39;</span><span class="p">,</span> <span class="s1">&#39;__repr__&#39;</span><span class="p">,</span> <span class="s1">&#39;__rmod__&#39;</span><span class="p">,</span> <span class="s1">&#39;__rmul__&#39;</span><span class="p">,</span> <span class="s1">&#39;__setattr__&#39;</span><span class="p">,</span> <span class="s1">&#39;__sizeof__&#39;</span><span class="p">,</span> <span class="s1">&#39;__str__&#39;</span><span class="p">,</span> <span class="s1">&#39;__subclasshook__&#39;</span><span class="p">,</span> <span class="s1">&#39;capitalize&#39;</span><span class="p">,</span> <span class="s1">&#39;casefold&#39;</span><span class="p">,</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="s1">&#39;count&#39;</span><span class="p">,</span> <span class="s1">&#39;encode&#39;</span><span class="p">,</span> <span class="s1">&#39;endswith&#39;</span><span class="p">,</span> <span class="s1">&#39;expandtabs&#39;</span><span class="p">,</span> <span class="s1">&#39;find&#39;</span><span class="p">,</span> <span class="s1">&#39;format&#39;</span><span class="p">,</span> <span class="s1">&#39;format_map&#39;</span><span class="p">,</span> <span class="s1">&#39;index&#39;</span><span class="p">,</span> <span class="s1">&#39;isalnum&#39;</span><span class="p">,</span> <span class="s1">&#39;isalpha&#39;</span><span class="p">,</span> <span class="s1">&#39;isascii&#39;</span><span class="p">,</span> <span class="s1">&#39;isdecimal&#39;</span><span class="p">,</span> <span class="s1">&#39;isdigit&#39;</span><span class="p">,</span> <span class="s1">&#39;isidentifier&#39;</span><span class="p">,</span> <span class="s1">&#39;islower&#39;</span><span class="p">,</span> <span class="s1">&#39;isnumeric&#39;</span><span class="p">,</span> <span class="s1">&#39;isprintable&#39;</span><span class="p">,</span> <span class="s1">&#39;isspace&#39;</span><span class="p">,</span> <span class="s1">&#39;istitle&#39;</span><span class="p">,</span> <span class="s1">&#39;isupper&#39;</span><span class="p">,</span> <span class="s1">&#39;join&#39;</span><span class="p">,</span> <span class="s1">&#39;ljust&#39;</span><span class="p">,</span> <span class="s1">&#39;lower&#39;</span><span class="p">,</span> <span class="s1">&#39;lstrip&#39;</span><span class="p">,</span> <span class="s1">&#39;maketrans&#39;</span><span class="p">,</span> <span class="s1">&#39;partition&#39;</span><span class="p">,</span> <span class="s1">&#39;removeprefix&#39;</span><span class="p">,</span> <span class="s1">&#39;removesuffix&#39;</span><span class="p">,</span> <span class="s1">&#39;replace&#39;</span><span class="p">,</span> <span class="s1">&#39;rfind&#39;</span><span class="p">,</span> <span class="s1">&#39;rindex&#39;</span><span class="p">,</span> <span class="s1">&#39;rjust&#39;</span><span class="p">,</span> <span class="s1">&#39;rpartition&#39;</span><span class="p">,</span> <span class="s1">&#39;rsplit&#39;</span><span class="p">,</span> <span class="s1">&#39;rstrip&#39;</span><span class="p">,</span> <span class="s1">&#39;split&#39;</span><span class="p">,</span> <span class="s1">&#39;splitlines&#39;</span><span class="p">,</span> <span class="s1">&#39;startswith&#39;</span><span class="p">,</span> <span class="s1">&#39;strip&#39;</span><span class="p">,</span> <span class="s1">&#39;swapcase&#39;</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;translate&#39;</span><span class="p">,</span> <span class="s1">&#39;upper&#39;</span><span class="p">,</span> <span class="s1">&#39;zfill&#39;</span><span class="p">]</span>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="o">&gt;&gt;&gt;</span>
+</span></code></pre></div>
+<p>Python kennt 4 Arten von Anführungszeichen: ', ", ''', """.</p>
+<div class="admonition task">
+<p class="admonition-title">Aufgabe</p>
+<p>Finden Sie heraus, was die Unterschiede der 4 Möglichkeiten von Anführungszeichen sind und wo ihr Einsatz liegt!</p>
+</div>
+<h4 id="tuples">Tuples</h4>
+<p>Tuples können ein oder mehrere Elemente enthalten. Sie können nicht verändert werden, wohl aber deren Elemente, wenn sie <em>mutable</em> sind (wie Listen).</p>
+<p>Beispiele für Tuples:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">t</span> <span class="o">=</span> <span class="p">(</span> <span class="mi">1</span><span class="p">,)</span> <span class="c1"># Beachte das Komma!</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="n">t</span> <span class="o">=</span> <span class="p">(</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;eins&quot;</span><span class="p">,</span> <span class="s2">&quot;zwei&quot;</span><span class="p">,</span> <span class="s2">&quot;drei&quot;</span><span class="p">,</span> <span class="p">[</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">])</span>
+</span></code></pre></div>
+<p>Wir versuchen, ein Element zu ändern:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">t</span><span class="p">[</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Hollodrio&quot;</span>
+</span></code></pre></div>
+<p>Das ergibt die Ausgabe </p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>TypeError<span class="w">                                 </span>Traceback<span class="w"> </span><span class="o">(</span>most<span class="w"> </span>recent<span class="w"> </span>call<span class="w"> </span>last<span class="o">)</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>/tmp/ipykernel_415212/1857332761.py<span class="w"> </span><span class="k">in</span><span class="w"> </span>&lt;module&gt;
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>----&gt;<span class="w"> </span><span class="m">1</span><span class="w"> </span>t<span class="o">[</span><span class="w"> </span><span class="m">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Hollodrio&quot;</span>
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>
+</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>
+</span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>TypeError:<span class="w"> </span><span class="s1">&#39;tuple&#39;</span><span class="w"> </span>object<span class="w"> </span>does<span class="w"> </span>not<span class="w"> </span>support<span class="w"> </span>item<span class="w"> </span>assignment
+</span></code></pre></div>
+<p>Auch das funktioniert nicht:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="n">t</span><span class="p">[</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+</span></code></pre></div>
+<p>und bewirkt 
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>---------------------------------------------------------------------------
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>TypeError<span class="w">                                 </span>Traceback<span class="w"> </span><span class="o">(</span>most<span class="w"> </span>recent<span class="w"> </span>call<span class="w"> </span>last<span class="o">)</span>
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>/tmp/ipykernel_415212/2145338212.py<span class="w"> </span><span class="k">in</span><span class="w"> </span>&lt;module&gt;
+</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>----&gt;<span class="w"> </span><span class="m">1</span><span class="w"> </span>t<span class="o">[</span><span class="w"> </span>-1<span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[]</span>
+</span><span id="__span-25-7"><a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>
+</span><span id="__span-25-8"><a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a>
+</span><span id="__span-25-9"><a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a>TypeError:<span class="w"> </span><span class="s1">&#39;tuple&#39;</span><span class="w"> </span>object<span class="w"> </span>does<span class="w"> </span>not<span class="w"> </span>support<span class="w"> </span>item<span class="w"> </span>assignment
+</span></code></pre></div></p>
+<p>Das hier allerdings funktioniert:
+<div class="language-python highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="n">t</span><span class="p">[</span> <span class="o">-</span><span class="mi">1</span><span class="p">][</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Hollodrio&quot;</span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="n">t</span>
+</span></code></pre></div></p>
+<p>und ergibt 
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="o">(</span><span class="m">0</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">2</span>,<span class="w"> </span><span class="s1">&#39;eins&#39;</span>,<span class="w"> </span><span class="s1">&#39;zwei&#39;</span>,<span class="w"> </span><span class="s1">&#39;drei&#39;</span>,<span class="w"> </span><span class="o">[</span><span class="s1">&#39;Hollodrio&#39;</span>,<span class="w"> </span>False,<span class="w"> </span>True<span class="o">])</span>
+</span></code></pre></div></p>
+<h4 id="listen">Listen</h4>
+<p>Listen sind Unterklassen des Typs <em>Sequenz</em>. Listen können im Unterschied zu Arrays oder Listen in anderen Programmiersprachen auch Elemente unterschiedlicher Datentypen enthalten </p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="n">L</span> <span class="o">=</span> <span class="p">[</span> <span class="o">*</span><span class="s2">&quot;Diese Liste enthält&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">(),</span> <span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;Strings und&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;Integer&quot;</span><span class="p">]</span>
+</span></code></pre></div>
+<p>Geben Sie das auf der Konsole ein und vergessen Sie dabei den '*' nicht! </p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>&gt;&gt;&gt;<span class="w"> </span><span class="nv">L</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>*<span class="s2">&quot;Diese Liste enthält&quot;</span>.split<span class="o">()</span>,<span class="w"> </span><span class="m">6</span>,<span class="w"> </span><span class="s2">&quot;Strings und&quot;</span>,<span class="w"> </span><span class="m">2</span>,<span class="w"> </span><span class="s2">&quot;Integer&quot;</span><span class="o">]</span>
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>&gt;&gt;&gt;<span class="w"> </span>L
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="o">[</span><span class="s1">&#39;Diese&#39;</span>,<span class="w"> </span><span class="s1">&#39;Liste&#39;</span>,<span class="w"> </span><span class="s1">&#39;enthält&#39;</span>,<span class="w"> </span><span class="m">6</span>,<span class="w"> </span><span class="s1">&#39;Strings und&#39;</span>,<span class="w"> </span><span class="m">2</span>,<span class="w"> </span><span class="s1">&#39;Integer&#39;</span><span class="o">]</span>
+</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>&gt;&gt;&gt;<span class="w"> </span>
+</span></code></pre></div>
+<p>Was aber macht der '*'? Versuchen Sie das Ganze nochmals einzugeben, aber dieses Mal ohne den '*'!</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>&gt;&gt;&gt;<span class="w"> </span><span class="nv">L</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">&quot;Diese Liste enthält&quot;</span>.split<span class="o">()</span>,<span class="w"> </span><span class="m">6</span>,<span class="w"> </span><span class="s2">&quot;Strings und&quot;</span>,<span class="w"> </span><span class="m">2</span>,<span class="w"> </span><span class="s2">&quot;Integer&quot;</span><span class="o">]</span>
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>&gt;&gt;&gt;<span class="w"> </span>L
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="o">[[</span><span class="s1">&#39;Diese&#39;</span>,<span class="w"> </span><span class="s1">&#39;Liste&#39;</span>,<span class="w"> </span><span class="s1">&#39;enthält&#39;</span><span class="o">]</span>,<span class="w"> </span><span class="m">6</span>,<span class="w"> </span><span class="s1">&#39;Strings und&#39;</span>,<span class="w"> </span><span class="m">2</span>,<span class="w"> </span><span class="s1">&#39;Integer&#39;</span><span class="o">]</span>
+</span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>&gt;&gt;&gt;<span class="w"> </span>
+</span></code></pre></div>
+<p>Elemente von Listen sind über Ihren Index ansprechbar:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>&gt;&gt;&gt;<span class="w"> </span>L<span class="o">[</span><span class="w"> </span><span class="m">0</span><span class="o">]</span>
+</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="o">[</span><span class="s1">&#39;Diese&#39;</span>,<span class="w"> </span><span class="s1">&#39;Liste&#39;</span>,<span class="w"> </span><span class="s1">&#39;enthält&#39;</span><span class="o">]</span>
+</span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>&gt;&gt;&gt;<span class="w"> </span>L<span class="o">[</span><span class="w"> </span><span class="m">0</span><span class="o">][</span><span class="w"> </span><span class="m">0</span><span class="o">]</span>
+</span><span id="__span-31-4"><a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a><span class="s1">&#39;Diese&#39;</span>
+</span><span id="__span-31-5"><a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>&gt;&gt;&gt;<span class="w"> </span>L<span class="o">[</span><span class="w"> </span><span class="m">1</span><span class="o">][</span><span class="w"> </span><span class="m">0</span><span class="o">]</span>
+</span><span id="__span-31-6"><a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a>Traceback<span class="w"> </span><span class="o">(</span>most<span class="w"> </span>recent<span class="w"> </span>call<span class="w"> </span>last<span class="o">)</span>:
+</span><span id="__span-31-7"><a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a><span class="w">  </span>File<span class="w"> </span><span class="s2">&quot;&lt;stdin&gt;&quot;</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>&lt;module&gt;
+</span><span id="__span-31-8"><a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a>TypeError:<span class="w"> </span><span class="s1">&#39;int&#39;</span><span class="w"> </span>object<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>subscriptable
+</span><span id="__span-31-9"><a id="__codelineno-31-9" name="__codelineno-31-9" href="#__codelineno-31-9"></a>&gt;&gt;&gt;<span class="w"> </span>L<span class="o">[</span><span class="w"> </span><span class="m">1</span><span class="o">]</span>
+</span><span id="__span-31-10"><a id="__codelineno-31-10" name="__codelineno-31-10" href="#__codelineno-31-10"></a><span class="m">6</span>
+</span><span id="__span-31-11"><a id="__codelineno-31-11" name="__codelineno-31-11" href="#__codelineno-31-11"></a>&gt;&gt;&gt;<span class="w"> </span>
+</span></code></pre></div>
+<div class="admonition task">
+<p class="admonition-title">Aufgabe</p>
+<p>Interpretieren Sie obige Konsolen-Session, mitsamt dem Fehler!</p>
+</div>
+<p>Listen sind sehr vielseitig. Es können einzelne Elemente oder ganze Listen angehängt werden und - wie oben schon gesheen - elementweise darauf zugegriffen werden. Über Listen kann aber auch iteriert werden. In Listen kann auch gesucht werden, sie können gelöscht werden und in ihnen kann gesucht werden. Die Aufzählung ist nicht vollständig, schauen Sie für einen vollständigen Überblick in die Standard-Dokumentation von <em>Python</em> zum Thema Listen <sup id="fnref:stdlib"><a class="footnote-ref" href="#fn:stdlib">1</a></sup>.</p>
+<h4 id="dictionaries">Dictionaries</h4>
+<p>Dictionaries sind wie Listen, nur dass die Elemente nicht über einen Index sondern über ein Schlüsselwort erreichbar sind:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>&gt;&gt;&gt;<span class="w"> </span><span class="nv">Max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="s2">&quot;Name&quot;</span>:<span class="w"> </span><span class="s2">&quot;Mustermann&quot;</span>,<span class="w"> </span><span class="s2">&quot;Alter&quot;</span>:<span class="w"> </span><span class="m">13</span>,<span class="w"> </span><span class="s2">&quot;Geschwister&quot;</span>:<span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">&quot;Anton&quot;</span>,<span class="w"> </span><span class="s2">&quot;Egon&quot;</span><span class="o">]}</span>
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>&gt;&gt;&gt;<span class="w"> </span>Max
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="o">{</span><span class="s1">&#39;Name&#39;</span>:<span class="w"> </span><span class="s1">&#39;Mustermann&#39;</span>,<span class="w"> </span><span class="s1">&#39;Alter&#39;</span>:<span class="w"> </span><span class="m">13</span>,<span class="w"> </span><span class="s1">&#39;Geschwister&#39;</span>:<span class="w"> </span><span class="o">[</span><span class="s1">&#39;Anton&#39;</span>,<span class="w"> </span><span class="s1">&#39;Egon&#39;</span><span class="o">]}</span>
+</span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>&gt;&gt;&gt;<span class="w"> </span>Max<span class="o">[</span><span class="w"> </span><span class="s2">&quot;Name&quot;</span><span class="o">]</span>
+</span><span id="__span-32-5"><a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a><span class="s1">&#39;Mustermann&#39;</span>
+</span><span id="__span-32-6"><a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a>&gt;&gt;&gt;<span class="w"> </span>Max<span class="o">[</span><span class="w"> </span><span class="s2">&quot;Alter&quot;</span><span class="o">]</span>
+</span><span id="__span-32-7"><a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a><span class="m">13</span>
+</span><span id="__span-32-8"><a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a>&gt;&gt;&gt;<span class="w"> </span>Max<span class="o">[</span><span class="w"> </span><span class="s2">&quot;Geschwister&quot;</span><span class="o">]</span>
+</span><span id="__span-32-9"><a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a><span class="o">[</span><span class="s1">&#39;Anton&#39;</span>,<span class="w"> </span><span class="s1">&#39;Egon&#39;</span><span class="o">]</span>
+</span><span id="__span-32-10"><a id="__codelineno-32-10" name="__codelineno-32-10" href="#__codelineno-32-10"></a>&gt;&gt;&gt;
+</span></code></pre></div>
+<p>Ein Beispiel aus der Technik:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>&gt;&gt;&gt;<span class="w"> </span><span class="nv">irs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="s2">&quot;Typ&quot;</span>:<span class="w"> </span><span class="s2">&quot;Entfernungsmesser&quot;</span>,<span class="w"> </span><span class="s2">&quot;Prinzip&quot;</span>:<span class="w"> </span><span class="s2">&quot;Infrarotsensor&quot;</span>,<span class="w"> </span><span class="s2">&quot;Hersteller&quot;</span>:<span class="w"> </span><span class="s2">&quot;Sharp&quot;</span>,<span class="w"> </span><span class="s2">&quot;Modell&quot;</span>:<span class="w"> </span>None,<span class="w"> </span><span class="s2">&quot;Maximaldistanz&quot;</span>:<span class="w"> </span><span class="m">0</span>.150<span class="o">}</span>
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>&gt;&gt;&gt;<span class="w"> </span>irs
+</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="o">{</span><span class="s1">&#39;Typ&#39;</span>:<span class="w"> </span><span class="s1">&#39;Entfernungsmesser&#39;</span>,<span class="w"> </span><span class="s1">&#39;Prinzip&#39;</span>:<span class="w"> </span><span class="s1">&#39;Infrarotsensor&#39;</span>,<span class="w"> </span><span class="s1">&#39;Hersteller&#39;</span>:<span class="w"> </span><span class="s1">&#39;Sharp&#39;</span>,<span class="w"> </span><span class="s1">&#39;Modell&#39;</span>:<span class="w"> </span>None,<span class="w"> </span><span class="s1">&#39;Maximaldistanz&#39;</span>:<span class="w"> </span><span class="m">0</span>.15<span class="o">}</span>
+</span><span id="__span-33-4"><a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a>&gt;&gt;&gt;<span class="w"> </span>
+</span><span id="__span-33-5"><a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a>&gt;&gt;&gt;<span class="w"> </span>irs<span class="o">[</span><span class="w"> </span><span class="s2">&quot;Maximaldistanz&quot;</span><span class="o">]</span>
+</span><span id="__span-33-6"><a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a><span class="m">0</span>.15
+</span><span id="__span-33-7"><a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a>&gt;&gt;&gt;<span class="w"> </span>irs<span class="o">[</span><span class="w"> </span><span class="s2">&quot;Maximale Distanz&quot;</span><span class="o">]</span>
+</span><span id="__span-33-8"><a id="__codelineno-33-8" name="__codelineno-33-8" href="#__codelineno-33-8"></a>Traceback<span class="w"> </span><span class="o">(</span>most<span class="w"> </span>recent<span class="w"> </span>call<span class="w"> </span>last<span class="o">)</span>:
+</span><span id="__span-33-9"><a id="__codelineno-33-9" name="__codelineno-33-9" href="#__codelineno-33-9"></a><span class="w">  </span>File<span class="w"> </span><span class="s2">&quot;&lt;stdin&gt;&quot;</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>&lt;module&gt;
+</span><span id="__span-33-10"><a id="__codelineno-33-10" name="__codelineno-33-10" href="#__codelineno-33-10"></a>KeyError:<span class="w"> </span><span class="s1">&#39;Maximale Distanz&#39;</span>
+</span><span id="__span-33-11"><a id="__codelineno-33-11" name="__codelineno-33-11" href="#__codelineno-33-11"></a>&gt;&gt;&gt;
+</span></code></pre></div>
+<p>Andere Namen sind auch <em>Assoziatives Array</em>, <em>Hash</em> oder <em>Map</em>.</p>
+<h4 id="sets-mengen">Sets (Mengen)</h4>
+<p>Wir erzeugen ein Set (eine Menge) so:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="n">menge</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+</span></code></pre></div>
+<p><code>set</code> ist eine Klasse und mit <code>set()</code> führen Sie deren <a href="glossar.html#ctor">Ctor</a> aus.</p>
+<p>Sets können, was man von Mengen so erwartet:</p>
+<ul>
+<li>Kein Element mehr als 1-mal aufnehmen</li>
+<li>Vereinigungen bilden</li>
+<li>Durchschnitte bilden</li>
+</ul>
+<p>usw.</p>
+<div class="admonition task inline end">
+<p class="admonition-title">Aufgabe</p>
+<p>Picken Sie sich eine Methode heraus und probieren Sie sie aus?</p>
+</div>
+<p>Ein <code>dir( set)</code> oder auch ein <code>help( set)</code> schaffen Klarheit.</p>
+<h4 id="files">Files</h4>
+<p>Files schreiben:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="n">pathname</span> <span class="o">=</span> <span class="s2">&quot;snapshot_of_the_rovers_propulsion.txt&quot;</span>
+</span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="n">etixL</span> <span class="o">=</span> <span class="mi">42</span>
+</span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="n">etixR</span> <span class="o">=</span> <span class="mi">4242</span>
+</span><span id="__span-35-4"><a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span> <span class="n">pathname</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+</span><span id="__span-35-5"><a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a><span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span> <span class="s2">&quot;Encoder-Tix</span><span class="se">\t</span><span class="si">%d</span><span class="se">\t</span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">etixL</span><span class="p">,</span> <span class="n">etixR</span><span class="p">))</span>
+</span><span id="__span-35-6"><a id="__codelineno-35-6" name="__codelineno-35-6" href="#__codelineno-35-6"></a><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span><span id="__span-35-7"><a id="__codelineno-35-7" name="__codelineno-35-7" href="#__codelineno-35-7"></a><span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;File &#39;</span><span class="si">%s</span><span class="s2">&#39; ist geschrieben.&quot;</span> <span class="o">%</span> <span class="n">pathname</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Es gibt Situationen, die verhindern, dass das File geschlossen wird. Das kann man verhindern, indem man das File als <a href="glossar.html#context-manager">Context-Manager</a> ausführt:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="n">etixL</span> <span class="o">=</span> <span class="mi">42</span>
+</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="n">etixR</span> <span class="o">=</span> <span class="mi">4242</span>
+</span><span id="__span-36-3"><a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span> <span class="s2">&quot;2delete.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span><span id="__span-36-4"><a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a>    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span> <span class="s2">&quot;Encoder-Tix</span><span class="se">\t</span><span class="si">%d</span><span class="se">\t</span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">etixL</span><span class="p">,</span> <span class="n">etixR</span><span class="p">))</span>
+</span><span id="__span-36-5"><a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a>
+</span><span id="__span-36-6"><a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a><span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;File &#39;</span><span class="si">%s</span><span class="s2">&#39; ist geschrieben.&quot;</span> <span class="o">%</span> <span class="n">pathname</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Außerdem machen <a href="glossar.html#context-manager">Context-Manager</a> den Code übersichtlicher.</p>
+<p>Files lesen:
+<div class="language-python highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span> <span class="n">pathname</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>    <span class="nb">print</span><span class="p">(</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+</span></code></pre></div></p>
+<h4 id="klassen">Klassen</h4>
+<p>Klassen beginnen mit dem Schlüsselwort <code>class</code>. Die weitere Diskussion verschieben wir an dieser Stelle aber besser, bis wir uns in Kap. <a href="glossar.html#oop">OOP</a> über objektorientierte Programmierung unterhalten haben.</p>
+<h3 id="ausdrucke-und-anweisungen">Ausdrücke und Anweisungen</h3>
+<div class="admonition task inline end">
+<p class="admonition-title">Aufgabe</p>
+<p>Was ist der Unterschied? Finden Sie's raus!</p>
+</div>
+<p><em>Ausdrücke</em> und <em>Anweisungen</em> oder englisch <em>Expressions</em> and <em>Statements</em>.</p>
+<h3 id="steuerung-des-programmflusses">Steuerung des Programmflusses</h3>
+<p>Welche Teile Ihres Programms durchlaufen werden und wie oft, steuern Sie mit</p>
+<p><strong>if-else</strong></p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="k">if</span> <span class="n">some_condition</span><span class="p">():</span>
+</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>    <span class="k">pass</span> <span class="c1"># some_condition() is fulfilled</span>
+</span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>
+</span><span id="__span-38-4"><a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a><span class="k">else</span><span class="p">:</span>
+</span><span id="__span-38-5"><a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a>    <span class="k">pass</span> <span class="c1"># some_condition() is NOT fulfilled</span>
+</span></code></pre></div>
+<p><strong>while</strong></p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="k">while</span> <span class="n">some_condition</span><span class="p">():</span>
+</span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>    <span class="k">pass</span> <span class="c1"># Execute this block as long as some_condition() is true.</span>
+</span></code></pre></div>
+<p><strong>for</strong></p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span> <span class="mi">42</span><span class="p">):</span>
+</span><span id="__span-40-2"><a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>    <span class="k">pass</span> <span class="c1"># Do this 42 times</span>
+</span><span id="__span-40-3"><a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a>
+</span><span id="__span-40-4"><a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a><span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="p">(</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">):</span>
+</span><span id="__span-40-5"><a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a>    <span class="k">pass</span> <span class="c1"># Do this for &#39;a&#39;, &#39;b&#39;, and &#39;c&#39;.</span>
+</span></code></pre></div>
+<p>Und weil man</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="n">cc</span> <span class="o">=</span> <span class="p">(</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">)</span>
+</span><span id="__span-41-2"><a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span> <span class="nb">len</span><span class="p">(</span> <span class="n">cc</span><span class="p">):</span>
+</span><span id="__span-41-3"><a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a>    <span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;Character </span><span class="si">%d</span><span class="s2"> == </span><span class="si">%s</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">cc</span><span class="p">[</span> <span class="n">i</span><span class="p">]))</span>
+</span></code></pre></div>
+<p>so soft braucht, kann man das kürzer schreiben:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="n">cc</span> <span class="o">=</span> <span class="p">(</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">)</span>
+</span><span id="__span-42-2"><a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span> <span class="n">cc</span><span class="p">):</span>
+</span><span id="__span-42-3"><a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a>    <span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;Character </span><span class="si">%d</span><span class="s2"> == </span><span class="si">%s</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">c</span><span class="p">))</span>
+</span></code></pre></div>
+<div class="admonition task">
+<p class="admonition-title">Finden Sie heraus, ...</p>
+<p>was das Statement <code>pass</code> bedeutet!</p>
+</div>
+<h3 id="programmiertstil">Programmiertstil</h3>
+<div class="admonition task inline end">
+<p class="admonition-title">Anmerkung</p>
+<p>Überspringen Sie dieses Kapitel beim ersten Durcharbeiten und kommen Sie zurück, wenn Sie erste Schritte in der objektorientierten Programmierung (s. Kap. <a href="python.oop.html">OOP</a>) gemacht haben. </p>
+</div>
+<p>Programmierrichtlinien sollen einen einheitlichen Stil in der Programmierung forcieren <sup id="fnref:programmierstil"><a class="footnote-ref" href="#fn:programmierstil">2</a></sup>, damit der Code jedes Mitarbeiters gleich gut lesbar ist. Da wird dann definiert, wie viele Leerzeichen wo hineingehören, wo geschwungene Klammern zu stehen haben (<a href="https://www.python.org">Python</a> hat - Gott sei Dank – keine) usw. usf. Oft kommen wichtige Aspekte eines guten Programmierstils dadurch zu kurz, Aspekte, die’s wert wären, dass sie in einer Programmierrichtlinie erwähnt werden. Und weil das so ist ober eben nicht, sind Programmierrichtlinien immer wieder Ursache von regelrechten Glaubenskriegen. Der Grund ist ein einfacher: Hier kann jeder, wirklich jeder mitreden („Kein Abstand nach einer eine Argumentenliste einleitenden Klammer oder genau einer?“). </p>
+<p>Wenn Sie in einer größeren SW-Abteilung arbeiten, dann haben Sie vermutlich keine Wahl und müssen einem definierten Stil folgen. Das ist meist gar nicht so schlecht oder rettet sogar Menschenleben <sup id="fnref:misra-c"><a class="footnote-ref" href="#fn:misra-c">3</a></sup>. Apropos <em>Menschenleben</em>: Führen Sie sich in einer ruhigen Minute <a href="https://de.wikipedia.org/wiki/Therac-25">https://de.wikipedia.org/wiki/Therac-25</a> (oder <a href="https://blog.grio.com/2021/07/when-small-software-bugs-cause-big-problems.html">https://blog.grio.com/2021/07/when-small-software-bugs-cause-big-problems.html</a>) zu Gemüte.</p>
+<p>Wir schlagen daher folgendes vor: Finden Sie Ihren eigenen Stil, wenn Sie sich das leisten können (weil Sie alleine an einem Projekt arbeiten). Hierzu ein paar Anregungen:</p>
+<ol>
+<li>
+<p>Kommentare: Kommentieren Sie Umstände, die aus dem Code nicht ersichtlich sind. Kommentieren Sie vornehmlich das <em>Warum</em> und weniger das <em>Was</em> und schon gar nicht Offenschtliches. Das hier ist daher nicht hilfreich:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="n">i</span> <span class="o">+=</span><span class="mi">1</span> <span class="c1"># i inkrementieren</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>Keine zu tiefen Klassenhierarchien, denn diese Tiefe macht Sie unbeweglicher, je tiefer sie geht.</p>
+</li>
+<li>Private Attribute beginnen mit zwei Unterstrichen.</li>
+<li>Methoden, die privat oder protected sind, beginnen und enden mit einem Unterstrich.</li>
+<li>Methodennamen beginnen mit Kleinbuchstaben.</li>
+<li>
+<p>Variablennamen – <em>CamelCase</em> (Pascal-Stil) oder <em>snake_case</em>? Das geht am eigentlichen Problem der Namenssystematik vorbei. Ein Beispiel: Wollen Sie Ihre Variable „Anzahl Studenten“</p>
+<ol>
+<li>anzahl_studenten</li>
+<li>studenten_anzahl</li>
+<li>studentenanzahl</li>
+</ol>
+<p>nennen? Antwort: Alle drei Varianten sind ok., je nachdem wie das große Bild aussieht.</p>
+<p>(1) liegt auf der Hand, immer.</p>
+<p>(2) liegt nahe, wenn man auch <code>studenten_lven</code>, <code>studenten_kohortenname</code> usw. hat.</p>
+<p>(3) wenn (2) nicht zutrifft; Zusammenschreiben – auch englischer Variablen oder Methodennamen - immer dann, wen man auch im Deutsch ein Wort daraus machen könnte.</p>
+</li>
+<li>
+<p>Nach öffnenden Klammern gerne ein Leerzeichen.</p>
+</li>
+<li>Globale Daten beginnen mit einem Unterstrich gefolgt von einem Großbuchstaben.</li>
+</ol>
+<h2 id="idioms">Idioms</h2>
+<p>Idiom, was ist ein Idiom in einer oder für eine Programmiersprache? <a href="https://de.wikipedia.org/wiki/Idiom_(Softwaretechnik)">Wikipedia</a> weiß hierzu: "Idiome können als Umsetzungen (Implementierungen) von abstrakten Mustern in einer spezifischen Programmiersprache verstanden werden. Also wie einfache Aufgaben (niedriger Abstraktionsstufe) in einer Programmiersprache gelöst werden. (...) Ein Idiom zeichnet sich somit durch folgende Eigenschaften aus:</p>
+<ul>
+<li>es ist programmiersprachenspezifisch</li>
+<li>es ist zu finden in Feinentwurf und Implementierung (niedrige Abstraktionsebene). </li>
+</ul>
+<p>Es geht also dabei um die Implementierung von speziellen Entwurfsaspekten. [https://de.wikipedia.org/wiki/Idiom_(Softwaretechnik)]"</p>
+<div class="admonition task inline end">
+<p class="admonition-title">Fallen Ihnen weitere Idioms ein?</p>
+<p>Dann schrieben Sie mir (franz.geiger@fhv.at), ich nehm' sie gerne in die diese Dokumentation auf!</p>
+</div>
+<p>Hier ein paar Idioms, die sich als hilfreich erweisen könnten.</p>
+<h3 id="werte-tauschen">Werte tauschen</h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">24</span>
+</span><span id="__span-44-2"><a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a><span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;Before swap:&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</span><span id="__span-44-3"><a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span>
+</span><span id="__span-44-4"><a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a><span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;After swap:&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="aus-einer-oder-mehreren-listen-mach-eine-liste">Aus einer oder mehreren Listen mach' eine Liste</h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="kn">import</span> <span class="nn">itertools</span>
+</span><span id="__span-45-2"><a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>
+</span><span id="__span-45-3"><a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a><span class="n">regular_list</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]]</span>
+</span><span id="__span-45-4"><a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a><span class="n">flat_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span> <span class="n">itertools</span><span class="o">.</span><span class="n">chain</span><span class="p">(</span> <span class="o">*</span><span class="n">regular_list</span><span class="p">))</span>
+</span><span id="__span-45-5"><a id="__codelineno-45-5" name="__codelineno-45-5" href="#__codelineno-45-5"></a>
+</span><span id="__span-45-6"><a id="__codelineno-45-6" name="__codelineno-45-6" href="#__codelineno-45-6"></a><span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Original list&#39;</span><span class="p">,</span> <span class="n">regular_list</span><span class="p">)</span>
+</span><span id="__span-45-7"><a id="__codelineno-45-7" name="__codelineno-45-7" href="#__codelineno-45-7"></a><span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Transformed list&#39;</span><span class="p">,</span> <span class="n">flat_list</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="aus-zwei-listen-mach-durch-verschranken-eine-liste-von-paaren">Aus zwei Listen mach' (durch Verschränken) eine Liste von Paaren</h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="n">list_of_tuples</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span> <span class="nb">zip</span><span class="p">(</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]))</span>
+</span><span id="__span-46-2"><a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a><span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;List of tuples created from 2 lists:&quot;</span><span class="p">,</span> <span class="n">list_of_tuples</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="aus-einer-liste-von-paaren-mach-zwei-listen">Aus einer Liste von Paaren mach' zwei Listen</h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="nb">list</span><span class="p">(</span> <span class="nb">zip</span><span class="p">(</span> <span class="o">*</span><span class="p">[</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)]))</span>
+</span></code></pre></div>
+<h3 id="zugriff-auf-listenelemente-mittels-negativer-indices">Zugriff auf Listenelemente mittels negativer Indices</h3>
+<p>Sehr praktisch generell, im Besonderen aber, wenn man mit Elementen zu hantieren hat wie in der Regelungstechnik, bspw. <span class="arithmatex">\(x_{k-1}\)</span>:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="n">x</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</span><span id="__span-48-2"><a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a><span class="n">x</span><span class="p">[</span>  <span class="mi">0</span><span class="p">]</span> <span class="c1"># Aktueller Wert</span>
+</span><span id="__span-48-3"><a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a><span class="n">x</span><span class="p">[</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># Wert des letzten Laufs</span>
+</span><span id="__span-48-4"><a id="__codelineno-48-4" name="__codelineno-48-4" href="#__codelineno-48-4"></a><span class="n">x</span><span class="p">[</span> <span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="c1"># Wert des vorletzten Laufs</span>
+</span><span id="__span-48-5"><a id="__codelineno-48-5" name="__codelineno-48-5" href="#__codelineno-48-5"></a><span class="n">x</span><span class="p">[</span> <span class="o">-</span><span class="mi">3</span><span class="p">]</span> <span class="c1"># Semantischer Fehler: Ist x[ 0]!</span>
+</span><span id="__span-48-6"><a id="__codelineno-48-6" name="__codelineno-48-6" href="#__codelineno-48-6"></a><span class="err">​</span>
+</span><span id="__span-48-7"><a id="__codelineno-48-7" name="__codelineno-48-7" href="#__codelineno-48-7"></a><span class="nb">print</span><span class="p">(</span> <span class="n">x</span><span class="p">[</span> <span class="mi">0</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span> <span class="o">-</span><span class="mi">2</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span> <span class="o">-</span><span class="mi">3</span><span class="p">])</span><span class="o">.</span>
+</span></code></pre></div>
+<h3 id="daten-ausin-objekten-lesenschreiben">Daten aus/in Objekte/n lesen/schreiben</h3>
+<p>Java-Programmierer verwenden sogenannte Getter und Setter, um auf Daten eines Objektes zuzugreifen. C++-Programmierer können entsprechende Zugriffsmethoden überladen (könnten Java-Programmierer auch), denn wer will schon statt <code>sin( phi)</code> <code>get_sin( phi)</code> schreiben (müssen).</p>
+<p>Wie können wir das in Python lösen? Getter und Setter sind umständlich und hässlich, Überladen geht wegen der dynamischen Natur von Python nicht. Eine Möglichkeit wären Properties; es sei hier allerdings dem Leser überlassen, sich diesbezüglich schlau zu machen.</p>
+<p>An dieser Stelle soll folgendes Python-Idiom für den Zugriff auf Objektdaten (meistens eine schlechte Idee übrigens, oft aber notwendig) gezeigt werden <sup id="fnref:erklaerung_zum_code"><a class="footnote-ref" href="#fn:erklaerung_zum_code">4</a></sup>:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="k">class</span> <span class="nc">Parameter</span><span class="p">:</span>
+</span><span id="__span-49-2"><a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a>
+</span><span id="__span-49-3"><a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span> <span class="bp">self</span><span class="p">,</span> <span class="n">defaultvalue</span><span class="o">=</span><span class="mf">0.0</span><span class="p">):</span>
+</span><span id="__span-49-4"><a id="__codelineno-49-4" name="__codelineno-49-4" href="#__codelineno-49-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">__value</span> <span class="o">=</span> <span class="n">defaultvalue</span>
+</span><span id="__span-49-5"><a id="__codelineno-49-5" name="__codelineno-49-5" href="#__codelineno-49-5"></a>
+</span><span id="__span-49-6"><a id="__codelineno-49-6" name="__codelineno-49-6" href="#__codelineno-49-6"></a>    <span class="k">def</span> <span class="nf">value</span><span class="p">(</span> <span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+</span><span id="__span-49-7"><a id="__codelineno-49-7" name="__codelineno-49-7" href="#__codelineno-49-7"></a>        <span class="k">if</span> <span class="n">arg</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="__span-49-8"><a id="__codelineno-49-8" name="__codelineno-49-8" href="#__codelineno-49-8"></a>            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__value</span>
+</span><span id="__span-49-9"><a id="__codelineno-49-9" name="__codelineno-49-9" href="#__codelineno-49-9"></a>
+</span><span id="__span-49-10"><a id="__codelineno-49-10" name="__codelineno-49-10" href="#__codelineno-49-10"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">__value</span> <span class="o">=</span> <span class="n">arg</span>
+</span><span id="__span-49-11"><a id="__codelineno-49-11" name="__codelineno-49-11" href="#__codelineno-49-11"></a>        <span class="k">return</span> <span class="bp">self</span>
+</span></code></pre></div>
+<p>Bei einer solchen Klasse liegt es auf der Hand, einen Accessor zu realisieren, der den Wert eines Parameters liest/schreibt, wozu sollte ein Parameter sonst gut sein.</p>
+<p>Allerdings sollte das wirklich die Ausnahme sein. Nehmen Sie an, Sie wollten den Wert ausdrucken. Wahrscheinlich würden Sie den Wert lesen und dann einem Drucker übergeben.</p>
+<p>Eine hinsichtlich Datenkapselung elegantere Methode wäre allerdings, den Parameter seinen Wert selber drucken zu lassen:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="k">def</span> <span class="nf">print_value</span><span class="p">(</span> <span class="bp">self</span><span class="p">,</span> <span class="n">printer</span><span class="p">:</span> <span class="n">callable</span><span class="p">):</span>
+</span><span id="__span-50-2"><a id="__codelineno-50-2" name="__codelineno-50-2" href="#__codelineno-50-2"></a>    <span class="n">printer</span><span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">())</span>
+</span></code></pre></div>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:stdlib">
+<p>Z.B. <a href="https://docs.python.org/3/tutorial/introduction.html#lists">hier</a> und <a href="https://docs.python.org/3/tutorial/datastructures.html">hier</a>. Gehen Sie jeweils eie Ebene höher und suchen Sie nach <code>list</code>. Stöbern Sie!&#160;<a class="footnote-backref" href="#fnref:stdlib" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:programmierstil">
+<p>Siehe z.B. <a href="https://de.wikipedia.org/wiki/Programmierstil">https://de.wikipedia.org/wiki/Programmierstil</a>, <a href="https://ssw.jku.at/Teaching/Lectures/PI2/2019/Guidelines.html">https://ssw.jku.at/Teaching/Lectures/PI2/2019/Guidelines.html</a> (wo der Programmierstil in die Prüfungsbewertung eingeht), <a href="https://www.embedded-software-engineering.de/coding-guidelines-sind-programmierrichtlinien-fluch-oder-segen-a-795748/">https://www.embedded-software-engineering.de/coding-guidelines-sind-programmierrichtlinien-fluch-oder-segen-a-795748/</a>, <a href="https://www.microconsult.de/blog/2019/01/fl_programmierrichtlinien/">https://www.microconsult.de/blog/2019/01/fl_programmierrichtlinien/</a> (launige Gedanken zu Programmierrichtlinien; nur mit Jodas Grammatik hat’s der Autor dort nicht so ;-)).&#160;<a class="footnote-backref" href="#fnref:programmierstil" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:misra-c">
+<p><a href="https://de.wikipedia.org/wiki/MISRA-C">https://de.wikipedia.org/wiki/MISRA-C</a>&#160;<a class="footnote-backref" href="#fnref:misra-c" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:erklaerung_zum_code">
+<p>Noch können Sie vermutlich wenig mit diesem Code anfangen. Das wird sich ändern, wenn Sie das Kapitel <a href="python.oop.html">OOP</a> durchgearbeitet haben werden. Kommen Sie dann wieder hierher zurück!&#160;<a class="footnote-backref" href="#fnref:erklaerung_zum_code" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="infrastruktur.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Infrastruktur" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Infrastruktur
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="python.variable_und_datentypen.html" class="md-footer__link md-footer__link--next" aria-label="Next: Variable und Datentypen" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Variable und Datentypen
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.copy", "navigation.sections"], "search": "assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+        <script src="javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+    
+  </body>
+</html>

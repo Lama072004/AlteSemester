@@ -1,0 +1,37 @@
+Circuit: * C:\Users\admin\OneDrive - FH Vorarlberg\Schaltungstechnik\LT_Spice_Simulation.asc
+
+WARNING: Less than two connections to node U8:DP.  This node is used by A:U8:DDEL.
+WARNING: Less than two connections to node NC_01.  This node is used by R:U8:OUT1:OUT.
+WARNING: Less than two connections to node U11:DP.  This node is used by A:U11:DDEL.
+WARNING: Less than two connections to node NC_02.  This node is used by R:U11:OUT2:OUT.
+WARNING: Less than two connections to node NC_03.  This node is used by R:U10:OUT0:OUT.
+Per .tran options, skipping operating point for transient analysis.
+Ignoring empty pin current: Ix(u1:vcc)
+Ignoring empty pin current: Ix(u2:vcc)
+Ignoring empty pin current: Ix(u3:vcc)
+Ignoring empty pin current: Ix(u4:vcc)
+Ignoring empty pin current: Ix(u5:vcc)
+Ignoring empty pin current: Ix(u6:vcc)
+Ignoring empty pin current: Ix(u7:vcc)
+Ignoring empty pin current: Ix(u8:vcc)
+Ignoring empty pin current: Ix(u9:vcc)
+Ignoring empty pin current: Ix(u11:vcc)
+
+Date: Sun Nov 13 20:25:26 2022
+Total elapsed time: 1.267 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 19786
+traniter = 19786
+tranpoints = 6709
+accept = 5486
+rejected = 1223
+matrix size = 290
+fillins = 0
+solver = Normal
+Thread vector: 40.9/17.0[8] 12.3/7.1[8] 11.0/6.2[6] 0.7/3.7[1]  2592/500
+Matrix Compiler1: 7.89 KB object code size  4.8/3.4/[0.8]
+Matrix Compiler2: 15.22 KB object code size  3.7/5.7/[0.8]
+

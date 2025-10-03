@@ -1,0 +1,32 @@
+Circuit: * J:\user\christoph\sicher\FH\Elektronik2\2018\Lektion0 AnalogeSpR LinearR\UeNetzGleichrichterSerienregler\BrueckeGr.asc
+
+.OP point found by inspection.
+
+p_tr: AVG(v(vtr)*i(r1))=-6.5366 FROM 0 TO 1
+u: AVG(v(vtr)*v(vtr))=519.55 FROM 0 TO 1
+ueff: RMS(v(vtr))=22.7936 FROM 0 TO 1
+ieff: RMS(i(r1))=0.324543 FROM 0 TO 1
+s_tr: AVG(ueff*ieff)=7.39751 FROM 0 TO 1
+cosphi: AVG(p_tr/s_tr)=-0.883621 FROM 0 TO 1
+iarith: AVG(i(r2))=-0.243892 FROM 0 TO 1
+formfac: AVG(ieff/iarith)=-1.33068 FROM 0 TO 1
+
+
+Date: Fri Feb 23 08:28:48 2018
+Total elapsed time: 0.125 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 9669
+traniter = 9669
+tranpoints = 2520
+accept = 1928
+rejected = 592
+matrix size = 6
+fillins = 0
+solver = Normal
+Matrix Compiler1: 360 Byte object code size  1.7/1.6/[1.6]
+Matrix Compiler2: 462 Byte object code size  1.6/1.6/[1.6]
+
+

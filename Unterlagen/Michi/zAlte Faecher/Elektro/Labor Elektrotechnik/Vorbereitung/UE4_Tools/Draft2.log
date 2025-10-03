@@ -1,0 +1,60 @@
+Circuit: * C:\Users\michael\OneDrive - FH Vorarlberg\Labor Elektrotechnik\Vorbereitung\UE4_Tools\Draft2.asc
+
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+vernier = 0.5
+Gmin = 0.021492
+vernier = 0.25
+vernier = 0.125
+vernier = 0.0625
+vernier = 0.03125
+Gmin = 0.0205201
+vernier = 0.015625
+vernier = 0.0078125
+vernier = 0.00390625
+vernier = 0.00195313
+Gmin = 0.0203412
+vernier = 0.000976563
+vernier = 0.000488281
+Gmin = 0
+Gmin stepping failed
+
+Starting source stepping with srcstepmethod=0
+Source Step = 3.0303%
+Source Step = 33.3333%
+Source Step = 63.6364%
+Source Step = 93.9394%
+Source stepping succeeded in finding the operating point.
+
+.step uin=1
+.step uin=2.1
+.step uin=3.2
+.step uin=4.3
+.step uin=5.4
+.step uin=6.5
+.step uin=7.6
+.step uin=8.7
+.step uin=9.8
+.step uin=10.9
+.step uin=12
+
+Date: Tue Nov 16 16:43:36 2021
+Total elapsed time: 0.812 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 27677
+traniter = 25422
+tranpoints = 5318
+accept = 4199
+rejected = 1119
+matrix size = 17
+fillins = 18
+solver = Normal
+Matrix Compiler1: 1.09 KB object code size  0.2/0.1/[0.1]
+Matrix Compiler2: 1.26 KB object code size  0.1/0.2/[0.1]
+

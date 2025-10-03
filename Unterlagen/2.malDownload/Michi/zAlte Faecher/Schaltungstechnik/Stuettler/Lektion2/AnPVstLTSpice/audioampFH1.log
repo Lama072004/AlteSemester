@@ -1,0 +1,40 @@
+Circuit: * D:\user\christoph\sicher\FH\elektronik\2016\Lektion1 AnalogePElektronik\Lektion1 AnalogePElektronik\audioampFH1.asc
+
+Direct Newton iteration for .op point succeeded.
+N-Period=1
+Fourier components of V(a)
+DC component:-0.121924
+
+Harmonic	Frequency	 Fourier 	Normalized	 Phase  	Normalized
+ Number 	  [Hz]   	Component	 Component	[degree]	Phase [deg]
+    1   	1.000e+03	7.225e+00	1.000e+00	   -0.91°	    0.00°
+    2   	2.000e+03	1.341e-02	1.856e-03	  -66.61°	  -65.70°
+    3   	3.000e+03	1.176e-02	1.628e-03	   31.50°	   32.40°
+    4   	4.000e+03	7.150e-03	9.897e-04	  141.54°	  142.45°
+    5   	5.000e+03	5.138e-03	7.111e-04	 -126.46°	 -125.55°
+    6   	6.000e+03	1.576e-03	2.182e-04	  -45.65°	  -44.75°
+    7   	7.000e+03	7.292e-04	1.009e-04	  -64.23°	  -63.32°
+    8   	8.000e+03	9.100e-04	1.260e-04	   23.71°	   24.62°
+    9   	9.000e+03	1.073e-03	1.485e-04	   81.39°	   82.29°
+Total Harmonic Distortion: 0.277026%(0.278851%)
+
+
+
+Date: Tue Oct 04 13:50:38 2016
+Total elapsed time: 0.114 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 4084
+traniter = 4076
+tranpoints = 1687
+accept = 1424
+rejected = 263
+matrix size = 43
+fillins = 49
+solver = Normal
+Matrix Compiler1: 5.96 KB object code size  1.0/0.5/[0.4]
+Matrix Compiler2: 4.83 KB object code size  0.4/0.5/[0.2]
+
+

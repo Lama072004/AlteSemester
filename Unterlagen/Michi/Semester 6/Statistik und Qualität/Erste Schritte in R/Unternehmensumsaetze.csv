@@ -1,0 +1,98 @@
+Rang;Name;Hauptsitz;Land;Umsatz;Gewinn;Mitarbeiter;Branche;Geschaeftsfuehrer
+1;Walmart;Bentonville;USA;476,294;16;2200000;Einzelhandel;Doug McMillon
+2;Royal Dutch Shell;Den Haag;Niederlande;459,599;16,371;90000;Oel und Gas;Ben van Beurden
+3;Sinopec;Peking;Volksrepublik China;457,201;8,932;1021979;Oel und Gas;Fu Chengyu
+4;China National Petroleum;Peking;Volksrepublik China;432,007;16,317;1668072;Oel und Gas;Zhou Jiping
+5;ExxonMobil;Irving;USA;407,666;32,58;99100;Oel und Gas;Rex Tillerson
+6;BP;London;Grossbritannien;396,217;23,451;83400;Oel und Gas;Robert Dudley
+7;State Grid;Peking;Volksrepublik China;333,387;7,982;1583000;Versorger;Liu Zhenya
+8;Volkswagen;Wolfsburg;Deutschland;261,539;12,072;626715;Automobile;Matthias MÈller
+9;Toyota Motor;Toyota;Japan;256,454;18,18;325905;Automobile;Akio Toyoda
+10;Glencore;Baar ZG;Schweiz;232,694;-7,402;58000;Rohstoffhandel;Ivan Glasenberg
+11;Total;Courbevoie;Frankreich;227,882;11,204;96104;Oel und Gas;Patrick Pouyann_
+12;Chevron;San Ramon;USA;220,356;21,423;61189;Oel und Gas;John S. Watson
+13;Samsung Electronics;Seoul;Suedkorea;208,838;27,245;307000;Technologie;Kwon Oh-hyun
+14;Berkshire Hathaway;Omaha;USA;182,15;19,476;270858;Mischkonzern;Warren Buffett
+15;Apple;Cupertino;USA;170,91;37,037;63300;Technologie;Tim Cook
+16;AXA;Paris;Frankreich;98,534;5,617;166000;Versicherungen;Henri de Castries
+17;Gazprom;Moskau;Russland;165,016;35,769;401000;Oel und Gas;Alexei Miller
+18;E.ON;Duesseldorf;Deutschland;162,56;2,843;78889;Versorger;Johannes Teyssen
+19;ConocoPhillips;Houston;USA;161,175;3,726;29800;Oel und Gas;James Mulva
+20;Daimler;Stuttgart;Deutschland;156,628;9,083;271370;Automobile;Dieter Zetsche
+21;General Motors;Detroit;USA;155,427;5,346;207000;Automobile;Daniel Akerson
+22;Eni;Rom;Italien;154,108;6,85;78686;Oel und Gas;Paolo Scaroni
+23;Nippon Yuesei;Kasumigaseki, Chiyoda, Tokio;Japan;152,125;4,782;110000;Logistik, Bankwesen, Versicherungswesen;Jiro Saito
+24;Exor;Turin;Italien;150,996;2,768;273460;Finanzdienstleister;John Elkann
+25;ICBC;Peking;Volksrepublik China;148,8;42,7;408859;Banken;Yang Kaisheng
+26;Ford Motor;Dearborn;USA;146,9;7,2;164000;Automobile;Mark Fields
+27;General Electric;Fairfield;USA;146,231;13,057;301000;Mischkonzern;Jeffrey R. Immelt
+28;Petrobras;Rio de Janeiro;Brasilien;141,462;11,094;81918;Oel und Gas;Maria das Gracas Silva Foster
+29;McKesson;San Francisco;USA;138;1,3;37700;Pharmahandel;John Hammergren
+30;Valero Energy;San Antonio;USA;137,8;2,7;21942;Oel und Gas;William Klesse
+31;Allianz;Muenchen;Deutschland;134,6;7,9;141938;Versicherungen;Oliver Baete
+32;Hon Hai Precision Industry (Foxconn);Taipeh;Taiwan;133,1;3,6;1232000;Technologie;Terry Gou
+33;Societe Generale;Paris;Frankreich;132,7;2,8;159616;Banken;Frederic Oudea
+34;AT&T;San Antonio;USA;128,7;18,3;256420;Telekommunikation;Randall Stephenson
+35;CVS Caremark;Woonsocket;USA;126,7;4,6;163000;Einzelhandel;Larry J. Merlo
+36;PEMEX;Mexiko-Stadt;Mexiko;125,344;-7,358;150884;Oel und Gas;Juan Jose Suarez Coppel
+37;Fannie Mae;Washington, D.C.;USA;125,7;83,9;7000;Banken;Timothy Mayopoulos
+38;China Construction Bank;Peking;Volksrepublik China;125,4;34,9;329438;Banken;Wang Hongzhang
+39;UnitedHealth;Minnetonka;USA;122,5;5,6;99000;Versicherungen;Stephen Hemsley
+40;BNP Paribas;Paris;Frankreich;121,9;6,4;198423;Banken;Jean-Laurent Bonnafe
+41;PDVSA;Caracas;Venezuela;121;12,9;91949;Oel und Gas;Rafael Ramirez Carreno
+42;Verizon;New York;USA;120,5;11,4;193900;Telekommunikation;Ivan Seidenberg
+43;Lukoil;Moskau;Russland;119,1;7,8;150000;Oel und Gas;Wagit Alekperow
+44;GDF Suez;Paris;Frankreich;118,5;-12,3;240303;Versorger;Gerard Mestrallet
+45;Honda Motor;Tokio;Japan;118,2;5,7;187094;Automobile;Takanobu Ito
+46;Rosneft Oil;Moskau;Russland;117,08;17,1;158884;Oel und Gas;Igor Setschin
+47;Agricultural Bank of China;Peking;Volksrepublik China;115,4;27;447401;Banken;Jiang Chaoliang
+48;Assicurazioni Generali;Triest;Italien;115,2;2,54;81997;Versicherungen;Mario Greco
+49;ING Groep;Amsterdam;Niederlande;114,295;6,076;104419;Finanzdienstleister;Jan Hommen
+50;Hewlett-Packard;Palo Alto;USA;112,3;5,1;349600;Technologie;Meg Whitman
+51;JX Holdings;Tokio;Japan;111;1,1;24236;Oel und Gas;Yasushi Kimura
+52;China State Construction Engineering;Peking;Volksrepublik China;110,8;1,8;188480;Bauhauptgewerbe;Yi Jun
+53;NTT;Tokio;Japan;109,054;5,8;224239;Telekommunikation;Satoshi Miura
+54;Statoil;Stavanger;Norwegen;108,459;6,8;31715;Oel und Gas;Helge Lund
+55;China Mobile;Peking;Volksrepublik China;107,6;9,2;216677;Telekommunikation;Li Yue
+56;Enel;Rom;Italien;106,9;4,3;75360;Versorger;Fulvio Conti
+57;JPMorgan Chase;New York;USA;106,3;17,9;260157;Banken;James Dimon
+58;Tata;Mumbai;Indien;103,5;8,9;660000;Automotive Telecom, IT & Tourismus;Cyrus Mistry
+59;Siemens;Muenchen;Deutschland;106,1;5,6;360000;Technologie;Joe Kaeser
+60;Bank of China;Peking;Volksrepublik China;118,2;5,7;289951;Banken;Li Lihui
+61;Costco Wholesale;Issaquah;USA;105,2;2;128000;Einzelhandel;W. Craig Jelinek
+62;Nissan Motor;Tokio;Japan;104,6;3,9;157000;Automobile;Carlos Ghosn
+63;Express Scripts Holding;St. Louis (Missouri);USA;104,62;17,1;30215;Pharmazie;George Paz
+64;Tesco;Cheshunt;Grossbritannien;103,3;1,53;406088;Einzelhandel;Philip Clarke
+65;SK Holdings;Seoul;Suedkorea;102,1;0,26;58287;Mischkonzern;Chey Tae-won
+66;Carrefour;Paris;Frankreich;101,8;1,67;412443;Einzelhandel;Georges Plassat
+67;Bank of America;Charlotte;USA;101,697;11,431;281791;Banken;Brian Moynihan
+68;Cardinal Health;Dublin;USA;101,09;0,334;31900;Pharmahandel;George S. Barrett
+69;BMW Group;Muenchen;Deutschland;100,9;7,05;110351;Automobile;Harald Krueger
+70;Petronas;Kuala Lumpur;Malaysia;100,7;17,18;43860;Oel und Gas;Shamsul Azhar Abbas
+71;Electricite de France;Paris;Frankreich;100,3;4,67;156168;Versorger;Henri Proglio
+72;International Business Machines;Armonk;USA;99,75;16,5;431212;Informationstechnik;Virginia Rometty
+73;Nestle;Vevey;Schweiz;99,45;10,8;328000;Nahrungsmittel;Paul Bulcke
+74;Banco Santander;Madrid;Spanien;98,5;5,8;193349;Banken;Alfredo Saenz
+75;Kroger;Cincinnati;USA;98,37;1,5;339000;Einzelhandel;David Dillon
+76;BASF;Ludwigshafen;Deutschland;98,2;6,4;111141;Chemie;Kurt Bock
+77;Noble Group;Hongkong;Volksrepublik China;97,88;0,244;14000;Rohstoffhandel;Yusuf Alireza
+78;HSBC;London;Grossbritannien;97,53;16,2;305984;Banken;Stuart Gulliver
+79;Hitachi;Tokio;Japan;95,99;2,6;323540;Technologie;Hiroaki Nakanishi
+80;China National Offshore Oil;Peking;Volksrepublik China;95,97;7,7;5377;Oel und Gas;-
+81;China Railway Construction;Peking;Volksrepublik China;95,746;0,986;220000;Eisenbahnbau;Li Guorui
+82;Archer Daniels Midland;Decatur;USA;89,8;1,3;30700;Nahrungsmittel;Patricia Woertz
+83;Citigroup;New York;USA;93,6;13,7;266000;Banken;Vikram Pandit
+84;Credit Agricole;Paris;Frankreich;93,6;3,3;87451;Banken;Jean-Paul Chifflet
+85;PTT Public Company;Bangkok;Thailand;92,5;3,08;18240;Oel und Gas;Pailin Chuchottaworn
+86;PSA Peugeot Citroen;Paris;Frankreich;83,305;0,818;209019;Automobile;Philippe Varin
+87;China Railway Group;Peking;Volksrepublik China;91,152;1,524;284000;Eisenbahnbau;-
+88;Sony;Tokio;Japan;82,237;-5,784;162700;Konsumgueter;Kazuo Hirai
+89;AmerisourceBergen;Chesterbrook;USA;89,1;0,434;9850;Pharmahandel;Steven Collis
+90;Wells Fargo;San Francisco;USA;88,1;21,9;264200;Banken;John Stumpf
+91;Boeing;Chicago;USA;86,623;4,585;174400;Flugzeugbau;-
+92;Metro;Duesseldorf;Deutschland;86,35;0,504;249953;Grosshandel;Olaf Koch
+93;Procter & Gamble;Cincinnati;USA;84,167;11,3;129000;Konsumgueter;Robert A. McDonald
+94;Munich Re;Muenchen;Deutschland;83,8;4,4;47206;Versicherungen;Nikolaus von Bomhard
+95;Indian Oil Corporation;Neu-Delhi;Indien;81,3;1,17;36198;Oel und Gas;Ranbir Singh Butola
+96;Freddie Mac;Tysons Corner;USA;81,2;48,7;4890;Banken;Donald Layton
+97;Deutsche Telekom;Bonn;Deutschland;79,829;1,234;228248;Telekommunikation;Timotheus Hoettges

@@ -1,0 +1,367 @@
+---
+title: "B-4_Verteilungsvergleich"
+author: "Michael Geuze"
+date: "2024-05-19"
+output: html_document
+---
+```{r}
+dist_comparison <- read.csv("Verteilungsvergleich.csv", sep=";", dec=",")
+
+
+get_hist_data <- function(data, breaks = "Sturges", plot = FALSE) {
+  # Create the histogram object
+  hist_data <- hist(data, breaks = breaks, plot = plot)
+  
+  # Extract the breaks (bin edges), counts, and mids
+  breaks <- hist_data$breaks
+  counts <- hist_data$counts
+  mids <- hist_data$mids
+  
+  # Create intervals from the breaks
+  intervals <- data.frame(
+    lower = breaks[-length(breaks)],    # All but the last break
+    upper = breaks[-1],                 # All but the first break
+    counts = counts,
+    mids = mids
+  )
+  
+  return(intervals)
+}
+
+get_interval_string <- function(lower, upper) {
+  # Ensure lower and upper are of the same length and reasonable
+  if(length(lower) != length(upper) || length(lower) == 0) {
+    stop("Lower and upper bounds must be of the same non-zero length")
+  }
+
+  ret_str <- vector("character", length(lower))
+
+  # Create the interval strings
+  for (i in 1:(length(lower) - 1)) {
+    ret_str[i] <- paste("[", lower[i], ",", upper[i], ")", sep = "")
+  }
+  
+  ret_str[length(lower)] <- paste("[", lower[length(lower)], ",", upper[length(upper)], "]", sep = "")
+
+  return (ret_str)
+}
+
+print_quantile_lines <- function(col = 2){
+  abline(0.25, 0, lty = "dashed", col = col + 2) 
+  abline(0.5, 0, lty = "dashed", col = col + 4)
+  abline(0.75, 0, lty = "dashed", col = col + 2)
+}
+
+plot_cumulative_barplot <- function(data_, names_, col_line = "red", col_plot = 1, col_qline = 4, xlab = "", ylab = "", main =""){
+  barplot_positions <- barplot(
+        data_,  # Positions holds the mid values.
+        names.arg = names_,
+        col = col_plot,
+        xlab = xlab,
+        ylab = ylab,
+        main = main,
+        space = 0
+  )
+
+# Plot the cumulative distribution line
+
+  line_positions_x <- c(0, barplot_positions + (barplot_positions[2] - barplot_positions[1]) /2) # Create X coordinates. Assuming they are evenly spread
+  par(new = TRUE)
+  
+  lines(x = line_positions_x,
+        y = c(0, data_), # We are starting at coord x=0, y=0
+        lty = 3,
+        col = col_line)
+  print_quantile_lines(col_qline)
+}
+
+get_mode <- function(v) {
+  # Use table to get the frequency of each element
+  freq_table <- table(v)
+  
+  # Find the maximum frequency
+  max_freq <- max(freq_table)
+  
+  # Get the values with the maximum frequency
+  mode_val <- as.numeric(names(freq_table)[freq_table == max_freq])
+  
+  return(mode_val)
+}
+
+```
+
+## a)
+### Häufigkeitstabelle
+```{r}
+cat("Würfel Häufigkeitstabelle:")
+würfel.tb <- table(dist_comparison$Wuerfel)
+würfel.tb
+```
+Die anderen Merkmale sind reelwertige Zahlen, daher müssen diese zuvor in Klassen eingeteilt werden. So wäre eine Häufigkeitstabelle sinnlos.
+
+```{r}
+wartezeit_hist <- get_hist_data(dist_comparison$Wartezeit_min)
+wartezeit.df <- data.frame(
+  wartezeit_minuten = get_interval_string(wartezeit_hist$lower, wartezeit_hist$upper), 
+  anzahl = wartezeit_hist$counts)
+cat("Häufikeitstabelle Minuten zwischen Vorbeifahrenden Autos")
+wartezeit.df
+```
+```{r}
+telefongespräch_länge <- get_hist_data(dist_comparison$Telgesprae_min)
+telefongespräch.df <- data.frame(
+  länge_des_gesprächs = get_interval_string(telefongespräch_länge$lower, telefongespräch_länge$upper), 
+  anzahl = telefongespräch_länge$counts)
+cat("Häufikeitstabelle Minuten der Telefongespräche")
+telefongespräch.df
+```
+```{r}
+stiftlaenge_cm <- get_hist_data(dist_comparison$Stiftlaenge_cm)
+stiftlaenge_cm.df <- data.frame(
+  länge_des_stifts = get_interval_string(stiftlaenge_cm$lower, stiftlaenge_cm$upper), 
+  anzahl = stiftlaenge_cm$counts)
+cat("Häufikeitstabelle Minuten der Telefongespräche")
+stiftlaenge_cm.df
+```
+### Häufigkeitsverteilung und Summenhäufigkeit
+
+
+```{r}
+# Farbzuweisungen für alle Plots
+würfel.col = 2
+wartezeit.col = 3
+gespräche.col = 4
+stiftlänge.col = 5
+
+barplot(würfel.tb / sum(würfel.tb),
+        ylim = c(0,0.25),
+        ylab = "Relative Häufigkeit",
+        xlab = "Augenanzahl",
+        main = "Würfelwürf relative Häufigkeit",
+        col = würfel.col
+        )
+
+plot_cumulative_barplot(
+        data_ = cumsum(würfel.tb) / sum(würfel.tb),
+        names_ = c(1:6),
+        ylab = "Summenhäufigkeit relativ",
+        xlab = "Augenanzahl",
+        main = "Würfelwürf Summenhäufigkeit",
+        col_plot = würfel.col,
+        col_line = "blue"
+        )
+
+print_quantile_lines(würfel.col)
+
+```
+```{r}
+barplot(wartezeit.df$anzahl / sum(wartezeit.df$anzahl),
+        ylim = c(0,max(wartezeit.df$anzahl) / sum(wartezeit.df$anzahl) * 1.2),
+        names.arg = wartezeit.df$wartezeit_minuten,
+        ylab = "Relative Häufigkeit",
+        xlab = "Wartezeit in Minuten",
+        main = "Wartezeit vorbeifahrende Autos relative Häufigkeit",
+        col = wartezeit.col
+        )
+
+plot_cumulative_barplot(
+        data_ = cumsum(wartezeit.df$anzahl) / sum(wartezeit.df$anzahl),
+        names_ = wartezeit.df$wartezeit_minuten,
+        ylab = "Summenhäufigkeit relativ",
+        xlab = "Wartezeit in Minuten",
+        main = "Wartezeit vorbeifahrende Autos Summenhäufigkeit",
+        col_plot = wartezeit.col,
+        col_line = "red"
+        )
+
+```
+```{r}
+barplot(telefongespräch.df$anzahl / sum(telefongespräch.df$anzahl),
+        ylim = c(0,max(telefongespräch.df$anzahl) / sum(telefongespräch.df$anzahl) * 1.2),
+        names.arg = telefongespräch.df$länge_des_gesprächs,
+        ylab = "Relative Häufigkeit",
+        xlab = "Länge des Gesprächs",
+        main = "Länge des Gesprächs relative Häufigkeit",
+        col = gespräche.col
+        )
+
+plot_cumulative_barplot(
+        data_ = cumsum(telefongespräch.df$anzahl) / sum(telefongespräch.df$anzahl),
+        names_ =telefongespräch.df$länge_des_gesprächs,
+        ylab = "Summenhäufigkeit relativ",
+        xlab = "Länge des Gesprächs",
+        main = "Länge des Gesprächs Summenhäufigkeit",
+        col_plot = gespräche.col,
+        col_line = "red"
+        )
+
+```
+
+```{r}
+stiftlaenge_cm.df$länge_des_stifts
+par(cex.axis = 0.7)
+    
+barplot(stiftlaenge_cm.df$anzahl / sum(stiftlaenge_cm.df$anzahl),
+        ylim = c(0,max(stiftlaenge_cm.df$anzahl) / sum(stiftlaenge_cm.df$anzahl) * 1.2),
+        names.arg = stiftlaenge_cm.df$länge_des_stifts,
+        ylab = "Relative Häufigkeit",
+        xlab = "Länge des Stifts",
+        main = "Länge des Stifts relative Häufigkeit",
+        col = stiftlänge.col
+        )
+
+plot_cumulative_barplot(
+        data_ = cumsum(stiftlaenge_cm.df$anzahl) / sum(stiftlaenge_cm.df$anzahl),
+        names_ = stiftlaenge_cm.df$länge_des_stifts,
+        ylab = "Summenhäufigkeit relativ",
+        xlab = "Länge des Stifts",
+        main = "Länge des Stifts Summenhäufigkeit",
+        col_plot = stiftlänge.col,
+        col_line = "red"
+        )
+par(cex.axis = 1)
+```
+
+## b)
+Schätzung Würfel:
+Mittel: 3
+Median: 3
+
+Schätzung vorbeifahrende Autos:
+Mittel: 2,2
+Median: 2,4
+
+Schätzung Länge des Telefongesprächs:
+Mittel: 3
+Median: 3,2
+
+Schätzung Länge des Stifts:
+Mittel: 3,5
+Median: 3,6
+
+## c)
+### Würfelwurf
+```{r}
+
+cat("Merkmalsausprägung unter derer 25% der Würfelwürfe sind", sort(dist_comparison$Wuerfel)[10])
+```
+### Wartezeit Autos
+```{r}
+cat("Merkmalsausprägung unter derer 25% der Messwerte sind", sort(dist_comparison$Wartezeit_min)[10], "min")
+```
+### Länge Telefongespräche
+```{r}
+cat("Merkmalsausprägung unter derer 25% der Telefongespräche sind", sort(dist_comparison$Telgesprae_min)[10], "min")
+```
+### Stiftlänge
+```{r}
+cat("Merkmalsausprägung unter derer 25% der Stiftlängen sind", sort(dist_comparison$Stiftlaenge_cm)[10], "cm")
+```
+## d)
+### Würfelwurf
+```{r}
+cat("Modus", get_mode(dist_comparison$Wuerfel))
+quantile(dist_comparison$Wuerfel)
+
+cat("Min", min(dist_comparison$Wuerfel), "Max", max(dist_comparison$Wuerfel) )
+cat("Spannweite", max(dist_comparison$Wuerfel) - min(dist_comparison$Wuerfel))
+cat("Mittelwert", mean(dist_comparison$Wuerfel))
+cat("Standardabweichung", sd(dist_comparison$Wuerfel))
+cat("Mittlere Absolute Abweichung", sum(abs(mean(dist_comparison$Wuerfel) - dist_comparison$Wuerfel)) / length(dist_comparison$Wuerfel))
+```
+
+#### Bewertung: 
+Die Ereignisse sind gleichverteilt. Der Mittelwert ist genau in der Mitte der Spannweite. Dazu gibt es noch eine recht kleine Standardabweichung. 
+
+### Info Klassifizierte Daten
+Für den Modus wurde die klassifizierte Zeit verwendet. Ansonsten kommt jeder Messwert nur 1 mal vor. 
+### Wartezeit Autos
+```{r}
+cat("Modus", wartezeit.df$wartezeit_minuten[wartezeit.df$anzahl == max(wartezeit.df$anzahl)])
+
+cat("Q25", sort(dist_comparison$Wartezeit_min)[10])
+cat("Q50", sort(dist_comparison$Wartezeit_min)[20])
+cat("Q75", sort(dist_comparison$Wartezeit_min)[30])
+cat("Interquartilabstand", sort(dist_comparison$Wartezeit_min)[30] - sort(dist_comparison$Wartezeit_min)[10])
+
+cat("Min", sort(dist_comparison$Wartezeit_min)[1], "Max", sort(dist_comparison$Wartezeit_min)[40] )
+cat("Spannweite", sort(dist_comparison$Wartezeit_min)[40] - sort(dist_comparison$Wartezeit_min)[1])
+cat("Mittelwert", mean(dist_comparison$Wartezeit_min))
+cat("Standardabweichung", sd(dist_comparison$Wartezeit_min))
+cat("Mittlere Absolute Abweichung", sum(abs(mean(dist_comparison$Wartezeit_min) - dist_comparison$Wartezeit_min)) / length(dist_comparison$Wartezeit_min))
+```
+
+#### Bewertung: 
+Maximalwert und Spannweite sind bedeutend höher als etwa der Modus oder der Mittelwert. Man kann in der Grafik auch schön erkennen, dass hier im Intervall [0,2) etwa 45% der Messwerte liegen. Es handelt sich hierbei um die Exponentailverteilung. Daher ist jeder Messwert der größer wird, noch unwahrscheinlicher. Wenn man hier eine Exponentailfunktion mit den Richtigen Parametern einlegen würde, so wäre das die Einhüllende der Funktionswerte.
+
+### Länge Telefongespräche
+```{r}
+cat("Modus", telefongespräch.df$länge_des_gesprächs[telefongespräch.df$anzahl == max(telefongespräch.df$anzahl)])
+
+cat("Q25", sort(dist_comparison$Telgesprae_min)[10])
+cat("Q50", sort(dist_comparison$Telgesprae_min)[20])
+cat("Q75", sort(dist_comparison$Telgesprae_min)[30])
+cat("Interquartilabstand", sort(dist_comparison$Telgesprae_min)[30] - sort(dist_comparison$Telgesprae_min)[10])
+
+cat("Min", sort(dist_comparison$Telgesprae_min)[1], "Max", sort(dist_comparison$Telgesprae_min)[40] )
+cat("Spannweite", sort(dist_comparison$Telgesprae_min)[40] - sort(dist_comparison$Telgesprae_min)[1])
+cat("Mittelwert", mean(dist_comparison$Telgesprae_min))
+cat("Standardabweichung", sd(dist_comparison$Telgesprae_min))
+cat("Mittlere Absolute Abweichung", sum(abs(mean(dist_comparison$Telgesprae_min) - dist_comparison$Telgesprae_min)) / length(dist_comparison$Telgesprae_min))
+```
+#### Bewertung
+Es ist hier schön zu sehen, dass es sich um eine Normalverteilung handelt. Um den Mittelwert sinken die Werte recht schnell ab. Daher ist auch die Standardabweichung recht klein. Wenn man nun noch die Ausreißer speziell behandeln würde, wäre die Kurve warhscheinlich noch schöner. Der IQR ist sogar kleiner als die Standardabweichung. Das heißt, 75% der Werte sind um den Median in einem Intervall kleiner als die Standardabweichung. 
+
+### Länge der Stifte
+```{r}
+cat("Modus", stiftlaenge_cm.df$länge_des_stifts[stiftlaenge_cm.df$anzahl == max(stiftlaenge_cm.df$anzahl)])
+
+cat("Q25", sort(dist_comparison$Stiftlaenge_cm)[10])
+cat("Q50", sort(dist_comparison$Stiftlaenge_cm)[20])
+cat("Q75", sort(dist_comparison$Stiftlaenge_cm)[30])
+cat("Interquartilabstand", sort(dist_comparison$Stiftlaenge_cm)[30] - sort(dist_comparison$Stiftlaenge_cm)[10])
+
+cat("Min", sort(dist_comparison$Stiftlaenge_cm)[1], "Max", sort(dist_comparison$Stiftlaenge_cm)[40] )
+cat("Spannweite", sort(dist_comparison$Stiftlaenge_cm)[40] - sort(dist_comparison$Stiftlaenge_cm)[1])
+cat("Mittelwert", mean(dist_comparison$Stiftlaenge_cm))
+cat("Standardabweichung", sd(dist_comparison$Stiftlaenge_cm))
+cat("Mittlere Absolute Abweichung", sum(abs(mean(dist_comparison$Stiftlaenge_cm) - dist_comparison$Stiftlaenge_cm)) / length(dist_comparison$Stiftlaenge_cm))
+```
+#### Bewertung
+Der Grafik nach, könnten hier 2 überlagerte Normalverteilungen im Hintergrund stehen. Mann sieht 2 große Peaks in den Intervallen [3.35, 3.4) und [3.5, 3.55). Es gibt auch 2 Modis mit der verwendeten Klassifizierung. Es könnte sein, dass hier die Stift von 2 unterschiedlichen Produktionslinien oder Werkzeugen vermessen wurden. Das würde die doch recht große Streuung und die 2 Peaks erklären.
+
+## e)
+
+```{r}
+boxplot(dist_comparison$Wuerfel,
+        main = "Boxplot Würfel",
+        col = würfel.col,
+        ylab = "Augenanzahl")
+```
+```{r}
+boxplot(dist_comparison$Wartezeit_min, 
+        main = "Boxplot Wartezeit Minuten", 
+        ylab = "Wartezeit in Minuten",
+        col = wartezeit.col)
+
+```
+```{r}
+boxplot(dist_comparison$Telgesprae_min, 
+        main = "Boxplot Telefongespräche", 
+        ylab = "Gesprächsdauer in Minuten",
+        col = gespräche.col)
+```
+
+Zur Übersicht, hier noch ein Boxplot ohne den weit entfernten Ausreißer:
+```{r}
+boxplot(sort(dist_comparison$Telgesprae_min)[1:39], 
+        main = "Boxplot Telefongespräche, Ausreißer entfernt", 
+        ylab = "Gesprächsdauer in Minuten",
+        col = gespräche.col)
+```
+```{r}
+boxplot(dist_comparison$Stiftlaenge_cm, 
+        main = "Boxplot Stiftlänge", 
+        ylab = "Stiftlänge in cm",
+        col = stiftlänge.col)
+```

@@ -1,0 +1,12 @@
+﻿  dieHaufigstenWoerter.c
+C:\Users\michael\source\repos\CHausUebungen\dieHaufigstenWoerter.c(31,21): warning C4473: "fscanf_s": nicht genügend Argumente für Formatzeichenfolge übergeben
+C:\Users\michael\source\repos\CHausUebungen\dieHaufigstenWoerter.c(31,21): message : Platzhalter und deren Parameter erwarten 2 variadic-Argumente, es wurden aber 1 variadic-Argumente bereitgestellt.
+C:\Users\michael\source\repos\CHausUebungen\dieHaufigstenWoerter.c(31,21): message : Das fehlende variadic-Argument "2" ist für die Zeichenfolge "%s" erforderlich.
+C:\Users\michael\source\repos\CHausUebungen\dieHaufigstenWoerter.c(31,21): message : Dieses Argument wird als Puffergröße verwendet.
+C:\Users\michael\source\repos\CHausUebungen\dieHaufigstenWoerter.c(28,14): warning C4101: "words": Unreferenzierte lokale Variable
+  Code wird generiert.
+  0 of 8 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Codegenerierung ist abgeschlossen.
+  CHausUebungen.vcxproj -> C:\Users\michael\source\repos\CHausUebungen\Release\CHausUebungen.exe
